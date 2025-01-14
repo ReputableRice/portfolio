@@ -27,11 +27,6 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>
-        {projects.map((project) => (
-          <Link key={project.id} to={`/project/${project.id}`}>
-            {project.name}
-          </Link>
-        ))}
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />

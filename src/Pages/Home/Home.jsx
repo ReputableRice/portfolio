@@ -1,6 +1,28 @@
+import { Link } from "react-router-dom"
+
 export default function Home() {
+    const projects = [
+        {
+            "id": 0,
+            "name": "test",
+            "Description": "Lorem Ipsum",
+            "Images": "https://placehold.co/600x400"
+        },
+        {
+            "id": 1,
+            "name": "test2",
+            "Description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+            "Images": "https://placehold.co/600x400"
+        }
+    ]
+
     return (
         <>
+            {projects.map((project) => (
+                <Link key={project.id} to={`/project/${project.id}`}>
+                    {project.name}
+                </Link>
+            ))}
             <main class="main">
                 <div class="flex flex-col appLayout">
                     {/* <section>
