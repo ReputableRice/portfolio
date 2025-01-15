@@ -1,28 +1,36 @@
 import { Link } from "react-router-dom"
+import { Button } from "@/components/ui/button"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
+import "../../App.css"
 
-export default function Home() {
-    const projects = [
-        {
-            "id": 0,
-            "name": "test",
-            "Description": "Lorem Ipsum",
-            "Images": "https://placehold.co/600x400"
-        },
-        {
-            "id": 1,
-            "name": "test2",
-            "Description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-            "Images": "https://placehold.co/600x400"
-        }
-    ]
+export default function Home({ projects }) {
 
     return (
         <>
-            {projects.map((project) => (
-                <Link key={project.id} to={`/project/${project.id}`}>
-                    {project.name}
-                </Link>
-            ))}
+            <div className="flex">
+                {projects.map((project) => (
+                    <div>
+                        <img src={project.Images} alt={project.name} className="rounded-[32px] project__thumbnail" />
+                        <div className="pt-4">
+                            <p className="text-base font-bold">{project.name}</p>
+                            <p>{project.subtitle}</p>
+                        </div>
+                        <Button asChild classname="rounded-full">
+                            <Link key={project.id} to={`/project/${project.id}`}>
+                                Link to Project
+                            </Link>
+                        </Button>
+                    </div>
+                ))}
+            </div>
+
             <main class="main">
                 <div class="flex flex-col appLayout">
                     {/* <section>
@@ -37,7 +45,7 @@ export default function Home() {
                             About Me
                         </div>
                     </section> */}
-                    <section>
+                    {/* <section>
                         <div class="col-start-4 col-end-10 flex flex-col">
                             <div class="bg-red-500 h-8 flex items-center justify-center">
                                 <h1>Portfolio</h1>
@@ -49,7 +57,7 @@ export default function Home() {
                                 <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     {/* <section>
                         <div
                             class="bg-blue-500 h-full col-start-1 col-end-7 w-full flex items-center justify-center"
@@ -68,6 +76,7 @@ export default function Home() {
                         </div>
                     </section> */}
                 </div>
+
             </main>
         </>
     )
