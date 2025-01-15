@@ -6,22 +6,7 @@ import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { useState } from "react";
 
 
-function App() {
-  const projects = [
-    {
-      "id": 0,
-      "name": "test",
-      "Description": "Lorem Ipsum",
-      "Images": "https://placehold.co/600x400"
-    },
-    {
-      "id": 1,
-      "name": "test2",
-      "Description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      "Images": "https://placehold.co/600x400"
-    }
-  ]
-
+function App({ projects }) {
   return (
     <Router>
       <nav>
@@ -29,7 +14,7 @@ function App() {
         <Link to="/contact">Contact</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home projects={projects} />} />
         <Route path="/contact" element={<Contact />} />
         {projects.map((project) => (
           <Route

@@ -8,43 +8,29 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import "../../App.css"
 
-export default function Home() {
-    const projects = [
-        {
-            "id": 0,
-            "name": "test",
-            "Description": "Lorem Ipsum",
-            "Images": "https://placehold.co/600x400"
-        },
-        {
-            "id": 1,
-            "name": "test2",
-            "Description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-            "Images": "https://placehold.co/600x400"
-        }
-    ]
+export default function Home({ projects }) {
 
     return (
         <>
-            {projects.map((project) => (
-                <Card className="w-[380px]">
-                    <CardHeader>
-                        <p>Header</p>
-                    </CardHeader>
-                    <CardContent>
-                        <img src={project.Images} alt={project.name} />
-                    </CardContent>
-                    <CardFooter>
-                        <Button asChild classname="">
+            <div className="flex">
+                {projects.map((project) => (
+                    <div>
+                        <img src={project.Images} alt={project.name} className="rounded-[32px] project__thumbnail" />
+                        <div className="pt-4">
+                            <p className="text-base font-bold">{project.name}</p>
+                            <p>{project.subtitle}</p>
+                        </div>
+                        <Button asChild classname="rounded-full">
                             <Link key={project.id} to={`/project/${project.id}`}>
-                                {project.name}
+                                Link to Project
                             </Link>
                         </Button>
-                    </CardFooter>
-                </Card>
+                    </div>
+                ))}
+            </div>
 
-            ))}
             <main class="main">
                 <div class="flex flex-col appLayout">
                     {/* <section>
@@ -90,6 +76,7 @@ export default function Home() {
                         </div>
                     </section> */}
                 </div>
+
             </main>
         </>
     )
