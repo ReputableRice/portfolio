@@ -37,7 +37,7 @@ export default function Home() {
                             About Me
                         </div>
                     </section> */}
-                    <section>
+                    {/* <section>
                         <div class="col-start-4 col-end-10 flex flex-col">
                             <div class="bg-red-500 h-8 flex items-center justify-center">
                                 <h1>Portfolio</h1>
@@ -49,7 +49,7 @@ export default function Home() {
                                 <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     {/* <section>
                         <div
                             class="bg-blue-500 h-full col-start-1 col-end-7 w-full flex items-center justify-center"
