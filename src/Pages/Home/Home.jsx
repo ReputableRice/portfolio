@@ -1,4 +1,13 @@
 import { Link } from "react-router-dom"
+import { Button } from "@/components/ui/button"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
 
 export default function Home() {
     const projects = [
@@ -19,9 +28,22 @@ export default function Home() {
     return (
         <>
             {projects.map((project) => (
-                <Link key={project.id} to={`/project/${project.id}`}>
-                    {project.name}
-                </Link>
+                <Card className="w-[380px]">
+                    <CardHeader>
+                        <p>Header</p>
+                    </CardHeader>
+                    <CardContent>
+                        <img src={project.Images} alt={project.name} />
+                    </CardContent>
+                    <CardFooter>
+                        <Button asChild classname="">
+                            <Link key={project.id} to={`/project/${project.id}`}>
+                                {project.name}
+                            </Link>
+                        </Button>
+                    </CardFooter>
+                </Card>
+
             ))}
             <main class="main">
                 <div class="flex flex-col appLayout">
