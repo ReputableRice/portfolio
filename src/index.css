@@ -15,6 +15,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  --black: #30261D;
+  --beige: #DCC7B7;
+  --orange: #F09F54;
+  --blue: #4AC1E0;
+  --green: #71A850;
 }
 
 section {
@@ -25,16 +31,31 @@ section {
   border: 1px solid green;/* Visualization of section*/
 }
 
+nav {
+  justify-content: space-between;
+  background-color: var(--beige,);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: var(--green);
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 16px; */
+    height: 100vh;
+    border: 1px solid green;/* Visualization of section*/
   }
 }
 

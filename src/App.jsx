@@ -4,13 +4,21 @@ import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 function App({ projects }) {
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
+      <nav className="p-[25px] w-full  flex items-center absolute top-[46px] z-50">
+        <img src="src/assets/images/CrocColour.png" className="w-24" />
+        <div className="flex gap-14">
+          <Link to="/">Home</Link>
+          <Link to="/">Portfolio</Link>
+          <Link to="/">About Me</Link>
+        </div>
+        <div>
+          <Link to="/contact">Contact</Link>
+        </div>
       </nav>
       <Routes>
         <Route path="/" element={<Home projects={projects} />} />

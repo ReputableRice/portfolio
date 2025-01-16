@@ -16,42 +16,48 @@ export default function Home({ projects }) {
 
     return (
         <>
-            <div className="flex">
-                {projects.map((project) => (
-                    <Card>
-                        <CardHeader>
-                            <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
-                        </CardHeader>
-                        <CardContent>
-                            <div className="">
-                                <p className="font-bold text-xl">{project.name}</p>
-                                <p>{project.subtitle}</p>
-                            </div>
-                        </CardContent>
-                        <CardFooter>
-                            <Button asChild classname="rounded-full">
-                                <Link key={project.id} to={`/project/${project.id}`}>
-                                    Link to Project
-                                </Link>
-                            </Button>
-                        </CardFooter>
-                    </Card>
-                ))}
+            <div className="flex flex-col">
+                <section>
+                    <div
+                        class="bg-red-500 h-4/5 col-start-1 col-end-6 rounded-tr-3xl w-full m-auto"
+                    >
+                        Hero Image
+                    </div>
+                    <div
+                        class="bg-red-500 h-4/5 col-start-8 col-end-13 rounded-tl-3xl w-full m-auto"
+                    >
+                        About Me
+                    </div>
+                </section>
+                    <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
+                <section>
+                    <div className="col-start-4 col-end-10 flex lg:flex-row sm:flex-col w-full">
+                        {projects.map((project) => (
+                            <Card className="w-[285px] h-[550px] m-auto">
+                                <CardHeader>
+                                    <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="">
+                                        <p className="font-bold text-xl">{project.name}</p>
+                                        <p>{project.subtitle}</p>
+                                    </div>
+                                </CardContent>
+                                <CardFooter>
+                                    <Button asChild classname="rounded-full">
+                                        <Link key={project.id} to={`/project/${project.id}`}>
+                                            Link to Project
+                                        </Link>
+                                    </Button>
+                                </CardFooter>
+                            </Card>
+                        ))}
+                    </div>
+                </section>
+
             </div>
             <main class="main">
                 <div class="flex flex-col appLayout">
-                    {/* <section>
-                        <div
-                            class="bg-red-500 h-4/5 col-start-1 col-end-6 rounded-tr-3xl w-full m-auto"
-                        >
-                            Hero Image
-                        </div>
-                        <div
-                            class="bg-red-500 h-4/5 col-start-8 col-end-13 rounded-tl-3xl w-full m-auto"
-                        >
-                            About Me
-                        </div>
-                    </section> */}
                     {/* <section>
                         <div class="col-start-4 col-end-10 flex flex-col">
                             <div class="bg-red-500 h-8 flex items-center justify-center">

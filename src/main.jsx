@@ -11,7 +11,9 @@ const projects = [
     "subtitle":"Design Project",
     "description": "A design mockup created for a fictional brand that uses animals as their motif.",
     "thumb_image": "/src/assets/images/can_all.png",
-    "date": 2024
+    "date": 2024,
+    "tags": ["Illustration", "Mockup"],
+    "images": ["/src/assets/images/can_all.png", "/src/assets/images/Can_Blue.png", "/src/assets/images/Can_Pink.png", "/src/assets/images/Can_Orange.png"],
   },
 ]
 
