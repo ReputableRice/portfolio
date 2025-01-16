@@ -9,8 +9,6 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import "../../App.css"
-import canAllImage from '../../assets/images/can_all.png';
-
 
 export default function Home({ projects }) {
 
