@@ -9,6 +9,8 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import "../../App.css"
+import canAllImage from '../../assets/images/can_all.png';
+
 
 export default function Home({ projects }) {
 
@@ -16,21 +18,26 @@ export default function Home({ projects }) {
         <>
             <div className="flex">
                 {projects.map((project) => (
-                    <div>
-                        <img src={project.Images} alt={project.name} className="rounded-[32px] project__thumbnail" />
-                        <div className="pt-4">
-                            <p className="text-base font-bold">{project.name}</p>
-                            <p>{project.subtitle}</p>
-                        </div>
-                        <Button asChild classname="rounded-full">
-                            <Link key={project.id} to={`/project/${project.id}`}>
-                                Link to Project
-                            </Link>
-                        </Button>
-                    </div>
+                    <Card>
+                        <CardHeader>
+                            <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
+                        </CardHeader>
+                        <CardContent>
+                            <div className="">
+                                <p className="font-bold text-xl">{project.name}</p>
+                                <p>{project.subtitle}</p>
+                            </div>
+                        </CardContent>
+                        <CardFooter>
+                            <Button asChild classname="rounded-full">
+                                <Link key={project.id} to={`/project/${project.id}`}>
+                                    Link to Project
+                                </Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
                 ))}
             </div>
-
             <main class="main">
                 <div class="flex flex-col appLayout">
                     {/* <section>

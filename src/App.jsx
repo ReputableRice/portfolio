@@ -5,7 +5,6 @@ import Contact from "./Pages/Contact/Contact";
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { useState } from "react";
 
-
 function App({ projects }) {
   return (
     <Router>
