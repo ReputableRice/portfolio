@@ -15,7 +15,7 @@ export default function Home({ projects }) {
     return (
         <>
             <div className="flex flex-col">
-                <section>
+                {/* <section>
                     <div
                         class="bg-red-500 h-4/5 col-start-1 col-end-6 rounded-tr-3xl w-full m-auto"
                     >
@@ -26,7 +26,7 @@ export default function Home({ projects }) {
                     >
                         About Me
                     </div>
-                </section>
+                </section> */}
                     <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
                 <section>
                     <div className="col-start-4 col-end-10 flex lg:flex-row sm:flex-col w-full">

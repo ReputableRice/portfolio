@@ -9,10 +9,10 @@ const projects = [
     "name": "Beastly Energy Drinks",
     "subtitle":"Design Project",
     "description": "A design mockup created for a fictional brand that uses animals as their motif.",
-    "thumb_image": "/src/public/images/can_all.png",
+    "thumb_image": "/src/public/assets/images/can_all.png",
     "date": 2024,
     "tags": ["Illustration", "Mockup"],
-    "images": ["/src/public/images/can_all.png", "/src/public/images/Can_Blue.png", "/src/public/images/Can_Pink.png", "/src/public/images/Can_Orange.png"],
+    "images": ["/src/public/assets/images/can_all.png", "/src/public/assets/images/Can_Blue.png", "/src/public/assets/images/Can_Pink.png", "/src/public/assets/images/Can_Orange.png"],
   },
 ]
 

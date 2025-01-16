@@ -24,19 +24,22 @@ function ProjectDetails({ project }) {
         {/* <img
           src={project.thumb_image}
           alt={project.name} className="project__image" /> */}
-        <Carousel>
-          <CarouselContent>
-            {project.images.map((images, index) => (
-              <CarouselItem key={index}>
-                <img
-                  src={images}
-                  alt={project.name} className="project__image" />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="w-full">
+          <Carousel className="">
+            <CarouselContent>
+              {project.images.map((images, index) => (
+                <CarouselItem key={index}>
+                  <img
+                    src={images}
+                    alt={project.name} className="project__image" />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
         <div className="sm:pt-6 lg:pt-0 lg:ml-8 flex flex-col">
           <Card>
             <CardHeader>
