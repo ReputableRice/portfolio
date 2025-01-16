@@ -9,7 +9,7 @@ import can_blue from"/src/public/assets/images/Can_Blue.png"
 import can_pink from"/src/public/assets/images/Can_Pink.png"
 import can_orange from"/src/public/assets/images/Can_Orange.png"
 
-
+//
 const projects = [
   {
     "id": 0,
