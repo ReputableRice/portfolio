@@ -6,11 +6,14 @@ import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
+//images
+import croc_logo from "/src/public/assets/images/CrocColour.png"
+
 function App({ projects }) {
   return (
     <Router>
-      <nav className="p-[25px] w-full  flex items-center absolute top-[46px] z-50">
-        <img src="src/public/images/CrocColour.png" className="w-24" />
+      <nav className="p-[25px] w-full  flex items-center z-50 sm:hidden lg:flex">
+        <img src={croc_logo} className="w-24" />
         <div className="flex gap-14">
           <Link to="/">Home</Link>
           <Link to="/">Portfolio</Link>

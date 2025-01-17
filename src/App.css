@@ -27,6 +27,16 @@
   border-radius: 32px;
 }
 
+.image_hero {
+  object-fit: cover;
+  object-position: 70% top;
+}
+
+.image_about{
+  object-fit: cover;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -10,25 +10,34 @@ import {
 } from "@/components/ui/card"
 import "../../App.css"
 
+//icons
+import { MoveDown } from "lucide-react"
+
+//images
+import lookout from "/src/public/assets/images/lookoutbanner.png"
+
 export default function Home({ projects }) {
 
     return (
         <>
             <div className="flex flex-col">
-                {/* <section>
-                    <div
-                        class="bg-red-500 h-4/5 col-start-1 col-end-6 rounded-tr-3xl w-full m-auto"
-                    >
-                        Hero Image
+                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-1.5 lg:mt-20 sm:mt-0">
+                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero h-4/5 lg:w-1/2 overflow-hidden lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
+
+                    <div class="h-4/5 lg:w-1/2 rounded-tl-3xl flex flex-col space-y-6 justify-center sm:items-center">
+                        <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="sm:hidden lg:inline h-full rounded-tl-3xl overflow-hidden image_about sm:h-1/2 lg:h-full" />
+                        <div className="flex flex-col w-full sm:items-center lg:items-start">
+                            <h1 className="text-5xl font-bold">Hi I'm Me</h1>
+                            <p>Description about me</p>
+                            <button className="flex w-1/2 bg-zinc-900 text-zinc-200 justify-center py-6 rounded-full">
+                                <MoveDown className="bg-blend-multiply" size={32} />
+                                <p className="text-2xl">To Projects</p>
+                            </button>
+                        </div>
                     </div>
-                    <div
-                        class="bg-red-500 h-4/5 col-start-8 col-end-13 rounded-tl-3xl w-full m-auto"
-                    >
-                        About Me
-                    </div>
-                </section> */}
-                    <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section>
+                </section>
+                <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
+                <section className="flex sm:flex-col lg:flex-row max-w-full gap-10">
                     <div className="col-start-4 col-end-10 flex lg:flex-row sm:flex-col w-full">
                         {projects.map((project) => (
                             <Card className="w-[285px] h-[550px] m-auto">
