@@ -21,7 +21,7 @@ export default function Home({ projects }) {
 
     return (
         <>
-            <div className="flex flex-col">
+            <main className="flex flex-col">
                 <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 lg:mt-20 sm:mt-0 sm:h-svh lg:h-[768px]">
                     <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero lg:w-1/2 sm:w-full sm:h-2/5 lg:h-full h-full lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
 
@@ -38,45 +38,23 @@ export default function Home({ projects }) {
                     </div>
                 </section>
                 <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex w-full items-start justify-center flex-wrap lg:px-[10%] sm:px-0">
+                <section className="flex w-full items-start justify-center flex-wrap lg:px-[20%] sm:px-0">
                     <ProjectPreview projects={projects} />
                 </section>
+                <section className="h-screen flex">
+                    <div className="bg-blue-400 w-1/2 m-auto px-24">
+                        <h1 className="text-3xl font-bold">Case Study</h1>
+                        <p>Lorem</p>
+                    </div>
+                    <div className="bg-red-400 w-1/2">
 
-            </div>
-            <main class="main">
-                <div class="flex flex-col appLayout">
-                    {/* <section>
-                        <div class="col-start-4 col-end-10 flex flex-col">
-                            <div class="bg-red-500 h-8 flex items-center justify-center">
-                                <h1>Portfolio</h1>
-                            </div>
-                            <div class="bg-green-500 flex flex-wrap mt-6 justify-center">
-                                <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
-                                <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
-                                <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
-                                <div class="bg-blue-500 h-72 w-72">component loop + 6 columns</div>
-                            </div>
-                        </div>
-                    </section> */}
-                    {/* <section>
-                        <div
-                            class="bg-blue-500 h-full col-start-1 col-end-7 w-full flex items-center justify-center"
-                        >
-                            text Section
-                        </div>
-                        <div class="bg-red-500 h-full col-start-7 col-end-13 w-full m-auto">
-                            text Section
-                        </div>
-                    </section>
-                    <section>
-                        <div
-                            class="bg-red-500 h-full col-span-full w-full m-auto flex items-center justify-center"
-                        >
-                            <h1>Hello World</h1>
-                        </div>
-                    </section> */}
-                </div>
-
+                    </div>
+                </section>
+                <section className="h-screen flex flex-col items-center justify-center">
+                   <h1>Want to Work together?</h1>
+                   <p>Contact me at</p>
+                   <p>me@gmail.com</p>
+                </section>
             </main>
         </>
     )

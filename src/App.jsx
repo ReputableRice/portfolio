@@ -14,7 +14,7 @@ function App({ projects }) {
     <Router>
       <nav className="p-[25px] w-full  flex items-center z-50 sm:hidden lg:flex">
         <img src={croc_logo} className="w-24" />
-        <div className="flex gap-14">
+        <div className="flex gap-14 ">
           <Link to="/">Home</Link>
           <Link to="/">Portfolio</Link>
           <Link to="/">About Me</Link>

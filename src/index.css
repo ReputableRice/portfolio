@@ -29,7 +29,6 @@ section {
 
 nav {
   justify-content: space-between;
-  background-color: var(--beige,);
 }
 
 @media (prefers-color-scheme: light) {
