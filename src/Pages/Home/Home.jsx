@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import "../../App.css"
+import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 
 //icons
 import { MoveDown } from "lucide-react"
@@ -21,43 +22,24 @@ export default function Home({ projects }) {
     return (
         <>
             <div className="flex flex-col">
-                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 lg:mt-20 sm:mt-0 sm:h-svh lg:h-[900px]">
-                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero lg:w-1/2 sm:w-full sm:h-2/5 lg:h-4/6 h-full lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
+                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 lg:mt-20 sm:mt-0 sm:h-svh lg:h-[768px]">
+                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero lg:w-1/2 sm:w-full sm:h-2/5 lg:h-full h-full lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
 
                     <div class="">
                         <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="sm:hidden lg:flex lg:rounded-tl-3xl sm:rounded-b-full lg:rounded-none" />
-                        <div className="flex flex-col w-full sm:items-center lg:items-start">
+                        <div className="flex flex-col w-full sm:items-center lg:items-start mt-32">
                             <h1 className="text-5xl font-bold">Hi I'm Me</h1>
                             <p>Description about me</p>
-                            <button className="flex w-1/2 bg-zinc-900 text-zinc-200 justify-center py-6 rounded-full">
+                            <button className="flex w-2/5 bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8">
                                 <MoveDown className="bg-blend-multiply" size={32} />
-                                <p className="text-2xl">To Projects</p>
+                                <p className="text-xl">To Projects</p>
                             </button>
                         </div>
                     </div>
                 </section>
                 <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex w-full items-start justify-center flex-wrap">
-                    {projects.map((project) => (
-                        <Card className="w-[285px] h-[550px] m-auto mx-6 mt-4">
-                            <CardHeader>
-                                <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="">
-                                    <p className="font-bold text-xl">{project.name}</p>
-                                    <p>{project.subtitle}</p>
-                                </div>
-                            </CardContent>
-                            <CardFooter>
-                                <Button asChild classname="rounded-full">
-                                    <Link key={project.id} to={`/project/${project.id}`}>
-                                        Link to Project
-                                    </Link>
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                    ))}
+                <section className="flex w-full items-start justify-center flex-wrap lg:px-[10%] sm:px-0">
+                    <ProjectPreview projects={projects} />
                 </section>
 
             </div>

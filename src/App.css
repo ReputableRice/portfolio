@@ -13,8 +13,6 @@
 }
 
 .project__image {
-  width: 587px;
-  height: 588px;
   object-fit: cover;
   border-radius: 32px;
 }
@@ -29,17 +27,7 @@
 }
 
 .image_cover {
-  object-fit: cover;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {

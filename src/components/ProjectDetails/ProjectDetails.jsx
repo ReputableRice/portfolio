@@ -1,4 +1,16 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
+import Autoplay from "embla-carousel-autoplay"
+
+//Shadcn
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -18,33 +30,42 @@ import {
 
 
 function ProjectDetails({ project }) {
+
+
   return (
-    <div className="mt-36">
-      <div className="drop-shadow-xl bg-white p-28 rounded-3xl col-start-1 col-end-12 m-auto flex sm:flex-col lg:flex-row sm:items-center lg:items-start">
-        {/* <img
-          src={project.thumb_image}
-          alt={project.name} className="project__image" /> */}
-          <Carousel className="lg:w-1/2">
+    <div className="mt-12">
+      <div className="drop-shadow-xl bg-white lg:p-28 sm:p-8 rounded-3xl m-auto flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+        <div className="lg:w-1/2">
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                loop: true,
+              }),
+            ]}
+          >
             <CarouselContent>
               {project.images.map((images, index) => (
                 <CarouselItem key={index}>
                   <img
                     src={images}
-                    alt={project.name} className="rounded-xl project__image" />
+                    alt={project.name} className="rounded-xl max-h-96 w-full object-contain"
+                    loading="lazy" decoding="async"  
+                    />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext />
-            <CarouselPrevious />
+            <CarouselNext className="sm:hidden lg:flex" />
+            <CarouselPrevious className="sm:hidden lg:flex" />
           </Carousel>
-
-        <div className="sm:pt-6 lg:pt-0 lg:ml-8 flex flex-col lg:w-1/2">
+        </div>
+        <div className="sm:pt-6 lg:pt-0 lg:ml-16 flex flex-col lg:w-2/5">
           <Card>
             <CardHeader>
               <h1 className="text-3xl font-bold">{project.name}</h1>
               <CardDescription>
                 <p>{project.description}</p>
-                <p> Created In {project.date}</p>
+                <p className="mt-8"> Created In {project.date}</p>
               </CardDescription>
             </CardHeader>
           </Card>
@@ -55,7 +76,6 @@ function ProjectDetails({ project }) {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
