@@ -32,12 +32,12 @@ import {
 
 function ProjectDetails({ project }) {
   return (
-    <div>
-      <div className="lg:mt-28 sm:pb-6 lg:pb-0">
+    <div className="lg:px-64">
+      <div className="lg:mt-28 sm:pb-6 lg:pb-6">
         <BreadcrumbCompress project_name={project.name} />
       </div>
-      <div className="drop-shadow-xl bg-white lg:p-12 sm:p-8 rounded-3xl m-auto flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
-        <div className="lg:w-1/2">
+      <div className="drop-shadow-xl bg-white lg:px-24 sm:p-8 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+        <div className="lg:w-2/3">
           <Carousel
             plugins={[
               Autoplay({

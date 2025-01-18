@@ -13,7 +13,7 @@ export default function ProjectDetails({ projects }) {
     return (
         <section className="flex w-full items-start justify-center flex-wrap">
             {projects.map((project) => (
-                <Card className="w-[285px] m-auto mt-4">
+                <Card className="w-[285px] m-auto mt-4 hover:drop-shadow-lg transition-all">
                     <CardHeader>
                         <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
                     </CardHeader>

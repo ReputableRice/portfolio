@@ -21,7 +21,7 @@ const projects = [
   {
     "id": 0,
     "name": "Beastly Energy Drinks",
-    "subtitle": "Can Design Project",
+    "subtitle": "Drink Can Design",
     "description": "Beastly Energy is a brand that prides itself with providing high-quality energy drinks of various flavours with popping designs. This is a design mockup created for a fictional brand that uses animals as their main motif.",
     "thumb_image": can_all,
     "date": 2024,
@@ -47,29 +47,153 @@ const projects = [
     "description": "A fictional animal designed from photobashing several different animals together",
     "thumb_image": rez_wulf,
     "date": 2024,
-    "tags": ["Illustration", "Mockup", "Photobashing"],
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
     "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
   },
   {
-    "id": 2,
-    "name": "WaddleOn",
-    "subtitle": "Study App",
-    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
-    "thumb_image": can_all,
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
     "date": 2024,
-    "tags": ["Illustration", "Mockup"],
-    "images": [can_all, can_blue, can_orange, can_pink],
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
   },
   {
-    "id": 0,
-    "name": "Flare",
-    "subtitle": "Design Project",
-    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
-    "thumb_image": can_all,
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
     "date": 2024,
-    "tags": ["Illustration", "Mockup"],
-    "images": [can_all, can_blue, can_orange, can_pink],
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
   },
+  {
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Rezealwulf",
+    "subtitle": "Creature Design",
+    "description": "A fictional animal designed from photobashing several different animals together",
+    "thumb_image": rez_wulf,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
+  }
 ]
 
 createRoot(document.getElementById('root')).render(
