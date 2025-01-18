@@ -21,6 +21,36 @@ const projects = [
     "tags": ["Illustration", "Mockup"],
     "images": [can_all, can_blue , can_orange, can_pink],
   },
+  {
+    "id": 0,
+    "name": "Beastly Energy Drinks",
+    "subtitle":"Design Project",
+    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
+    "thumb_image": can_all,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup"],
+    "images": [can_all, can_blue , can_orange, can_pink],
+  },
+  {
+    "id": 0,
+    "name": "Beastly Energy Drinks",
+    "subtitle":"Design Project",
+    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
+    "thumb_image": can_all,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup"],
+    "images": [can_all, can_blue , can_orange, can_pink],
+  },
+  {
+    "id": 0,
+    "name": "Beastly Energy Drinks",
+    "subtitle":"Design Project",
+    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
+    "thumb_image": can_all,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup"],
+    "images": [can_all, can_blue , can_orange, can_pink],
+  },
 ]
 
 createRoot(document.getElementById('root')).render(

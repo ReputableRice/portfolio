@@ -24,7 +24,6 @@
 }
 
 section {
-  height: 100vh;
   border: 1px solid green;/* Visualization of section*/
 }
 
@@ -40,16 +39,6 @@ nav {
   }
   a:hover {
     color: var(--green);
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  section {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* gap: 16px; */
-    height: 100vh;
-    border: 1px solid green;/* Visualization of section*/
   }
 }
 

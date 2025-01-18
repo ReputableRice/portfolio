@@ -21,11 +21,11 @@ export default function Home({ projects }) {
     return (
         <>
             <div className="flex flex-col">
-                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-1.5 lg:mt-20 sm:mt-0">
-                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero h-4/5 lg:w-1/2 overflow-hidden lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
+                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 lg:mt-20 sm:mt-0 sm:h-svh lg:h-[900px]">
+                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero lg:w-1/2 sm:w-full sm:h-2/5 lg:h-4/6 h-full lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
 
-                    <div class="h-4/5 lg:w-1/2 rounded-tl-3xl flex flex-col space-y-6 justify-center sm:items-center">
-                        <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="sm:hidden lg:inline h-full rounded-tl-3xl overflow-hidden image_about sm:h-1/2 lg:h-full" />
+                    <div class="">
+                        <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="sm:hidden lg:flex lg:rounded-tl-3xl sm:rounded-b-full lg:rounded-none" />
                         <div className="flex flex-col w-full sm:items-center lg:items-start">
                             <h1 className="text-5xl font-bold">Hi I'm Me</h1>
                             <p>Description about me</p>
@@ -37,29 +37,27 @@ export default function Home({ projects }) {
                     </div>
                 </section>
                 <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex sm:flex-col lg:flex-row max-w-full gap-10">
-                    <div className="col-start-4 col-end-10 flex lg:flex-row sm:flex-col w-full">
-                        {projects.map((project) => (
-                            <Card className="w-[285px] h-[550px] m-auto">
-                                <CardHeader>
-                                    <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
-                                </CardHeader>
-                                <CardContent>
-                                    <div className="">
-                                        <p className="font-bold text-xl">{project.name}</p>
-                                        <p>{project.subtitle}</p>
-                                    </div>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button asChild classname="rounded-full">
-                                        <Link key={project.id} to={`/project/${project.id}`}>
-                                            Link to Project
-                                        </Link>
-                                    </Button>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
+                <section className="flex w-full items-start justify-center flex-wrap">
+                    {projects.map((project) => (
+                        <Card className="w-[285px] h-[550px] m-auto mx-6 mt-4">
+                            <CardHeader>
+                                <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
+                            </CardHeader>
+                            <CardContent>
+                                <div className="">
+                                    <p className="font-bold text-xl">{project.name}</p>
+                                    <p>{project.subtitle}</p>
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button asChild classname="rounded-full">
+                                    <Link key={project.id} to={`/project/${project.id}`}>
+                                        Link to Project
+                                    </Link>
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                    ))}
                 </section>
 
             </div>

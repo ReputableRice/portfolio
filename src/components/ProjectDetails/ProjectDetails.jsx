@@ -24,23 +24,21 @@ function ProjectDetails({ project }) {
         {/* <img
           src={project.thumb_image}
           alt={project.name} className="project__image" /> */}
-        <div className="w-full">
-          <Carousel className="">
+          <Carousel className="lg:w-1/2">
             <CarouselContent>
               {project.images.map((images, index) => (
                 <CarouselItem key={index}>
                   <img
                     src={images}
-                    alt={project.name} className="project__image" />
+                    alt={project.name} className="rounded-xl project__image" />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
             <CarouselNext />
+            <CarouselPrevious />
           </Carousel>
-        </div>
 
-        <div className="sm:pt-6 lg:pt-0 lg:ml-8 flex flex-col">
+        <div className="sm:pt-6 lg:pt-0 lg:ml-8 flex flex-col lg:w-1/2">
           <Card>
             <CardHeader>
               <h1 className="text-3xl font-bold">{project.name}</h1>
