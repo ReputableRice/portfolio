@@ -1,8 +1,7 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header__shape {
+  position: absolute;
+  z-index: 0;
+  transform: rotate(15deg) translateY(-600px) translateX(-200px);
 }
 
 .project__thumbnail {
@@ -22,14 +21,17 @@
   object-position: 70% top;
 }
 
-.image_about{
+.hero_image {
+  background-image: url("./public/assets/images/lookoutbanner.png"), linear-gradient(#eb01a5, #d13531);
+  background-image: url("./public/assets/images/lookoutbanner.png");
+
+  background-size: cover;
+}
+
+.image_about {
   object-fit: cover;
 }
 
-.image_cover {
-  
-}
+.image_cover {}
 
-@media (prefers-reduced-motion: no-preference) {
-
-}
+@media (prefers-reduced-motion: no-preference) {}

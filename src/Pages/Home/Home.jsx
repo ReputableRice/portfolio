@@ -1,3 +1,9 @@
+import "../../App.css"
+import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
+import Footer from "../../components/Footer/Footer"
+import BreadcrumbCompress from "../../components/BreadcrumbCompress/BreadcrumbCompress"
+
+//shadcn
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import {
@@ -8,54 +14,53 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import "../../App.css"
-import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 
 //icons
 import { MoveDown } from "lucide-react"
 
 //images
 import lookout from "/src/public/assets/images/lookoutbanner.png"
+import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 export default function Home({ projects }) {
 
     return (
         <>
-            <main className="flex flex-col">
-                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 lg:mt-20 sm:mt-0 sm:h-svh lg:h-[768px]">
-                    <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="image_hero lg:w-1/2 sm:w-full sm:h-2/5 lg:h-full h-full lg:rounded-tr-3xl sm:rounded-b-full lg:rounded-b-none" />
-
-                    <div class="">
-                        <img src={lookout} alt="hero image" loading="lazy" decoding="async" className="sm:hidden lg:flex lg:rounded-tl-3xl sm:rounded-b-full lg:rounded-none" />
-                        <div className="flex flex-col w-full sm:items-center lg:items-start mt-32">
-                            <h1 className="text-5xl font-bold">Hi I'm Me</h1>
-                            <p>Description about me</p>
-                            <button className="flex w-2/5 bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8">
-                                <MoveDown className="bg-blend-multiply" size={32} />
-                                <p className="text-xl">To Projects</p>
-                            </button>
-                        </div>
+            <main className="flex flex-col ">
+                <section className="flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-svh items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image px-[20%]">
+                    <div className="w-1/2"></div>
+                    <div className="flex flex-col w-1/2">
+                        <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
+                        <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
+                        <p className="pt-2 z-10 sm:hidden lg:flex">Predominantly a graphic designer with a keen focus on objective-driven visuals, seeking to provide professional- level illustrations and eye-catching graphics to prospective clients.</p>
+                        <button className="z-10 flex lg:w-[436px] sm:w-[] bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8 sm:px-6">
+                            <MoveDown className="bg-blend-multiply" size={32} />
+                            <p className="text-xl sm:hidden lg:flex">To Projects</p>
+                        </button>
+    
                     </div>
                 </section>
                 <h1 className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex w-full items-start justify-center flex-wrap lg:px-[20%] sm:px-0">
+                <section className="flex w-full items-start justify-between flex-wrap lg:px-[20%] sm:px-0 gap-6 min-h-svh" >
                     <ProjectPreview projects={projects} />
                 </section>
-                <section className="h-screen flex">
-                    <div className="bg-blue-400 w-1/2 m-auto px-24">
+                <section className="h-screen flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
+                    <div className="w-1/2 px-24">
                         <h1 className="text-3xl font-bold">Case Study</h1>
                         <p>Lorem</p>
                     </div>
-                    <div className="bg-red-400 w-1/2">
-
+                    <div className=" w-1/2 h-1/2">
+                        <img src="https://placehold.co/600x400" className="w-full h-full object-cover" />
                     </div>
                 </section>
                 <section className="h-screen flex flex-col items-center justify-center">
-                   <h1>Want to Work together?</h1>
-                   <p>Contact me at</p>
-                   <p>me@gmail.com</p>
+                    <img src={croc_logo} alt="my crocodile logo" className="sm:w-2/6 lg:w-2/12" />
+                    <h1 className="pt-10 text-3xl font-bold">Want to Work together?</h1>
+                    <p className="pt-6">Contact me at</p>
+                    <p>jackietruong274@gmail.com</p>
                 </section>
             </main>
+            <Footer />
         </>
     )
 }

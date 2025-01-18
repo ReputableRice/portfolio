@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import Autoplay from "embla-carousel-autoplay"
+import BreadcrumbCompress from "../BreadcrumbCompress/BreadcrumbCompress";
 
 //Shadcn
 import {
@@ -30,11 +31,12 @@ import {
 
 
 function ProjectDetails({ project }) {
-
-
   return (
-    <div className="mt-12">
-      <div className="drop-shadow-xl bg-white lg:p-28 sm:p-8 rounded-3xl m-auto flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+    <div>
+      <div className="lg:mt-28 sm:pb-6 lg:pb-0">
+        <BreadcrumbCompress project_name={project.name} />
+      </div>
+      <div className="drop-shadow-xl bg-white lg:p-12 sm:p-8 rounded-3xl m-auto flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
         <div className="lg:w-1/2">
           <Carousel
             plugins={[
@@ -49,9 +51,9 @@ function ProjectDetails({ project }) {
                 <CarouselItem key={index}>
                   <img
                     src={images}
-                    alt={project.name} className="rounded-xl max-h-96 w-full object-contain"
-                    loading="lazy" decoding="async"  
-                    />
+                    alt={project.name} className="rounded-xl h-96 w-full object-cover"
+                    loading="lazy" decoding="async"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -76,6 +78,16 @@ function ProjectDetails({ project }) {
           </div>
         </div>
       </div>
+
+      {project.sections.map((section, index) => (
+        <div key={index} className="w-full flex px-24 mt-6 justify-between">
+          <div>
+            <h1 className="font-bold">{section.heading}</h1>
+            <p>{section.description}</p>
+          </div>
+          <img src={section.image} className="w-5/12 h-full" />
+        </div>
+      ))}
     </div>
   );
 }

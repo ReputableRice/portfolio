@@ -16,22 +16,34 @@ import rez_poster from "/src/public/assets/images/rezposterone.png"
 import rez_poster_2 from "/src/public/assets/images/rezpostertwo.png"
 
 
-//
+//Create a different object for solo and team projects along with component
 const projects = [
   {
     "id": 0,
     "name": "Beastly Energy Drinks",
-    "subtitle": "Design Project",
-    "description": "A design mockup created for a fictional brand that uses animals as their motif.",
+    "subtitle": "Can Design Project",
+    "description": "Beastly Energy is a brand that prides itself with providing high-quality energy drinks of various flavours with popping designs. This is a design mockup created for a fictional brand that uses animals as their main motif.",
     "thumb_image": can_all,
     "date": 2024,
-    "tags": ["Illustration", "Mockup"],
+    "tags": ["Illustration", "Mockup", "Photoshop", "Clip Studio Paint"],
     "images": [can_all, can_blue, can_orange, can_pink],
+    "sections": [ //Additional Sections If I want to add details
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum",
+        "image": [can_orange],
+      },
+      {
+        "heading": "Project Details",
+        "description": "Lorem Ipsum 2",
+        "image": [can_blue],
+      },
+    ]
   },
   {
     "id": 1,
     "name": "Rezealwulf",
-    "subtitle": "Fictional Creature Design",
+    "subtitle": "Creature Design",
     "description": "A fictional animal designed from photobashing several different animals together",
     "thumb_image": rez_wulf,
     "date": 2024,
@@ -39,9 +51,9 @@ const projects = [
     "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
   },
   {
-    "id": 0,
-    "name": "Beastly Energy Drinks",
-    "subtitle": "Design Project",
+    "id": 2,
+    "name": "WaddleOn",
+    "subtitle": "Study App",
     "description": "A design mockup created for a fictional brand that uses animals as their motif.",
     "thumb_image": can_all,
     "date": 2024,
@@ -50,7 +62,7 @@ const projects = [
   },
   {
     "id": 0,
-    "name": "Beastly Energy Drinks",
+    "name": "Flare",
     "subtitle": "Design Project",
     "description": "A design mockup created for a fictional brand that uses animals as their motif.",
     "thumb_image": can_all,
