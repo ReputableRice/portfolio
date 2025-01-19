@@ -73,7 +73,7 @@ const projects = [
     "description": "An application designed to assist users who have trouble managing their time by utilizing the pomodoro method in combination with relaxing imagery",
     "thumb_image": wad_mockup,
     "date": 2024,
-    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "tags": ["React", "Frontend Developing", "Photobashing", "Photoshop"],
     "images": [wad_mockup, wad_hifi, wad_live],
     "sections": [ //Additional Sections If I want to add details
     ]

@@ -9,17 +9,13 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   --black: #30261D;
-  --beige: #DCC7B7;
+  --white: #eef5f5;
   --orange: #F09F54;
   --blue: #4AC1E0;
   --green: #71A850;
@@ -33,15 +29,8 @@ nav {
   justify-content: space-between;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: var(--green);
-  }
+a:hover {
+  color: var(--green);
 }
 
 @layer base {
