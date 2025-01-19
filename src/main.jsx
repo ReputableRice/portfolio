@@ -76,7 +76,7 @@ const projects = [
     "thumb_image": wad_mockup,
     "date": 2024,
     "tags": ["App", "React", "Frontend Developing", "Graphic Design", "UI/UX"],
-    "images": [wad_mockup, wad_hifi, wad_live],
+    "images": [wad_mockup, wad_live],
     "sections": [ //Additional Sections If I want to add details
     ]
   },
