@@ -18,6 +18,11 @@ import rez_book from "/src/public/assets/images/rezbook.png"
 import rez_poster from "/src/public/assets/images/rezposterone.png"
 import rez_poster_2 from "/src/public/assets/images/rezpostertwo.png"
 
+//waddleOn
+import wad_mockup from "/src/public/assets/images/wad_mockup.png"
+import wad_hifi from "/src/public/assets/images/wad_hifi.png"
+import wad_live from "/src/public/assets/images/wad_live.jpg"
+
 
 //Create a different object for solo and team projects along with component
 const projects = [
@@ -49,16 +54,28 @@ const projects = [
     "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
     "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
     "sections": [ //Additional Sections If I want to add details
-      {
-        "heading": "Project Details",
-        "description": "Lorem Ipsum",
-        "image": [can_orange],
-      },
-      {
-        "heading": "Project Details",
-        "description": "Lorem Ipsum 2",
-        "image": [can_blue],
-      },
+      // {
+      //   "heading": "Project Details",
+      //   "description": "Lorem Ipsum",
+      //   "image": [can_orange],
+      // },
+      // {
+      //   "heading": "Project Details",
+      //   "description": "Lorem Ipsum 2",
+      //   "image": [can_blue],
+      // },
+    ]
+  },
+  {
+    "id": 2,
+    "name": "WaddleOn",
+    "subtitle": "Pomodoro Task Manager",
+    "description": "An application designed to assist users who have trouble managing their time by utilizing the pomodoro method in combination with relaxing imagery",
+    "thumb_image": wad_mockup,
+    "date": 2024,
+    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+    "images": [wad_mockup, wad_hifi, wad_live],
+    "sections": [ //Additional Sections If I want to add details
     ]
   },
 

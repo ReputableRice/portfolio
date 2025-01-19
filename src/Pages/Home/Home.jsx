@@ -45,7 +45,7 @@ export default function Home({ projects }) {
                     </div>
                 </section>
                 <h1 id="projects" className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex min-h-svh w-full items-start justify-between flex-wrap lg:px-[20%] sm:px-0 gap-6 lg:pb-12" >
+                <section className="flex min-h-svh w-full items-start justify-between flex-wrap lg:px-[20%] sm:px-6 gap-6 lg:pb-12" >
                     <ProjectPreview projects={projects} />
                     <div className="bg-pin"></div>
                 </section>

@@ -35,7 +35,7 @@ import {
 function ProjectDetails({ project }) {
   return (
     <>
-      <div className="lg:px-[10%]">
+      <div className="lg:px-[10%] min-h-svh">
         <div className="sm:pb-6 lg:pb-6">
           <BreadcrumbCompress project_name={project.name} />
         </div>
