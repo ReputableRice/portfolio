@@ -54,7 +54,7 @@ function ProjectDetails({ project }) {
                   <CarouselItem key={index}>
                     <img
                       src={images}
-                      alt={project.name} className="rounded-xl h-96 w-full object-cover"
+                      alt={project.name} className="rounded-xl h-96 w-full object-contain overflow-hidden"
                       loading="lazy" decoding="async"
                     />
                   </CarouselItem>

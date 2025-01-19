@@ -23,6 +23,8 @@ import wad_mockup from "/src/public/assets/images/wad_mockup.png"
 import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
 
+//flare
+import flare_mockup from "/src/public/assets/images/flare_mockup.png"
 
 //Create a different object for solo and team projects along with component
 const projects = [
@@ -73,12 +75,23 @@ const projects = [
     "description": "An application designed to assist users who have trouble managing their time by utilizing the pomodoro method in combination with relaxing imagery",
     "thumb_image": wad_mockup,
     "date": 2024,
-    "tags": ["React", "Frontend Developing", "Photobashing", "Photoshop"],
+    "tags": ["App", "React", "Frontend Developing", "Graphic Design", "UI/UX"],
     "images": [wad_mockup, wad_hifi, wad_live],
     "sections": [ //Additional Sections If I want to add details
     ]
   },
-
+  {
+    "id": 3,
+    "name": "Flare",
+    "subtitle": "Wildfire Mitigation App",
+    "description": "An app created to help users who live in under-resourced areas and lack access to proper fire services, help them prepare for wildfire seasons.",
+    "thumb_image": flare_mockup ,
+    "date": 2024,
+    "tags": ["App", "Frontend Developing", "UI Design"],
+    "images": [flare_mockup],
+    "sections": [ //Additional Sections If I want to add details
+    ]
+  },
 ]
 
 createRoot(document.getElementById('root')).render(
