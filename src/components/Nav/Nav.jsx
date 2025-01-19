@@ -1,26 +1,39 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { act, useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 export default function NavBar() {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true);
+    const [screenSize, setScreenSize] = useState();
+
+    useEffect(() => {
+        if (window.innerWidth < 1000) {
+            setActive(() => false)
+            console.log("sm vw")
+        } else {
+            setActive(() => true)
+            console.log("lg vw")
+        }
+    }, [])
 
     return (
-        <nav className="lg:p-[25px] w-full flex items-center z-50 lg:flex sm:flex-col lg:flex-row sm:items-end lg:bg-zinc-200 top-0">
-            <Menu className="sm:flex lg:hidden" />
-            <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
-            <div className="flex lg:gap-14 sm:flex-col lg:flex-row">
-                <Link to="/">Home</Link>
-                <Link to="/">Portfolio</Link>
-                <Link to="/">About Me</Link>
-                <Link to="/contact" className="sm:flex lg:hidden">Contact</Link>
-            </div>
-            <div className="sm:hidden lg:flex">
-                <Link to="/contact">Contact</Link>
-            </div>
+        <nav className="lg:p-[25px] flex sm:justify-end lg:justify-between z-50 items bg-zinc-50 top-0 w-full sm:sticky drop-shadow-lg">
+            <Menu className="sm:flex lg:hidden absolute top-6 right-6 bg-zinc-200 rounded-sm" onClick={() => setActive(!active)} size={32} />
+            {
+                active &&
+                <div className="flex sm:flex-col lg:flex-row w-full justify-between sm:items-end lg:items-center sm:text-right sm:mr-16 lg:mr-0 sm:mt-6 lg:mt-0 sm:font-bold sm:py-6 lg:py-0 text-xl">
+                    <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
+                    <div className="flex sm:flex-col lg:flex-row lg:gap-12">
+                        <Link to="/">Home</Link>
+                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/about">About Me</Link>
+                    </div>
+                    <Link to="/contact">Contact</Link>
+                </div>
+            }
         </nav>
     );
 }

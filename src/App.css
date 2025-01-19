@@ -32,6 +32,15 @@
   object-fit: cover;
 }
 
+.vertical__line {
+  padding-top: 100px;
+  margin-right: 16px;
+  width: 10px;
+  background: var(--black);
+  border-radius: 99px;
+}
+
+
 .image_cover {}
 
 @media (prefers-reduced-motion: no-preference) {}

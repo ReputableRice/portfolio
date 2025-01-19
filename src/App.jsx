@@ -2,6 +2,8 @@ import React from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
+import About from "./Pages/About/About";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -18,6 +20,9 @@ function App({ projects }) {
         <Routes>
           <Route path="/" element={<Home projects={projects} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio projects={projects} />} />
+
           {projects.map((project) => (
             <Route
               key={project.id}
