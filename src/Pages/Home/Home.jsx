@@ -34,6 +34,7 @@ export default function Home({ projects }) {
                         <p className="font-normal text-5xl text-zinc-200">Frontend Development</p>
                     </div>
                     <div className="flex flex-col lg:w-1/2">
+                        <h1 className="lg:text-5xl sm:text-3xl font-bold z-10 text-zinc-50">Website Under Construction</h1>
                         <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
                         <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
                         <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
