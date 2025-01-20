@@ -24,7 +24,7 @@ import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
 
 //flare
-import flare_mockup from "/src/public/assets/images/flare_mockup.png"
+// import flare_mockup from "/src/public/assets/images/flare_mockup.png"
 
 //Test
 
@@ -82,18 +82,18 @@ const projects = [
     "sections": [ //Additional Sections If I want to add details
     ]
   },
-  {
-    "id": 3,
-    "name": "Flare",
-    "subtitle": "Wildfire Mitigation App",
-    "description": "An app created to help users who live in under-resourced areas and lack access to proper fire services, help them prepare for wildfire seasons.",
-    "thumb_image": flare_mockup ,
-    "date": 2024,
-    "tags": ["App", "Frontend Developing", "UI Design"],
-    "images": [flare_mockup],
-    "sections": [ //Additional Sections If I want to add details
-    ]
-  },
+  // {
+  //   "id": 3,
+  //   "name": "Flare",
+  //   "subtitle": "Wildfire Mitigation App",
+  //   "description": "An app created to help users who live in under-resourced areas and lack access to proper fire services, help them prepare for wildfire seasons.",
+  //   "thumb_image": flare_mockup ,
+  //   "date": 2024,
+  //   "tags": ["App", "Frontend Developing", "UI Design"],
+  //   "images": [flare_mockup],
+  //   "sections": [ //Additional Sections If I want to add details
+  //   ]
+  // },
 ]
 
 createRoot(document.getElementById('root')).render(
