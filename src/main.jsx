@@ -19,7 +19,7 @@ import rez_poster from "/src/public/assets/images/rezposterone.png"
 import rez_poster_2 from "/src/public/assets/images/rezpostertwo.png"
 
 //waddleOn
-import wad_mockup from "/src/public/assets/images/wad_mockup.png"
+import wad_mockup from "./public/assets/images/wad_mockup.png"
 import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
 
