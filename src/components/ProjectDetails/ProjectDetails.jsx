@@ -93,11 +93,11 @@ function ProjectDetails({ project }) {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap w-full rounded-3xl overflow-hidden">
+            <div className="flex flex-wrap w-full rounded-3xl overflow-hidden justify-left">
               {
                 section.image.map((image, b) => (
                   <img key={b} src={image} loading="lazy" decoding="async"
-                    className="w-1/2" alt={image.name} />
+                    className="w-1/2 h-full object-cover" alt={image.name} />
                 ))
               }
             </div>
