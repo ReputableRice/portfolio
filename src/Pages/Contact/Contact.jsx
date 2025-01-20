@@ -1,5 +1,6 @@
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 import { SocialIcon } from 'react-social-icons'
+import ImageExpand from "../../components/ImageExpand/ImageExpand.jsx"
 
 export default function Contact() {
     return (
@@ -13,6 +14,7 @@ export default function Contact() {
                 <div className="w-1/2 flex items-center justify-center gap-6 mt-6">
                     <SocialIcon url="https://www.linkedin.com/in/jackiehtruong/" target="_blank" />
                 </div>
+
             </section>
         </>
     )

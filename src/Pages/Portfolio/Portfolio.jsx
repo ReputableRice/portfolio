@@ -41,7 +41,6 @@ export default function Portfolio({ projects }) {
                     </div>
                 </main>
             </div>
-
             <Footer />
         </>
     )
