@@ -75,8 +75,8 @@ function ProjectDetails({ project }) {
               </CardHeader>
             </Card>
             <div className="pt-3">
-              {project.tags.map((tags, index) => (
-                <Badge key={index}>{tags}</Badge>
+              {project.tags.map((tags, i) => (
+                <Badge key={i}>{tags}</Badge>
               ))}
             </div>
           </div>
@@ -95,8 +95,8 @@ function ProjectDetails({ project }) {
             </div>
             <div className="flex flex-wrap w-full rounded-3xl overflow-hidden">
               {
-                section.image.map((image, index) => (
-                  <img key={index} src={image} loading="lazy" decoding="async"
+                section.image.map((image, b) => (
+                  <img key={b} src={image} loading="lazy" decoding="async"
                     className="w-1/2" alt={image.name} />
                 ))
               }
