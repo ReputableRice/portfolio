@@ -26,6 +26,8 @@ import wad_live from "/src/public/assets/images/wad_live.jpg"
 //flare
 import flare_mockup from "/src/public/assets/images/flare_mockup.png"
 
+//Test
+
 //Create a different object for solo and team projects along with component
 const projects = [
 

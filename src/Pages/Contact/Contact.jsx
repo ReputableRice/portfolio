@@ -11,8 +11,7 @@ export default function Contact() {
                 <p>jackietruong274@gmail.com</p>
                 <h1 className="mt-6 text-xl">I'm also here!</h1>
                 <div className="w-1/2 flex items-center justify-center gap-6 mt-6">
-                    <SocialIcon url="https://www.linkedin.com/in/jackiehtruong/"/>
-                    <SocialIcon url="https://www.linkedin.com/in/jackiehtruong/"/>
+                    <SocialIcon url="https://www.linkedin.com/in/jackiehtruong/" target="_blank" />
                 </div>
             </section>
         </>
