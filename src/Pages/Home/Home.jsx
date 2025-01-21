@@ -23,18 +23,17 @@ import lookout from "/src/public/assets/images/lookoutbanner.png"
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 export default function Home({ projects }) {
-
     return (
         <>
             <main className="flex flex-col">
-            <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1>
-                <section className=" overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-svh items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image px-[20%]">
+                <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1>
+                <section className=" overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image px-[20%]">
                     <div className="w-1/2 h-full flex flex-col justify-end items-start absolute left-0 bottom-0 sm:hidden lg:flex">
-                        <p className="font-normal text-5xl text-zinc-200">Graphic Solutions</p>
-                        <p className="font-normal text-5xl text-zinc-200">Illustrations</p>
+                        <p className="font-normal text-7xl text-zinc-200">Graphic Solutions</p>
+                        <p className="font-normal text-7xl text-zinc-200">Illustrations</p>
                         <p className="font-normal text-5xl text-zinc-200">Frontend Development</p>
                     </div>
-                    <div className="flex flex-col lg:w-1/2 frosted p-6 rounded-xl">
+                    <div className="flex flex-col lg:w-1/2 frosted p-6 rounded-xl justify-center">
                         <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
                         <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
                         <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
@@ -45,12 +44,11 @@ export default function Home({ projects }) {
 
                     </div>
                 </section>
-                <h1 id="projects" className="m-auto font-bold text-4xl p-6"> Projects </h1>
-                <section className="flex min-h-svh w-full items-start justify-between flex-wrap lg:px-[20%] sm:px-6 gap-6 lg:pb-12" >
+                <section className="flex min-h-svh w-full items-start flex-wrap lg:px-[20%] sm:px-6 lg:pb-12" >
+                    <h1 id="projects" className="m-auto font-bold text-4xl p-6"> Projects </h1>
                     <ProjectPreview projects={projects} />
-                    <div className="bg-pin"></div>
                 </section>
-                <section id="case" className="bg-zinc-50 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
+                <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
                     <div className="lg:w-1/2 sm:w-full lg:px-24 sm:px-4">
                         <h1 className="text-3xl font-bold">Case Study</h1>
                         <p>Lorem</p>

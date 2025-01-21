@@ -20,7 +20,7 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className="lg:p-[25px] flex sm:justify-end lg:justify-between z-50 items bg-zinc-50 top-0 w-full sm:sticky border-b-2 border-b-zinc-950">
+        <nav className="lg:p-[25px] flex sm:justify-end lg:justify-between z-50 items frosted top-0 w-full sm:sticky border-b-2 border-b-zinc-950">
             <Menu className="sm:flex lg:hidden absolute top-6 right-6 bg-zinc-200 rounded-sm" onClick={() => setActive(!active)} size={32} />
             {
                 active &&

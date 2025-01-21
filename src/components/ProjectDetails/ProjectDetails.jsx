@@ -39,7 +39,7 @@ function ProjectDetails({ project }) {
         <div className="sm:pb-6 lg:pb-6">
           <BreadcrumbCompress project_name={project.name} />
         </div>
-        <div className=" drop-shadow-xl bg-white lg:px-24 sm:p-8 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+        <div className="drop-shadow-xl bg-white lg:px-24 sm:p-8 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
           <div className="lg:w-2/3">
             <Carousel
               plugins={[
@@ -64,7 +64,7 @@ function ProjectDetails({ project }) {
               <CarouselPrevious className="sm:hidden lg:flex" />
             </Carousel>
           </div>
-          <div className="sm:pt-6 lg:pt-0 lg:ml-16 flex flex-col lg:w-2/5">
+          <div className="sm:pt-6 lg:pt-0 lg:ml-16 flex flex-col lg:w-2/5 sm:px-6 lg:px-0">
             <Card>
               <CardHeader>
                 <h1 className="text-3xl font-bold">{project.name}</h1>
@@ -93,15 +93,27 @@ function ProjectDetails({ project }) {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap w-full rounded-3xl overflow-hidden justify-left">
-              {
-                section.image.map((image, b) => (
-                  <img key={b} src={image} loading="lazy" decoding="async"
-                    className="w-1/2 h-full object-cover" alt={image.name} />
-                ))
-              }
-            </div>
 
+            <div className="flex flex-wrap rounded-3xl overflow-hidden justify-left w-2/3">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                    loop: true,
+                  }),
+                ]}
+              >
+                <CarouselContent>
+                  {section.image.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <img src={image} loading="lazy" decoding="async"
+                        className="object-cover" alt={image.name} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+
+            </div>
           </div>
         ))}
       </div>
