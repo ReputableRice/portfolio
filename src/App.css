@@ -47,6 +47,16 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.image_cover {}
+.frosted__nodrop {
+  backdrop-filter: blur(20px);
+  background-color: rgba(212, 203, 203, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-@media (prefers-reduced-motion: no-preference) {}
+.green-bg {
+  background-color: var(--green);
+}
+
+.green-text {
+  color: var(--green);
+}

@@ -20,10 +20,10 @@
   --blue: #4AC1E0;
   --green: #71A850;
 
-  scroll-behavior: smooth;;
-}
+  scroll-behavior: smooth;
 
-section {}
+  background-color: var(--white);
+}
 
 nav {
   justify-content: space-between;
@@ -32,8 +32,6 @@ nav {
 a:hover {
   color: var(--green);
 }
-
-
 
 @layer base {
   :root {

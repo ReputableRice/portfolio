@@ -6,7 +6,7 @@ export default function Footer() {
     const links = ["https://www.linkedin.com/in/jackiehtruong/"]
 
     return (
-        <footer className="bg-zinc-800 text-zinc-100 px-12 py-12 flex justify-between items-center">
+        <footer className="bg-zinc-800 text-zinc-100 px-12 py-12 flex sm:flex-col lg:flex-row justify-between items-center">
             <div className="flex flex-col items-start">
                 <img src={croc_logo} className="w-24" />
             </div>

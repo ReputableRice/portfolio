@@ -27,25 +27,22 @@ export default function Home({ projects }) {
         <>
             <main className="flex flex-col">
                 <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1>
-                <section className=" overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image px-[20%]">
-                    <div className="w-1/2 h-full flex flex-col justify-end items-start absolute left-0 bottom-0 sm:hidden lg:flex">
-                        <p className="font-normal text-7xl text-zinc-200">Graphic Solutions</p>
-                        <p className="font-normal text-7xl text-zinc-200">Illustrations</p>
-                        <p className="font-normal text-5xl text-zinc-200">Frontend Development</p>
+                <section className=" overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image">
+                    <div className="w-1/2 h-full flex flex-col justify-start items-start sm:hidden lg:flex px-12 pt-12">
                     </div>
-                    <div className="flex flex-col lg:w-1/2 frosted p-6 rounded-xl justify-center">
+                    <div className="flex flex-col lg:w-1/2 h-full frosted p-6 rounded-xl justify-center">
+                        <div className="bg-red-500 h-1/3 w-full rounded-tl-3xl mb-6"></div>
                         <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
                         <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
                         <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
-                        <button href="projects" className="z-10 flex bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8 sm:px-6">
+                        <button href="projects" className="z-10 flex bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8 sm:px-6 lg:w-1/3">
                             <MoveDown className="bg-blend-multiply" size={32} />
                             <p className="text-xl sm:hidden lg:flex">To Projects</p>
                         </button>
-
                     </div>
                 </section>
-                <section className="flex min-h-svh w-full items-start flex-wrap lg:px-[20%] sm:px-6 lg:pb-12" >
-                    <h1 id="projects" className="m-auto font-bold text-4xl p-6"> Projects </h1>
+                <section className="flex min-h-svh items-center flex-col flex-wrap lg:px-[20%] sm:px-6 lg:pb-12" >
+                    <h1 id="projects" className=" font-bold text-4xl mx-auto my-6"> Projects </h1>
                     <ProjectPreview projects={projects} />
                 </section>
                 <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
@@ -59,7 +56,7 @@ export default function Home({ projects }) {
                 </section>
                 <section id="contact" className="h-screen flex flex-col items-center justify-center">
                     <img src={croc_logo} alt="my crocodile logo" className="sm:w-2/6 lg:w-2/12" />
-                    <h1 className="pt-10 text-3xl font-bold">Want to Work together?</h1>
+                    <h1 className="pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
                     <p className="pt-6">Contact me at</p>
                     <p>jackietruong274@gmail.com</p>
                 </section>

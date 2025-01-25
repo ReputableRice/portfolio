@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/carousel"
 
 
+
 function ProjectDetails({ project }) {
   return (
     <>
@@ -39,8 +40,8 @@ function ProjectDetails({ project }) {
         <div className="sm:pb-6 lg:pb-6">
           <BreadcrumbCompress project_name={project.name} />
         </div>
-        <div className="drop-shadow-xl bg-white lg:px-24 sm:p-8 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
-          <div className="lg:w-2/3">
+        <div className="drop-shadow-xl bg-zinc-100 sm:mx-6 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+          <div className="w-1/2">
             <Carousel
               plugins={[
                 Autoplay({
@@ -51,26 +52,26 @@ function ProjectDetails({ project }) {
             >
               <CarouselContent>
                 {project.images.map((images, index) => (
-                  <CarouselItem key={index}>
+                  <CarouselItem key={index} className="flex items-end justify-end">
                     <img
                       src={images}
-                      alt={project.name} className="rounded-xl h-96 w-full object-contain overflow-hidden"
+                      alt={project.name} className="h-[588px] rounded-lg object-cover drop-shadow-2xl"
                       loading="lazy" decoding="async"
                     />
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselNext className="sm:hidden lg:flex" />
-              <CarouselPrevious className="sm:hidden lg:flex" />
+
             </Carousel>
           </div>
-          <div className="sm:pt-6 lg:pt-0 lg:ml-16 flex flex-col lg:w-2/5 sm:px-6 lg:px-0">
+          <div className="sm:p-0 lg:p-8 w-1/2">
             <Card>
               <CardHeader>
                 <h1 className="text-3xl font-bold">{project.name}</h1>
                 <CardDescription>
                   <ReactMarkdown>{project.description}</ReactMarkdown>
                   <p className="mt-8"> Created In {project.date}</p>
+                  {project.link && <Button asChild className="mt-2"><a href={project.link} target="_blank"> Link To Project</a></Button>}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -81,39 +82,21 @@ function ProjectDetails({ project }) {
             </div>
           </div>
         </div>
-
         {project.sections.map((section, a) => (
-          <div key={a} className=" w-full h-full flex lg:flex-row sm:flex-col-reverse px-12 my-12 justify-between gap-16 sm:items-center lg:items-start">
-            <div className="lg:w-1/2 sm:w-full">
-              <div className="flex">
-                <div className="vertical__line"></div>
-                <div>
-                  <h1 className="font-bold">{section.heading}</h1>
-                  <ReactMarkdown>{section.description}</ReactMarkdown>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap rounded-3xl overflow-hidden justify-left w-2/3">
-              <Carousel
-                plugins={[
-                  Autoplay({
-                    delay: 2000,
-                    loop: true,
-                  }),
-                ]}
-              >
-                <CarouselContent>
-                  {section.image.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <img src={image} loading="lazy" decoding="async"
-                        className="object-cover" alt={image.name} />
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-
-            </div>
+          <div key={a} className="flex lg:flex-row sm:flex-col-reverse px-12 my-12 gap-16 sm:items-center lg:items-start justify-center">
+            <Card className="flex w-1/3">
+              <div className="vertical__line"></div>
+              <CardHeader>
+                <CardTitle className="font-bold">{section.heading}</CardTitle>
+                <ReactMarkdown>{section.description}</ReactMarkdown>
+              </CardHeader>
+            </Card>
+            <CardContent className="flex flex-wrap justify-end">
+              {section.image.map((image, index) => (
+                <img key={index} src={image} loading="lazy" decoding="async"
+                  className="rounded-xl w-[500px] h-[400px] object-cover lg-96" alt={image.name} />
+              ))}
+            </CardContent>
           </div>
         ))}
       </div>
@@ -121,7 +104,6 @@ function ProjectDetails({ project }) {
         <Footer />
       </div>
     </>
-
   );
 }
 
