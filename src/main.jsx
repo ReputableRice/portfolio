@@ -24,7 +24,7 @@ import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
 
 //flare
-import flare_mockup from "/src/public/assets/images/flare_mockup.png"
+import flare_mockup from "/src/public/assets/images/flare_mock.png"
 
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.png"
