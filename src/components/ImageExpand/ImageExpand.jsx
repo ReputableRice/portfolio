@@ -1,32 +1,21 @@
 import { useState, useEffect } from "react";
 import { XIcon } from "lucide-react";
 
-export default function ImageExpand({ styleProps, nameProps, linkProps }) {
-  const [isEnlarged, setIsEnlarged] = useState(false)
-  const [imgStyle, setImgStyle] = useState()
-  const [container, setContainer] = useState("")
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
-  useEffect(() => {
-    if (isEnlarged) {
-      setImgStyle("h-svh z-50 sticky")
-      setContainer("bg-opacity-75 absolute h-full w-full bg-slate-900 z-50 top-0 flex items-center justify-center")
-    } else {
-      setImgStyle(styleProps)
-      setContainer("")
-    } 
-  }, [isEnlarged])
-
+export default function ImageExpand({ className, alt, src }) {
   return (
     <>
-      <div className={container}>
+      <Zoom>
         <img
-          src={linkProps ? linkProps : "https://placehold.co/600x400"}
-          alt={nameProps}
-          className={imgStyle}
+          src={src ? src : "https://placehold.co/600x400"}
+          alt={alt}
+          className={className}
           onClick={() => setIsEnlarged(!isEnlarged)}
           loading="lazy" decoding="async"
         />
-      </div>
+      </Zoom>
     </>
   );
 }

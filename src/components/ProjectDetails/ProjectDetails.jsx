@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay"
 import BreadcrumbCompress from "../BreadcrumbCompress/BreadcrumbCompress";
 import Footer from "../Footer/Footer";
 import ReactMarkdown from "react-markdown";
+import ImageExpand from "../ImageExpand/ImageExpand";
 
 //Shadcn
 import {
@@ -30,17 +31,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-
+import { Skeleton } from "@/components/ui/skeleton"
 
 function ProjectDetails({ project }) {
   return (
     <>
       <div className="lg:px-[10%] min-h-svh">
-        <div className="sm:pb-6 lg:pb-6">
+        <div className="px-[8%] mt-6">
           <BreadcrumbCompress project_name={project.name} />
         </div>
-        <div className="drop-shadow-xl bg-zinc-100 sm:mx-6 rounded-3xl flex sm:flex-col lg:flex-row sm:items-center lg:items-start lg:justify-center">
+        <div className="drop-shadow-xl flex justify-center mt-3">
           <div className="w-1/2">
             <Carousel
               plugins={[
@@ -49,22 +49,23 @@ function ProjectDetails({ project }) {
                   loop: true,
                 }),
               ]}
+              className="rounded-3xl overflow-hidden"
             >
               <CarouselContent>
                 {project.images.map((images, index) => (
                   <CarouselItem key={index} className="flex items-end justify-end">
-                    <img
+                    <ImageExpand
                       src={images}
-                      alt={project.name} className="h-[588px] rounded-lg object-cover drop-shadow-2xl"
-                      loading="lazy" decoding="async"
+                      alt={project.name} className="h-[700px] object-cover drop-shadow-2xl"
                     />
+                    <Skeleton className="h-[700px] rounded-full" />
                   </CarouselItem>
                 ))}
               </CarouselContent>
 
             </Carousel>
           </div>
-          <div className="sm:p-0 lg:p-8 w-1/2">
+          <div className="w-1/4 px-6">
             <Card>
               <CardHeader>
                 <h1 className="text-3xl font-bold">{project.name}</h1>
@@ -78,6 +79,12 @@ function ProjectDetails({ project }) {
             <div className="pt-3">
               {project.tags.map((tags, i) => (
                 <Badge key={i}>{tags}</Badge>
+              ))}
+              {project.roles && <h1 className="mt-6 text-xl font-bold">Project Role(s):</h1>}
+              {project.roles && project.roles.map((roles, role) => (
+                <div key={role}>
+                  <Badge>{roles}</Badge>
+                </div>
               ))}
             </div>
           </div>
@@ -93,7 +100,7 @@ function ProjectDetails({ project }) {
             </Card>
             <CardContent className="flex flex-wrap justify-end">
               {section.image.map((image, index) => (
-                <img key={index} src={image} loading="lazy" decoding="async"
+                <ImageExpand key={index} src={image}
                   className="rounded-xl w-[500px] h-[400px] object-cover lg-96" alt={image.name} />
               ))}
             </CardContent>

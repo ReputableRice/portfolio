@@ -23,11 +23,15 @@ import lookout from "/src/public/assets/images/lookoutbanner.png"
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 export default function Home({ projects }) {
+
+
+
+
     return (
         <>
             <main className="flex flex-col">
                 <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1>
-                <section className=" overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image">
+                <section className="overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image">
                     <div className="w-1/2 h-full flex flex-col justify-start items-start sm:hidden lg:flex px-12 pt-12">
                     </div>
                     <div className="flex flex-col lg:w-1/2 h-full frosted p-6 rounded-xl justify-center">
@@ -41,7 +45,7 @@ export default function Home({ projects }) {
                         </button>
                     </div>
                 </section>
-                <section className="flex min-h-svh items-center flex-col flex-wrap lg:px-[20%] sm:px-6 lg:pb-12" >
+                <section className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12" >
                     <h1 id="projects" className=" font-bold text-4xl mx-auto my-6"> Projects </h1>
                     <ProjectPreview projects={projects} />
                 </section>

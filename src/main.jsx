@@ -4,13 +4,15 @@ import './index.css'
 import App from './App.jsx'
 
 //cans import
-import can_all from "/src/public/assets/images/can_all.png"
-import can_blue from "/src/public/assets/images/Can_Blue.png"
-import can_pink from "/src/public/assets/images/Can_Pink.png"
-import can_orange from "/src/public/assets/images/Can_Orange.png"
-import label_blue from "/src/public/assets/images/label_eagle.png"
-import label_orange from "/src/public/assets/images/label_tiger.png"
-import label_pink from "/src/public/assets/images/label_wolf.png"
+import can_all from "/src/public/assets/images/cans/can_all.png"
+import can_blue from "/src/public/assets/images/cans/Can_Blue.png"
+import can_pink from "/src/public/assets/images/cans/Can_Pink.png"
+import can_orange from "/src/public/assets/images/cans/Can_Orange.png"
+import label_blue from "/src/public/assets/images/cans/label_eagle.png"
+import label_orange from "/src/public/assets/images/cans/label_tiger.png"
+import label_pink from "/src/public/assets/images/cans/label_wolf.png"
+import label_sketches from "/src/public/assets/images/cans/sketches.png"
+
 
 //rezealwulf import
 import rez_wulf from "/src/public/assets/images/rezwulf.png"
@@ -22,6 +24,9 @@ import rez_poster_2 from "/src/public/assets/images/rezpostertwo.png"
 import wad_mockup from "/src/public/assets/images/wad_mock.png"
 import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
+import wad_lofi from "/src/public/assets/images/wad_lofi.png"
+import wad_logo from "/src/public/assets/images/wad_logo1.png"
+import wad_style from "/src/public/assets/images/wad_style.png"
 
 //flare
 import flare_mockup from "/src/public/assets/images/flare_mock.png"
@@ -53,9 +58,14 @@ const projects = [
     "images": [can_all, can_blue, can_orange, can_pink],
     "sections": [ //Additional Sections If I want to add details
       {
-        "heading": "Processes",
+        "heading": "Labels",
         "description": "Each label is designed around specific dieline guides, utilizing them to ensure the design is showcased prominantly",
         "image": [label_blue],
+      },
+      {
+        "heading": "Label Drafts",
+        "description": "The original design involved a single anthropomorphic wolf doing various activities.",
+        "image": [label_sketches],
       },
     ]
   },
@@ -63,7 +73,7 @@ const projects = [
     "id": 1,
     "name": "Rezealwulf",
     "subtitle": "Creature Design",
-    "description": "A fictional animal designed from photobashing several different animals together",
+    "description": "A promotional poster featuring an animal design, advertising it's nature",
     "thumb_image": rez_wulf,
     "date": 2024,
     "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
@@ -90,8 +100,19 @@ const projects = [
     "thumb_image": wad_mockup,
     "date": 2024,
     "tags": ["App", "React", "Frontend Developing", "Graphic Design", "UI/UX"],
-    "images": [wad_mockup, wad_live],
-    "sections": [ //Additional Sections If I want to add details
+    "roles": ["UI Designer", "Project Manager"],
+    "images": [wad_mockup],
+    "sections": [
+      {
+        "heading": "Logo Colour Development",
+        "description": "Design Lead & Project Manager",
+        "image": [wad_style],
+      },
+      {
+        "heading": "Logo Colour Development",
+        "description": "Design Lead & Project Manager",
+        "image": [wad_logo],
+      },
     ]
   },
   {
@@ -103,8 +124,10 @@ const projects = [
     "thumb_image": flare_mockup,
     "date": 2024,
     "tags": ["App", "Frontend Developing", "UI Design"],
+    "roles": ["UI Designer", "Frontend Developer"],
     "images": [flare_mockup],
-    "sections": [ //Additional Sections If I want to add details
+    "sections": [
+
     ]
   },
   {

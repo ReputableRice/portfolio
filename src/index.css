@@ -20,7 +20,6 @@
   --blue: #4AC1E0;
   --green: #71A850;
 
-  scroll-behavior: smooth;
 
   background-color: var(--white);
 }

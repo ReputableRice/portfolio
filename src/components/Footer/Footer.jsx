@@ -13,8 +13,8 @@ export default function Footer() {
             <p className="text-xs mt-2 text-zinc-500">Jackie Truong © {(new Date().getFullYear())}</p>
             <div className="flex flex-wrap justify-between">
                 {
-                    links.map((link) => (
-                        <SocialIcon url={link} bgColor="#71A850"/>
+                    links.map((link, foot) => (
+                        <SocialIcon key={foot} url={link} bgColor="#71A850"/>
                     )
                     )}
             </div>
