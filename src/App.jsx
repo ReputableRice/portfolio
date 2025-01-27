@@ -12,7 +12,7 @@ import NavBar from "./components/Nav/Nav";
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
-function App({ projects }) {
+function App({ projects, illustrations }) {
   return (
     <Router>
       <NavBar />
@@ -21,7 +21,7 @@ function App({ projects }) {
           <Route path="/" element={<Home projects={projects} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio projects={projects} />} />
+          <Route path="/portfolio" element={<Portfolio projects={projects} illustrations={illustrations} />} />
 
           {projects.map((project) => (
             <Route

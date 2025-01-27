@@ -35,7 +35,7 @@ export default function Home({ projects }) {
                     <div className="w-1/2 h-full flex flex-col justify-start items-start sm:hidden lg:flex px-12 pt-12">
                     </div>
                     <div className="flex flex-col lg:w-1/2 h-full frosted p-6 rounded-xl justify-center">
-                        <div className="bg-red-500 h-1/3 w-full rounded-tl-3xl mb-6"></div>
+                        <div className="bg-amber-300 h-1/3 w-full rounded-tl-3xl mb-6"></div>
                         <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
                         <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
                         <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
@@ -49,7 +49,7 @@ export default function Home({ projects }) {
                     <h1 id="projects" className=" font-bold text-4xl mx-auto my-6"> Projects </h1>
                     <ProjectPreview projects={projects} />
                 </section>
-                <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
+                {/* <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
                     <div className="lg:w-1/2 sm:w-full lg:px-24 sm:px-4">
                         <h1 className="text-3xl font-bold">Case Study</h1>
                         <p>Lorem</p>
@@ -57,7 +57,7 @@ export default function Home({ projects }) {
                     <div className="lg:w-1/2 sm:w-full sm:px-4 lg:px-0 h-1/2">
                         <img src="https://placehold.co/600x400" className="w-full h-full object-cover rounded-tl-3xl" />
                     </div>
-                </section>
+                </section> */}
                 <section id="contact" className="h-screen flex flex-col items-center justify-center">
                     <img src={croc_logo} alt="my crocodile logo" className="sm:w-2/6 lg:w-2/12" />
                     <h1 className="pt-10 text-3xl font-bold text-center">Want to Work together?</h1>

@@ -41,8 +41,15 @@ import char_wip2 from "/src/public/assets/images/charizard/bg_chars.png"
 import char_wip3 from "/src/public/assets/images/charizard/charizard.png"
 import char_icon from "/src/public/assets/images/charizard/iconography.png"
 
+//
+import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
+import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
+import ill_3 from "/src/public/assets/images/illustrations/Giant Shrines.png"
+import ill_4 from "/src/public/assets/images/illustrations/Grasslands.png"
+import ill_5 from "/src/public/assets/images/illustrations/Commission.png"
+import ill_6 from "/src/public/assets/images/illustrations/Distant Landscape.png"
 
-//Test
+const illustrations = [ill_3, ill_4, ill_5, ill_6]
 
 //Create a different object for solo and team projects along with component
 const projects = [
@@ -96,7 +103,7 @@ const projects = [
     "link": "https://waddleon.vercel.app",
     "name": "WaddleOn",
     "subtitle": "Pomodoro Task Manager",
-    "description": "An application designed to assist users who have trouble managing their time by utilizing the pomodoro method in combination with relaxing imagery",
+    "description": "An application designed to assist users who have trouble managing their time by utilizing the pomodoro method in combination with relaxing imagery and ducks as our mascot",
     "thumb_image": wad_mockup,
     "date": 2024,
     "tags": ["App", "React", "Frontend Developing", "Graphic Design", "UI/UX"],
@@ -104,13 +111,13 @@ const projects = [
     "images": [wad_mockup],
     "sections": [
       {
-        "heading": "Logo Colour Development",
-        "description": "Design Lead & Project Manager",
+        "heading": "Branding",
+        "description": "The core aspect of the design was to utilize common palettes found in ducks, combined with imagery in nature. Together they compose to be a relaxing experience.",
         "image": [wad_style],
       },
       {
         "heading": "Logo Colour Development",
-        "description": "Design Lead & Project Manager",
+        "description": "Various different colours were considered during the design period to see which attracted the most interest but ultimately the palette resembling Mallard was suitable.",
         "image": [wad_logo],
       },
     ]
@@ -161,6 +168,6 @@ const projects = [
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App projects={projects} />
+    <App projects={projects} illustrations={illustrations} />
   </StrictMode>,
 )
