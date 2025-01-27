@@ -22,8 +22,8 @@
 }
 
 .hero_image {
-  background-image: url("./public/assets/images/lookoutbanner.png"), linear-gradient(#eb01a5, #d13531);
-  background-image: url("./public/assets/images/lookoutbanner.png");
+  background-image: url("./public/assets/images/lookoutbanner.jpg"), linear-gradient(#eb01a5, #d13531);
+  background-image: url("./public/assets/images/lookoutbanner.jpg");
 
   background-size: cover;
 }

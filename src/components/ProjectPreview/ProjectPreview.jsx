@@ -28,21 +28,21 @@ export default function ProjectPreview({ projects }) {
             scrollTrigger: '.projectCard', 
             y:100,
             stagger: 0.05,
-            ease: "bounce.out",
-            duration:1.5,
+            ease: "power3.out",
+            duration:2.5,
         });
     }, { scope: card }) // <-- scope
     
     return (
         <div className="flex flex-wrap boxAll" ref={card} >
             {projects.map((project) => (
-                <Card className="projectCard w-[285px] sm:m-auto lg:m-3 mt-4 hover:drop-shadow-lg">
+                <Card className="projectCard w-[285px] sm:m-auto lg:m-3 hover:drop-shadow-lg my-3">
                     <CardHeader>
-                        <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
+                        <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" loading="eager"/>
                     </CardHeader>
                     <CardContent>
                         <div className="">
-                            <p className="font-bold text-xl">{project.name}</p>
+                            <p className="font-bold text-lg">{project.name}</p>
                             <p>{project.subtitle}</p>
                         </div>
                     </CardContent>

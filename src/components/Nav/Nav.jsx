@@ -29,6 +29,7 @@ export default function NavBar() {
                     <div className="flex sm:flex-col lg:flex-row lg:gap-12">
                         <Link to="/">Home</Link>
                         <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/illustrations">Illustrations</Link>
                         <Link to="/about">About Me</Link>
                     </div>
                     <Link to="/contact">Contact</Link>

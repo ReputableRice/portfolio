@@ -15,12 +15,13 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 //icons
 import { MoveDown } from "lucide-react"
 
 //images
-import lookout from "/src/public/assets/images/lookoutbanner.png"
+import lookout from "/src/public/assets/images/lookoutbanner.jpg"
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 //GSAP
@@ -29,18 +30,28 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home({ projects }) {
+
+    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript" ,"React", "Figma", "UI/UX"]
     const container = useRef();
 
     useGSAP(() => {
         gsap.from('.contact', {
-            scrollTrigger: '.contactArea', 
-            y:100,
+            scrollTrigger: '.contactArea',
+            y: 300,
             stagger: 0.1,
             ease: "power3.out",
-            duration:1.5,
+            duration: 3.5,
+        });
+
+        gsap.from('.skills', {
+            scrollTrigger: '.skillArea',
+            y: 300,
+            stagger: 0.1,
+            ease: "power3.out",
+            duration: 3.5,
         });
     }, { scope: container }) // <-- scope
 
@@ -63,8 +74,8 @@ export default function Home({ projects }) {
                     </div>
                 </section>
                 <section className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12" >
-                    <h1 id="projects" className=" font-bold text-4xl mx-auto my-6"> Projects </h1>
-                    <ProjectPreview projects={projects}/>
+                    <h1 id="projects" className=" font-bold text-2xl mx-auto my-6"> Projects </h1>
+                    <ProjectPreview projects={projects} />
                 </section>
                 {/* <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
                     <div className="lg:w-1/2 sm:w-full lg:px-24 sm:px-4">
@@ -75,6 +86,17 @@ export default function Home({ projects }) {
                         <img src="https://placehold.co/600x400" className="w-full h-full object-cover rounded-tl-3xl" />
                     </div>
                 </section> */}
+                <section className="skillsArea flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
+                    <h1 className="skills font-bold text-2xl">My Skills</h1>
+                    <div className="skills mt-6 justify-center">
+                        {skills.map((skill, index) => (
+                            <Badge key={index} className="m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
+                                {skill}
+                            </Badge>
+                        ))}
+                    </div>
+
+                </section>
                 <section id="contact" className="contactArea h-screen flex flex-col items-center justify-center">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
                     <h1 className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>

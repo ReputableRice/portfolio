@@ -41,24 +41,6 @@ export default function Portfolio({ projects, illustrations }) {
                             </Card>
                         ))}
                     </div>
-                    <div className="w-full">
-                        <h1 className="text-3xl font-bold mt-16">Illustrations</h1>
-                        <ResponsiveMasonry
-                            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}
-                            gutterBreakpoints={{ 350: "12px", 750: "16px", 900: "24px" }}
-                            className="mt-6"
-                        >
-                            <Masonry>
-                                {illustrations.map((illustration, ill) => (
-                                    <div key={ill}>
-                                        <ImageExpand src={illustration}
-                                            className="max-h-96 min-h-48 object-cover drop-shadow-2xl rounded-md" alt={illustration} />
-                                    </div>
-                                ))}
-                            </Masonry>
-                        </ResponsiveMasonry>
-                    </div>
-
                 </main>
             </div>
             <div className="mt-16">

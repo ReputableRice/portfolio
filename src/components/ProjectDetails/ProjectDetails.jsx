@@ -98,12 +98,26 @@ function ProjectDetails({ project }) {
                 <ReactMarkdown>{section.description}</ReactMarkdown>
               </CardHeader>
             </Card>
-            <CardContent className="flex flex-wrap justify-end">
-              {section.image.map((image, index) => (
-                <ImageExpand key={index} src={image}
-                  className="rounded-xl w-[500px] h-[400px] object-cover lg-96" alt={image.name} />
-              ))}
-            </CardContent>
+            <div className="w-[500px] h-[400px] flex gap-6">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                    loop: true,
+                  }),
+                ]}
+                className="rounded-3xl overflow-hidden"
+              >
+                <CarouselContent>
+                  {section.image.map((image, index) => (
+                    <CarouselItem key={index} className="flex items-end justify-end">
+                      <ImageExpand key={index} src={image}
+                        className="" alt={image.name} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            </div>
           </div>
         ))}
       </div>

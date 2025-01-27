@@ -4,21 +4,21 @@ import './index.css'
 import App from './App.jsx'
 
 //cans import
-import can_all from "/src/public/assets/images/cans/can_all.png"
-import can_blue from "/src/public/assets/images/cans/Can_Blue.png"
-import can_pink from "/src/public/assets/images/cans/Can_Pink.png"
-import can_orange from "/src/public/assets/images/cans/Can_Orange.png"
-import label_blue from "/src/public/assets/images/cans/label_eagle.png"
-import label_orange from "/src/public/assets/images/cans/label_tiger.png"
-import label_pink from "/src/public/assets/images/cans/label_wolf.png"
-import label_sketches from "/src/public/assets/images/cans/sketches.png"
+import can_all from "/src/public/assets/images/cans/can_all.jpg"
+import can_blue from "/src/public/assets/images/cans/Can_Blue.jpg"
+import can_pink from "/src/public/assets/images/cans/Can_Pink.jpg"
+import can_orange from "/src/public/assets/images/cans/Can_Orange.jpg"
+import label_blue from "/src/public/assets/images/cans/label_eagle.jpg"
+import label_orange from "/src/public/assets/images/cans/label_tiger.jpg"
+import label_pink from "/src/public/assets/images/cans/label_wolf.jpg"
+import label_sketches from "/src/public/assets/images/cans/sketches.jpg"
 
 
 //rezealwulf import
-import rez_wulf from "/src/public/assets/images/rezwulf.png"
-import rez_book from "/src/public/assets/images/rezbook.png"
-import rez_poster from "/src/public/assets/images/rezposterone.png"
-import rez_poster_2 from "/src/public/assets/images/rezpostertwo.png"
+import rez_wulf from "/src/public/assets/images/rezeal/rezwulf.jpg"
+import rez_book from "/src/public/assets/images/rezeal/rezbook.jpg"
+import rez_poster from "/src/public/assets/images/rezeal/rezposterone.jpg"
+import rez_poster_2 from "/src/public/assets/images/rezeal/rezpostertwo.jpg"
 
 //waddleOn
 import wad_mockup from "/src/public/assets/images/wad_mock.png"
@@ -34,8 +34,8 @@ import flare_mockup from "/src/public/assets/images/flare_mock.png"
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.png"
 import char_mock1 from "/src/public/assets/images/charizard/Book.png"
-import char_mock2 from "/src/public/assets/images/charizard/poster.png"
-import char_mock3 from "/src/public/assets/images/charizard/poster_2.png"
+import char_mock2 from "/src/public/assets/images/charizard/poster.jpg"
+import char_mock3 from "/src/public/assets/images/charizard/poster_2.jpg"
 import char_wip1 from "/src/public/assets/images/charizard/bg.png"
 import char_wip2 from "/src/public/assets/images/charizard/bg_chars.png"
 import char_wip3 from "/src/public/assets/images/charizard/charizard.png"
@@ -44,10 +44,10 @@ import char_icon from "/src/public/assets/images/charizard/iconography.png"
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
 import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
-import ill_3 from "/src/public/assets/images/illustrations/Giant Shrines.png"
-import ill_4 from "/src/public/assets/images/illustrations/Grasslands.png"
-import ill_5 from "/src/public/assets/images/illustrations/Commission.png"
-import ill_6 from "/src/public/assets/images/illustrations/Distant Landscape.png"
+import ill_3 from "/src/public/assets/images/illustrations/Giant Shrines.jpg"
+import ill_4 from "/src/public/assets/images/illustrations/Grasslands.jpg"
+import ill_5 from "/src/public/assets/images/illustrations/Commission.jpg"
+import ill_6 from "/src/public/assets/images/illustrations/Distant Landscape.jpg"
 
 const illustrations = [ill_3, ill_4, ill_5, ill_6]
 
@@ -58,7 +58,7 @@ const projects = [
     "id": 0,
     "name": "Beastly Energy Drinks",
     "subtitle": "Drink Can Design",
-    "description": "**Beastly Energy is a brand that prides itself with providing high-quality energy drinks** of various flavours with popping designs. This is a design mockup created for a brand that uses animals as their main motif.",
+    "description": "**Beastly Energy is a brand that prides itself on providing high-quality energy drinks of various flavours with popping designs.** This is a label design for the brand showcasing the flavours: Orange, Blueberry, and Bubblegum",
     "thumb_image": can_all,
     "date": 2024,
     "tags": ["Illustration", "Mockup", "Photoshop", "Clip Studio Paint"],
@@ -66,12 +66,12 @@ const projects = [
     "sections": [ //Additional Sections If I want to add details
       {
         "heading": "Labels",
-        "description": "Each label is designed around specific dieline guides, utilizing them to ensure the design is showcased prominantly",
-        "image": [label_blue],
+        "description": "**Each label uses a mono-colour design**, Assigning colours that closely relate to the flavour ensures the design is easily understandable without needing to read the label. By having a diverse set of animals, Beastly Energy can easily adapt itself to different product requirements if needed",
+        "image": [label_blue, label_orange, label_pink],
       },
       {
-        "heading": "Label Drafts",
-        "description": "The original design involved a single anthropomorphic wolf doing various activities.",
+        "heading": "Early Designs",
+        "description": "The earlier variants used an anthropomorphic wolf, performing various activities which would be inspired by the flavour the design represented. The wolf would’ve been utilized to ensure consistency across all designs through characterization. Different animals were chosen to diversify the possible design options for different flavours.",
         "image": [label_sketches],
       },
     ]
