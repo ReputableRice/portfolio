@@ -31,40 +31,34 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Skeleton } from "@/components/ui/skeleton"
 
 function ProjectDetails({ project }) {
   return (
     <>
-      <div className="lg:px-[10%] min-h-svh">
-        <div className="px-[8%] mt-6">
-          <BreadcrumbCompress project_name={project.name} />
-        </div>
-        <div className="drop-shadow-xl flex justify-center mt-3">
-          <div className="w-1/2">
-            <Carousel
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                  loop: true,
-                }),
-              ]}
-              className="rounded-3xl overflow-hidden"
-            >
-              <CarouselContent>
-                {project.images.map((images, index) => (
-                  <CarouselItem key={index} className="flex items-end justify-end">
-                    <ImageExpand
-                      src={images}
-                      alt={project.name} className="h-[700px] object-cover drop-shadow-2xl"
-                    />
-                    <Skeleton className="h-[700px] rounded-full" />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
+      <div className="min-h-svh">
+        <BreadcrumbCompress project_name={project.name} />
+        <div className="drop-shadow-xl flex">
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                loop: true,
+              }),
+            ]}
+            className="w-3/5 h-[650px] object-cover"
+          >
+            <CarouselContent>
+              {project.images.map((images, index) => (
+                <CarouselItem key={index} className="w-3/5 h-[650px] overflow-hidden flex justify-end">
+                  <ImageExpand
+                    src={images}
+                    alt={project.name} className="h-[650px] object-cover drop-shadow-2xl"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
 
-            </Carousel>
-          </div>
+          </Carousel>
           <div className="w-1/4 px-6">
             <Card>
               <CardHeader>

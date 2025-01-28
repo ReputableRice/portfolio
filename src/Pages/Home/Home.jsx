@@ -34,7 +34,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home({ projects }) {
 
-    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript" ,"React", "Figma", "UI/UX"]
+    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript" ,"React", "Figma", "UI/UX", "Live2D"]
     const container = useRef();
 
     useGSAP(() => {
@@ -77,20 +77,11 @@ export default function Home({ projects }) {
                     <h1 id="projects" className=" font-bold text-2xl mx-auto my-6"> Projects </h1>
                     <ProjectPreview projects={projects} />
                 </section>
-                {/* <section id="case" className="bg-zinc-100 pt-6 flex sm:flex-col-reverse lg:flex-row items-center lg:text-left sm:text-center">
-                    <div className="lg:w-1/2 sm:w-full lg:px-24 sm:px-4">
-                        <h1 className="text-3xl font-bold">Case Study</h1>
-                        <p>Lorem</p>
-                    </div>
-                    <div className="lg:w-1/2 sm:w-full sm:px-4 lg:px-0 h-1/2">
-                        <img src="https://placehold.co/600x400" className="w-full h-full object-cover rounded-tl-3xl" />
-                    </div>
-                </section> */}
-                <section className="skillsArea flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
-                    <h1 className="skills font-bold text-2xl">My Skills</h1>
+                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
+                    <h1 className="skillsArea skills font-bold text-2xl">My Skills</h1>
                     <div className="skills mt-6 justify-center">
                         {skills.map((skill, index) => (
-                            <Badge key={index} className="m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            <Badge key={index} className="frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
                                 {skill}
                             </Badge>
                         ))}

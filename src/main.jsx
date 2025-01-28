@@ -21,7 +21,7 @@ import rez_poster from "/src/public/assets/images/rezeal/rezposterone.jpg"
 import rez_poster_2 from "/src/public/assets/images/rezeal/rezpostertwo.jpg"
 
 //waddleOn
-import wad_mockup from "/src/public/assets/images/wad_mock.png"
+import wad_mockup from "/src/public/assets/images/wad_mock.webp"
 import wad_hifi from "/src/public/assets/images/wad_hifi.png"
 import wad_live from "/src/public/assets/images/wad_live.jpg"
 import wad_lofi from "/src/public/assets/images/wad_lofi.png"
@@ -32,12 +32,12 @@ import wad_style from "/src/public/assets/images/wad_style.png"
 import flare_mockup from "/src/public/assets/images/flare_mock.png"
 
 //Charizard
-import char_cover from "/src/public/assets/images/charizard/charizard_cover.png"
+import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
 import char_mock1 from "/src/public/assets/images/charizard/Book.png"
 import char_mock2 from "/src/public/assets/images/charizard/poster.jpg"
 import char_mock3 from "/src/public/assets/images/charizard/poster_2.jpg"
 import char_wip1 from "/src/public/assets/images/charizard/bg.png"
-import char_wip2 from "/src/public/assets/images/charizard/bg_chars.png"
+import char_wip2 from "/src/public/assets/images/charizard/bg_chars.webp"
 import char_wip3 from "/src/public/assets/images/charizard/charizard.png"
 import char_icon from "/src/public/assets/images/charizard/iconography.png"
 
@@ -145,7 +145,7 @@ const projects = [
     "thumb_image": char_cover,
     "date": 2024,
     "tags": ["Photoshop", "Illustrator", "Clip Studio Paint"],
-    "images": [char_cover, char_mock1, char_mock2, char_mock3],
+    "images": [char_cover, char_mock1],
     "sections": [
       {
         "heading": "Background Development",
