@@ -1,0 +1,10 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Belt",
+			"Value": 1,
+			"Blend": "Add"
+		}
+	]
+}
