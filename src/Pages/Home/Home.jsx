@@ -43,7 +43,8 @@ export default function Home({ projects }) {
             y: 300,
             stagger: 0.1,
             ease: "power3.out",
-            duration: 3.5,
+            duration: 1.5,
+            opacity: 0,
         });
 
         gsap.from('.skills', {
@@ -51,9 +52,11 @@ export default function Home({ projects }) {
             y: 300,
             stagger: 0.1,
             ease: "power3.out",
-            duration: 3.5,
+            duration: 0.5,
+            opacity: 0,
         });
-    }, { scope: container }) // <-- scope
+    }, { scope: container }) 
+    
 
     return (
         <>
@@ -78,10 +81,10 @@ export default function Home({ projects }) {
                     <ProjectPreview projects={projects} />
                 </section>
                 <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
-                    <h1 className="skillsArea skills font-bold text-2xl">My Skills</h1>
-                    <div className="skills mt-6 justify-center">
+                    <h1 className="font-bold text-2xl">My Skills</h1>
+                    <div className="skillArea mt-6 justify-center">
                         {skills.map((skill, index) => (
-                            <Badge key={index} className="frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            <Badge key={index} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
                                 {skill}
                             </Badge>
                         ))}

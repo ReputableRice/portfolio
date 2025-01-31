@@ -16,7 +16,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger)
 
 
 export default function ProjectPreview({ projects }) {
@@ -25,20 +25,23 @@ export default function ProjectPreview({ projects }) {
 
     useGSAP(() => {
         gsap.from('.projectCard', {
-            scrollTrigger: '.projectCard', 
-            y:100,
-            stagger: 0.05,
+            scrollTrigger: '.projectCard',
+            y: 200,
+            x: -800,
+            stagger: 0.1,
             ease: "power3.out",
-            duration:2.5,
+            duration: 0.5,
+            rotation: 90,
+            opacity: 0,
         });
     }, { scope: card }) // <-- scope
-    
+
     return (
         <div className="flex flex-wrap boxAll" ref={card} >
             {projects.map((project) => (
                 <Card className="projectCard w-[285px] sm:m-auto lg:m-3 hover:drop-shadow-lg my-3">
                     <CardHeader>
-                        <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" loading="eager"/>
+                        <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" loading="eager" />
                     </CardHeader>
                     <CardContent>
                         <div className="">
