@@ -10,30 +10,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import NavBar from "./components/Nav/Nav";
 import Illustrations from "./Pages/Illustrations/Illustrations";
 
+import Live2DViewer from "./components/Live2DViewer"
+
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 function App({ projects, illustrations }) {
   return (
     <Router>
-      <NavBar />
-      <div>
-        <Routes>
-          <Route path="/" element={<Home projects={projects} />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio projects={projects} illustrations={illustrations} />} />
-          <Route path="/illustrations" element={<Illustrations projects={projects} illustrations={illustrations} />} />
-
-          {projects.map((project) => (
-            <Route
-              key={project.id}
-              path={`/project/${project.id}`}
-              element={<ProjectDetails project={project} />}
-            />
-          ))}
-        </Routes>
-      </div>
+     Testv
+     <Live2DViewer/>
     </Router>
   );
 }
