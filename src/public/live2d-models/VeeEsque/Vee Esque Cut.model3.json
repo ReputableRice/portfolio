@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Vee Esque Cut.moc3",
+		"Textures": [
+			"Vee Esque Cut.4096/texture_00.png"
+		],
+		"Physics": "Vee Esque Cut.physics3.json",
+		"DisplayInfo": "Vee Esque Cut.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}
