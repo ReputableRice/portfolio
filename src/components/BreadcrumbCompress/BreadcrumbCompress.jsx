@@ -9,7 +9,7 @@ import {
 
 export default function BreadcrumbCompress({ project_name }) {
     return (
-        <Breadcrumb className="py-4 lg:px-20 sm:px-4 z-50">
+        <Breadcrumb className="z-50 mb-12">
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink href="/">Home</BreadcrumbLink>

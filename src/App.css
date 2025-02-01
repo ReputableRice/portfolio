@@ -16,29 +16,7 @@
   border-radius: 32px;
 }
 
-.image_hero {
-  object-fit: cover;
-  object-position: 70% top;
-}
 
-.hero_image {
-  background-image: url("./public/assets/images/lookoutbanner.webp"), linear-gradient(#eb01a5, #d13531);
-  background-image: url("./public/assets/images/lookoutbanner.webp");
-
-  background-size: cover;
-}
-
-.image_about {
-  object-fit: cover;
-}
-
-.vertical__line {
-  padding-top: 100px;
-  margin-right: 16px;
-  width: 10px;
-  background: var(--black);
-  border-radius: 99px;
-}
 
 .frosted {
   backdrop-filter: blur(20px);
@@ -53,10 +31,28 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.green-bg {
+.green__bg {
   background-color: var(--green);
 }
 
-.green-text {
+.green__text {
   color: var(--green);
+}
+
+.green {
+  background-color: var(--green);
+  color: var(--green);
+}
+
+.orange__bg {
+  background-color: var(--orange);
+}
+
+.orange__text {
+  color: var(--orange);
+}
+
+.orange {
+  background-color: var(--orange);
+  color: var(--orange);
 }

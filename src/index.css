@@ -24,6 +24,10 @@
   background-color: var(--white);
 }
 
+h1, p {
+  color: var(--black);
+}
+
 nav {
   justify-content: space-between;
 }

@@ -36,7 +36,6 @@ function ProjectDetails({ project }) {
   return (
     <>
       <div className="min-h-svh">
-        <BreadcrumbCompress project_name={project.name} />
         <div className="drop-shadow-xl flex">
           <Carousel
             plugins={[
@@ -60,8 +59,9 @@ function ProjectDetails({ project }) {
 
           </Carousel>
           <div className="w-1/4 px-6">
-            <Card>
+            <div>
               <CardHeader>
+                <BreadcrumbCompress project_name={project.name} />
                 <h1 className="text-3xl font-bold">{project.name}</h1>
                 <CardDescription>
                   <ReactMarkdown>{project.description}</ReactMarkdown>
@@ -69,53 +69,64 @@ function ProjectDetails({ project }) {
                   {project.link && <Button asChild className="mt-2"><a href={project.link} target="_blank"> Link To Project</a></Button>}
                 </CardDescription>
               </CardHeader>
-            </Card>
-            <div className="pt-3">
-              {project.tags.map((tags, i) => (
-                <Badge key={i}>{tags}</Badge>
-              ))}
-              {project.roles && <h1 className="mt-6 text-xl font-bold">Project Role(s):</h1>}
-              {project.roles && project.roles.map((roles, role) => (
-                <div key={role}>
-                  <Badge>{roles}</Badge>
+              <CardFooter>
+                <div className="pt-3">
+                  {project.tags.map((tags, i) => (
+                    <Badge key={i}>{tags}</Badge>
+                  ))}
+                  {project.roles && <h1 className="mt-6 text-xl font-bold">Project Role(s):</h1>}
+                  {project.roles && project.roles.map((roles, role) => (
+                    <div key={role}>
+                      <Badge>{roles}</Badge>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </CardFooter>
             </div>
           </div>
         </div>
+
+        <h1 className="font-bold text-[128px]">PROJECT DETAILS</h1>
+        {/* this part is where i can add sections, i want to make this a sub component but it's kind of scary */}
         {project.sections.map((section, a) => (
-          <div key={a} className="flex lg:flex-row sm:flex-col-reverse px-12 my-12 gap-16 sm:items-center lg:items-start justify-center">
-            <Card className="flex w-1/3">
-              <div className="vertical__line"></div>
-              <CardHeader>
-                <CardTitle className="font-bold">{section.heading}</CardTitle>
-                <ReactMarkdown>{section.description}</ReactMarkdown>
-              </CardHeader>
-            </Card>
-            <div className="w-[500px] h-[400px] flex gap-6">
-              <Carousel
-                plugins={[
-                  Autoplay({
-                    delay: 2000,
-                    loop: true,
-                  }),
-                ]}
-                className=" overflow-hidden"
-              >
-                <CarouselContent>
-                  {section.image.map((image, index) => (
-                    <CarouselItem key={index} className="flex items-end justify-end">
-                      <ImageExpand key={index} src={image}
-                        className="" alt={image.name} />
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
+          <div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="6" viewBox="0 0 1916 6" fill="none" className="my-6">
+              <path d="M0 3L1913 2.99983" stroke="black" stroke-width="2" stroke-linecap="round" />
+            </svg>
+
+            <div key={a} className="flex pl-[215px] gap-16">
+              <div className="flex w-1/3">
+                <CardHeader>
+                  <CardTitle className="font-bold text-3xl">{section.heading}</CardTitle>
+                  <ReactMarkdown>{section.description}</ReactMarkdown>
+                </CardHeader>
+              </div>
+              <div className="w-[737px] h-[492px] flex">
+                <Carousel
+                  plugins={[
+                    Autoplay({
+                      delay: 2000,
+                      loop: true,
+                    }),
+                  ]}
+                  className=" overflow-hidden"
+                >
+                  <CarouselContent>
+                    {section.image.map((image, index) => (
+                      <CarouselItem key={index} className="flex items-end justify-end">
+                        <ImageExpand key={index} src={image}
+                          className="object-cover" alt={image.name} />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="bottom-0 w-full">
+      <div className="bottom-0 w-full mt-32">
         <Footer />
       </div>
     </>

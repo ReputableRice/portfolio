@@ -1,24 +1,13 @@
 import "../../App.css"
 import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 import Footer from "../../components/Footer/Footer"
-import BreadcrumbCompress from "../../components/BreadcrumbCompress/BreadcrumbCompress"
 import { useRef } from "react"
 
 //shadcn
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 //icons
-import { MoveDown } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 
 //images
 import lookout from "/src/public/assets/images/lookoutbanner.jpg"
@@ -34,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home({ projects }) {
 
-    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript" ,"React", "Figma", "UI/UX", "Live2D"]
+    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript", "React", "Figma", "UI/UX", "Live2D"]
     const container = useRef();
 
     useGSAP(() => {
@@ -55,30 +44,54 @@ export default function Home({ projects }) {
             duration: 0.5,
             opacity: 0,
         });
-    }, { scope: container }) 
-    
+
+        // gsap.to(".arrowGSAP", {
+        //     duration: 0.5,
+        //     y: 20,
+        //     repeat: -1,
+        //     stagger: 1,
+        //     yoyo: true
+        // });
+
+        var tl = gsap.timeline({ repeat: -1 });
+        tl.to(".arrowGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
+        tl.to(".arrowGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
+        // tl.to(".arrowGSAP", { opacity: 0, duration: 1 });
+
+    }, { scope: container })
+
 
     return (
         <>
             <main className="flex flex-col" ref={container} >
-                <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1>
-                <section className="overflow-hidden flex sm:flex-col lg:flex-row max-w-full gap-x-3.5 sm:mt-0 sm:h-lvh lg:h-s items-center lg:justify-end sm:justify-center lg:text-left sm:text-center hero_image">
-                    <div className="w-1/2 h-full flex flex-col justify-start items-start sm:hidden lg:flex px-12 pt-12">
+                {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
+                <section className="flex flex-col w-full h-[761px]">
+                    <div className=" h-[491px] flex gap-6">
+                        <img src={lookout} />
+                        {/* <div className="bg-green-200 w-7/12"></div> */}
+                        {/* <div className="bg-blue-200 w-5/12"></div> */}
                     </div>
-                    <div className="flex flex-col lg:w-1/2 h-full frosted p-6 rounded-xl justify-center">
-                        <div className=" bg-amber-300 h-1/3 w-full rounded-tl-3xl mb-6"></div>
-                        <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Hi I'm Jackie</h1>
-                        <p className="z-10 font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
-                        <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
-                        <button href="projects" className="z-10 flex bg-zinc-900 text-zinc-200 justify-center items-center py-6 rounded-full mt-8 sm:px-6 lg:w-1/3">
-                            <MoveDown className="bg-blend-multiply" size={32} />
-                            <p className="text-xl sm:hidden lg:flex">To Projects</p>
-                        </button>
+                    <div className="w-full px-[63px] flex justify-between">
+                        <div className="w-[736px]">
+                            <h1 className="text-[90px] font-bold">Hi I'm Jackie!</h1>
+                            <p className="font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
+                            <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
+                        </div>
+                        <div className="mt-auto flex gap-6">
+                            <div className="flex">
+                                <ArrowDown className="arrowGSAP" strokeWidth={4} />
+                                <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="orange" />
+                                <ArrowDown className="arrowGSAP green" strokeWidth={4} />
+                            </div>
+                            <h1 className="font-bold contentPush green__text">Project Examples</h1>
+                        </div>
                     </div>
                 </section>
-                <section className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12" >
-                    <h1 id="projects" className=" font-bold text-2xl mx-auto my-6"> Projects </h1>
-                    <ProjectPreview projects={projects} />
+                <section className="bg-zinc-100 ">
+                    <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12">
+                        <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects </h1>
+                        <ProjectPreview projects={projects} />
+                    </div>
                 </section>
                 <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
                     <h1 className="font-bold text-2xl">My Skills</h1>
@@ -89,7 +102,6 @@ export default function Home({ projects }) {
                             </Badge>
                         ))}
                     </div>
-
                 </section>
                 <section id="contact" className="contactArea h-screen flex flex-col items-center justify-center">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
