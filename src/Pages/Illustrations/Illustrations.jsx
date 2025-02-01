@@ -12,11 +12,31 @@ import { Button } from "@/components/ui/button"
 import Footer from "../../components/Footer/Footer"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import ImageExpand from "../../components/ImageExpand/ImageExpand"
+import { useRef } from "react"
+
+//GSAP
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 export default function Illustrations({ projects, illustrations }) {
+    const container = useRef();
+
+    useGSAP(() => {
+        gsap.from('.imageGSAP', {
+            y: 300,
+            stagger: 0.1,
+            ease: "power3.out",
+            duration: 1.5,
+            opacity: 0,
+        });
+
+    }, { scope: container }) 
+    
     return (
         <>
-            <div className="min-h-svh">
+            <div className="min-h-svh" ref={container}>
                 <main className=" flex w-full flex-wrap lg:px-[10%] sm:px-6 sm:justify-center lg:justify-normal" >
                     <div className="w-full">
                         <h1 className="text-3xl font-bold mt-16">Illustrations</h1>
@@ -29,7 +49,7 @@ export default function Illustrations({ projects, illustrations }) {
                                 {illustrations.map((illustration, ill) => (
                                     <div key={ill}>
                                         <ImageExpand src={illustration}
-                                            className="max-h-96 min-h-48 object-cover drop-shadow-2xl rounded-md" alt={illustration} />
+                                            className="imageGSAP max-h-96 min-h-48 object-cover drop-shadow-2xl rounded-md" alt={illustration} />
                                     </div>
                                 ))}
                             </Masonry>

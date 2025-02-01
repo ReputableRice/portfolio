@@ -100,7 +100,7 @@ function ProjectDetails({ project }) {
                     loop: true,
                   }),
                 ]}
-                className="rounded-3xl overflow-hidden"
+                className=" overflow-hidden"
               >
                 <CarouselContent>
                   {section.image.map((image, index) => (

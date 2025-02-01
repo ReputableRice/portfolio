@@ -12,6 +12,7 @@ import label_blue from "/src/public/assets/images/cans/label_eagle.jpg"
 import label_orange from "/src/public/assets/images/cans/label_tiger.jpg"
 import label_pink from "/src/public/assets/images/cans/label_wolf.jpg"
 import label_sketches from "/src/public/assets/images/cans/sketches.jpg"
+import can_display from "/src/public/assets/images/cans/display.png"
 
 
 //rezealwulf import
@@ -21,25 +22,32 @@ import rez_poster from "/src/public/assets/images/rezeal/rezposterone.jpg"
 import rez_poster_2 from "/src/public/assets/images/rezeal/rezpostertwo.jpg"
 
 //waddleOn
-import wad_mockup from "/src/public/assets/images/wad_mock.webp"
-import wad_hifi from "/src/public/assets/images/wad_hifi.png"
-import wad_live from "/src/public/assets/images/wad_live.jpg"
-import wad_lofi from "/src/public/assets/images/wad_lofi.png"
-import wad_logo from "/src/public/assets/images/wad_logo1.png"
-import wad_style from "/src/public/assets/images/wad_style.png"
+import wad_mockup from "/src/public/assets/images/wad/wad_mock.webp"
+import wad_color from "/src/public/assets/images/wad/WaddleOn_colours.png"
+import wad_logo from "/src/public/assets/images/wad/WaddleOn_logo.png"
+import wad_type from "/src/public/assets/images/wad/WaddleOn_type.png"
 
 //flare
 import flare_mockup from "/src/public/assets/images/flare_mock.png"
 
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
-import char_mock1 from "/src/public/assets/images/charizard/Book.png"
-import char_mock2 from "/src/public/assets/images/charizard/poster.jpg"
-import char_mock3 from "/src/public/assets/images/charizard/poster_2.jpg"
+import char_mock1 from "/src/public/assets/images/charizard/holding.png"
+import char_mock2 from "/src/public/assets/images/charizard/MagazineCovers.png"
 import char_wip1 from "/src/public/assets/images/charizard/bg.png"
-import char_wip2 from "/src/public/assets/images/charizard/bg_chars.webp"
 import char_wip3 from "/src/public/assets/images/charizard/charizard.png"
 import char_icon from "/src/public/assets/images/charizard/iconography.png"
+
+//hoyo
+import hoyo_cover from "/src/public/assets/images/hoyo/hoyo-cover.png"
+import hoyo_1 from "/src/public/assets/images/hoyo/hoyo-liyue.jpg"
+import hoyo_2 from "/src/public/assets/images/hoyo/hoyo-font.jpg"
+import hoyo_3 from "/src/public/assets/images/hoyo/hoyo-pena.jpg"
+import hoyo_4 from "/src/public/assets/images/hoyo/hoyo-zzz.jpg"
+import hoyo_inside from "/src/public/assets/images/hoyo/inside.png"
+import hoyo_multi from "/src/public/assets/images/hoyo/hoyo_multi.png"
+import hoyo_crop from "/src/public/assets/images/hoyo/crop.png"
+
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -62,7 +70,7 @@ const projects = [
     "thumb_image": can_all,
     "date": 2024,
     "tags": ["Illustration", "Mockup", "Photoshop", "Clip Studio Paint"],
-    "images": [can_all, can_blue, can_orange, can_pink],
+    "images": [can_display, can_all, can_blue, can_orange, can_pink],
     "sections": [ //Additional Sections If I want to add details
       {
         "heading": "Labels",
@@ -80,22 +88,12 @@ const projects = [
     "id": 1,
     "name": "Rezealwulf",
     "subtitle": "Creature Design",
-    "description": "A promotional poster featuring an animal design, advertising it's nature",
+    "description": "A promotional advertisement featuring an original animal, promoting it's natural habitat through the text.",
     "thumb_image": rez_wulf,
     "date": 2024,
     "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
     "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
-    "sections": [ //Additional Sections If I want to add details
-      // {
-      //   "heading": "Project Details",
-      //   "description": "Lorem Ipsum",
-      //   "image": [can_orange],
-      // },
-      // {
-      //   "heading": "Project Details",
-      //   "description": "Lorem Ipsum 2",
-      //   "image": [can_blue],
-      // },
+    "sections": [
     ]
   },
   {
@@ -113,7 +111,7 @@ const projects = [
       {
         "heading": "Branding",
         "description": "The core aspect of the design was to utilize common palettes found in ducks, combined with imagery in nature. Together they compose to be a relaxing experience.",
-        "image": [wad_style],
+        "image": [wad_color, wad_type],
       },
       {
         "heading": "Logo Colour Development",
@@ -140,12 +138,12 @@ const projects = [
   {
     "id": 4,
     "name": "Pokephoto Studios",
-    "subtitle": "Magazine graphic",
+    "subtitle": "Magazine Cover",
     "description": "**A Pokemon themed magazine cover** designed for a photography company based in the Pokemon franchise. It features Charizard from Pokemon as the prominent figure.",
     "thumb_image": char_cover,
     "date": 2024,
     "tags": ["Photoshop", "Illustrator", "Clip Studio Paint"],
-    "images": [char_cover, char_mock1],
+    "images": [char_mock2, char_cover, char_mock1,],
     "sections": [
       {
         "heading": "Background Development",
@@ -161,6 +159,29 @@ const projects = [
         "heading": "Icons & Graphics",
         "description": "Graphics were all made inside Adobe Illustrator with semblance to Pokemon or items within the series.",
         "image": [char_icon],
+      },
+    ]
+  },
+  {
+    "id": 5,
+    "link": "https://indd.adobe.com/view/9077b5bd-4735-48f2-9be5-db070371064f",
+    "name": "The Architecture of Hoyoverse",
+    "subtitle": "Magazine Print",
+    "description": "This magazine highlights the diverse locations designed and produced in the games **Genshin Impact**, **Honkai Star Rail** and **Zenless Zone Zero**. This editorial was created for both web and for print to showcase and highlight the cultural references within these games. ",
+    "thumb_image": hoyo_cover,
+    "date": 2024,
+    "tags": ["InDesign", "Photoshop", "Illustrator", "Clip Studio Paint"],
+    "images": [hoyo_multi, hoyo_cover, hoyo_inside,],
+    "sections": [
+      {
+        "heading": "Layout",
+        "description": "The layout of the magazine emphasizes large imagery, using screenshots within the game and edited further in **Photoshop** for visual direction.",
+        "image": [hoyo_1, hoyo_2, hoyo_3, hoyo_4],
+      },
+      {
+        "heading": "Optimized for Print",
+        "description": "All pages for the print version of the magazine are optimized for print, including crop/bleed marks and necessary color settings.",
+        "image": [hoyo_crop],
       },
     ]
   },
