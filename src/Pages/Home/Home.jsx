@@ -10,8 +10,11 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowDown } from "lucide-react"
 
 //images
-import lookout from "/src/public/assets/images/lookoutbanner.jpg"
+import lookout from "/src/public/assets/images/lookout/lookoutbanner.jpg"
 import croc_logo from "/src/public/assets/images/CrocColour.png"
+import lookout_fg from "/src/public/assets/images/lookout/fg.png"
+import lookout_bg from "/src/public/assets/images/lookout/bg.png"
+
 
 //GSAP
 import gsap from 'gsap';
@@ -62,6 +65,35 @@ export default function Home({ projects }) {
         tl.to(".arrowContactGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
         tl.to(".arrowContactGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
 
+        document.addEventListener("mousemove", mouseMoveFunc);
+
+        let fg = gsap.utils.toArray(".fgGSAP");
+        let bg = gsap.utils.toArray(".bgGSAP");
+
+
+        function mouseMoveFunc(e) {
+
+            fg.forEach((fg, index) => {
+                const depth = 10;
+                const moveX = (e.pageX - window.innerWidth / 2) / depth;
+                index++
+
+                gsap.to(fg, {
+                    x: moveX * index,
+                });
+            });
+
+            bg.forEach((bg, index) => {
+                const depth = 10;
+                const moveX = (e.pageX - window.innerWidth / 2) / depth;
+                index++
+
+                gsap.to(bg, {
+                    x: -moveX * index,
+                });
+            });
+        }
+
     }, { scope: container })
 
 
@@ -70,10 +102,10 @@ export default function Home({ projects }) {
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-[761px]">
-                    <div className=" h-[491px] flex gap-6 fadeIn">
-                        <img src={lookout} className="object-cover object-top mx-auto w-full"/>
-                        {/* <div className="bg-green-200 w-7/12"></div> */}
-                        {/* <div className="bg-blue-200 w-5/12"></div> */}
+                    <div className=" h-[491px] fadeIn relative top-0 left-0 overflow-hidden bg-zinc-700">
+                        <img src={lookout_fg} className="w-full absolute z-20 lg:h-[800px] sm:h-[100%] -right-[43%] object-contain fgGSAP" alt="a vast landscape"/>
+                        <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
+                        {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
                     </div>
                     <div className="w-full px-[63px] flex justify-between">
                         <div className="w-[736px]">
@@ -91,13 +123,13 @@ export default function Home({ projects }) {
                         </div>
                     </div>
                 </section>
-                <section className="bg-zinc-100">
+                <section className="hover:bg-zinc-100 transition-colors">
                     <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12">
                         <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects</h1>
                         <ProjectPreview projects={projects} />
                     </div>
                 </section>
-                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%] bg-zinc-50">
+                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%] hover:bg-zinc-100 transition-colors">
                     <h1 className="font-bold text-2xl">My Skills</h1>
                     <div className="skillArea mt-6 justify-center">
                         {skills.map((skill, index) => (
@@ -107,7 +139,7 @@ export default function Home({ projects }) {
                         ))}
                     </div>
                 </section>
-                <section className="contactArea h-screen flex flex-col items-center justify-center">
+                <section className="contactArea h-screen flex flex-col items-center justify-center hover:bg-zinc-100 transition-colors">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
                     <h1 className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
                     <p className="contact pt-6">Contact me at</p>
