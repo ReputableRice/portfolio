@@ -56,3 +56,16 @@
   background-color: var(--orange);
   color: var(--orange);
 }
+
+.white__bg {
+  background-color: var(--white);
+}
+
+.white__text {
+  color: var(--white);
+}
+
+.white {
+  background-color: var(--white);
+  color: var(--white);
+}

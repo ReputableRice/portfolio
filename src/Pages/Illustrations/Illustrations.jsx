@@ -1,12 +1,4 @@
 import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import Footer from "../../components/Footer/Footer"
@@ -20,7 +12,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-export default function Illustrations({ projects, illustrations }) {
+export default function Illustrations({ illustrations }) {
     const container = useRef();
 
     useGSAP(() => {
@@ -32,14 +24,14 @@ export default function Illustrations({ projects, illustrations }) {
             opacity: 0,
         });
 
-    }, { scope: container }) 
-    
+    }, { scope: container })
+
     return (
         <>
             <div className="min-h-svh" ref={container}>
                 <main className=" flex w-full flex-wrap lg:px-[10%] sm:px-6 sm:justify-center lg:justify-normal" >
                     <div className="w-full">
-                        <h1 className="text-3xl font-bold mt-16">Illustrations</h1>
+                        <h1 className="text-3xl font-bold mt-16">Illustrations & Graphics</h1>
                         <ResponsiveMasonry
                             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}
                             gutterBreakpoints={{ 350: "12px", 750: "16px", 900: "24px" }}
@@ -49,7 +41,7 @@ export default function Illustrations({ projects, illustrations }) {
                                 {illustrations.map((illustration, ill) => (
                                     <div key={ill}>
                                         <ImageExpand src={illustration}
-                                            className="imageGSAP max-h-96 min-h-48 object-cover drop-shadow-2xl rounded-md" alt={illustration} />
+                                            className="imageGSAP object-cover min-h-60" alt={illustration} />
                                     </div>
                                 ))}
                             </Masonry>

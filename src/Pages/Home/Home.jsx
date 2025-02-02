@@ -45,18 +45,22 @@ export default function Home({ projects }) {
             opacity: 0,
         });
 
-        // gsap.to(".arrowGSAP", {
-        //     duration: 0.5,
-        //     y: 20,
-        //     repeat: -1,
-        //     stagger: 1,
-        //     yoyo: true
-        // });
+        gsap.from('.fadeIn', {
+            y: 300,
+            stagger: 0.1,
+            ease: "power3.out",
+            duration: 0.5,
+            opacity: 0,
+        });
+
 
         var tl = gsap.timeline({ repeat: -1 });
         tl.to(".arrowGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
         tl.to(".arrowGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
-        // tl.to(".arrowGSAP", { opacity: 0, duration: 1 });
+
+        var tl2 = gsap.timeline({ repeat: -1 });
+        tl.to(".arrowContactGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
+        tl.to(".arrowContactGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
 
     }, { scope: container })
 
@@ -66,34 +70,34 @@ export default function Home({ projects }) {
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-[761px]">
-                    <div className=" h-[491px] flex gap-6">
-                        <img src={lookout} />
+                    <div className=" h-[491px] flex gap-6 fadeIn">
+                        <img src={lookout} className="object-cover object-top mx-auto w-full"/>
                         {/* <div className="bg-green-200 w-7/12"></div> */}
                         {/* <div className="bg-blue-200 w-5/12"></div> */}
                     </div>
                     <div className="w-full px-[63px] flex justify-between">
                         <div className="w-[736px]">
-                            <h1 className="text-[90px] font-bold">Hi I'm Jackie!</h1>
-                            <p className="font-semibold">Graphic Design | Illustrator | Frontend Web Developer</p>
-                            <p className="pt-2 z-10 lg:flex">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
+                            <h1 className="text-[90px] font-bold fadeIn">Hi I'm Jackie!</h1>
+                            <p className="font-semibold fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
+                            <p className="pt-2 z-10 lg:flex fadeIn">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                         </div>
                         <div className="mt-auto flex gap-6">
                             <div className="flex">
                                 <ArrowDown className="arrowGSAP" strokeWidth={4} />
-                                <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="orange" />
-                                <ArrowDown className="arrowGSAP green" strokeWidth={4} />
+                                <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="var(--orange)" />
+                                <ArrowDown className="arrowGSAP" strokeWidth={4} stroke="var(--green)" />
                             </div>
-                            <h1 className="font-bold contentPush green__text">Project Examples</h1>
+                            <h1 className="font-bold contentPush green__text">Projects Down Below</h1>
                         </div>
                     </div>
                 </section>
-                <section className="bg-zinc-100 ">
+                <section className="bg-zinc-100">
                     <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12">
-                        <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects </h1>
+                        <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects</h1>
                         <ProjectPreview projects={projects} />
                     </div>
                 </section>
-                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%]">
+                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%] bg-zinc-50">
                     <h1 className="font-bold text-2xl">My Skills</h1>
                     <div className="skillArea mt-6 justify-center">
                         {skills.map((skill, index) => (
@@ -103,7 +107,7 @@ export default function Home({ projects }) {
                         ))}
                     </div>
                 </section>
-                <section id="contact" className="contactArea h-screen flex flex-col items-center justify-center">
+                <section className="contactArea h-screen flex flex-col items-center justify-center">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
                     <h1 className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
                     <p className="contact pt-6">Contact me at</p>
