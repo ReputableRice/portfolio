@@ -28,7 +28,13 @@ import wad_logo from "/src/public/assets/images/wad/WaddleOn_logo.png"
 import wad_type from "/src/public/assets/images/wad/WaddleOn_type.png"
 
 //flare
-import flare_mockup from "/src/public/assets/images/flare_mock.png"
+import flare_mockup from "/src/public/assets/images/flare/flare_mock.png"
+import flare_mockup2 from "/src/public/assets/images/flare/flare_mock2.png"
+import flare_safety from "/src/public/assets/images/flare/Safety.png"
+import flare_settings from "/src/public/assets/images/flare/Settings.png"
+import flare_sol from "/src/public/assets/images/flare/flaresol.png"
+import flare_land from "/src/public/assets/images/flare/land.png"
+
 
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
@@ -48,16 +54,24 @@ import hoyo_inside from "/src/public/assets/images/hoyo/inside.png"
 import hoyo_multi from "/src/public/assets/images/hoyo/hoyo_multi.png"
 import hoyo_crop from "/src/public/assets/images/hoyo/crop.png"
 
+//UNA 
+import una_mock from "/src/public/assets/images/UNA/una_mock.png"
+
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
 import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
 import ill_3 from "/src/public/assets/images/illustrations/Giant Shrines.jpg"
 import ill_4 from "/src/public/assets/images/illustrations/Grasslands.jpg"
-import ill_5 from "/src/public/assets/images/illustrations/Commission.jpg"
+// import ill_5 from "/src/public/assets/images/illustrations/Commission.jpg"
 import ill_6 from "/src/public/assets/images/illustrations/Distant Landscape.jpg"
+import ill_7 from "/src/public/assets/images/illustrations/plane.png"
+import ill_8 from "/src/public/assets/images/illustrations/Shoutmon.png"
+import ill_9 from "/src/public/assets/images/illustrations/river.png"
+import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 
-const illustrations = [ill_3, ill_4, ill_5, ill_6]
+
+const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, ill_8]
 
 //Create a different object for solo and team projects along with component
 const projects = [
@@ -128,11 +142,51 @@ const projects = [
     "description": "An app created to help users who live in under-resourced areas and lack access to proper fire services, help them prepare for wildfire seasons.",
     "thumb_image": flare_mockup,
     "date": 2024,
-    "tags": ["App", "Frontend Developing", "UI Design"],
-    "roles": ["UI Designer", "Frontend Developer"],
-    "images": [flare_mockup],
+    "tags": ["App", "Frontend Developer", "UI Design"],
+    "roles": ["UI/UX Designer", "Frontend Developer"],
+    "images": [flare_mockup, flare_mockup2, flare_safety, flare_settings],
     "sections": [
+      {
+        "heading": "1. Project Summary",
+        "description": `Flare is an app targeted towards those who live in areas that lack the necessary resources for fire relief services. This app provides **informational** and **reliable** information about fires occurring in the Vancouver area.`,
+        "image": [flare_mockup],
+      },
+      {
+        "heading": "2. Challenges",
+        "description": `
+        
+* One of the core challenges for Flare was **cohesive design**. Being the first large project most team members were a part of it was difficult to coordinate proper design systems between frontend and backend, from visuals to micro-interactions.
+---
+* Another obstacle was overall coordination, highlighting a difference between team members other work and this particular project. It made it much more difficult to properly pace the project.
 
+        `,
+        "image": [flare_mockup2],
+      },
+      {
+        "heading": "3. Solution",
+        "description": `
+        
+* The best solutions for cohesive design was to **create a single concise document** highlighting all the required colours and schema for components.
+---
+* During the latter half of the project we were able to properly better discuss and coordinate times in which we could work. By setting expectations when **[x] feature** needed to be done ensured accountability across team members. 
+
+`,
+        "image": [flare_sol],
+      },
+      {
+        "heading": "4. Design Process",
+        "description": `
+        
+By establishing the purpose of Flare, **we were able to ideate possible visuals that would resonate with the meaning of the app through mood boards**, providing peace of mind from wildfires. This process helped dictate the colours that were used in the app.
+---
+The fonts chosen were based on **simplicity and readabliity** and how quickly users can understand what's going on.
+---
+The rest of the designs were based off of pre-existing UI Kits with our style guide adapted to the components provided.
+---
+
+        `,
+        "image": [flare_land, flare_safety, flare_settings],
+      },
     ]
   },
   {
@@ -183,6 +237,20 @@ const projects = [
         "description": "All pages for the print version of the magazine are optimized for print, including crop/bleed marks and necessary color settings.",
         "image": [hoyo_crop],
       },
+    ]
+  },
+  {
+    "id": 6,
+    "link": "https://una-marketing.vercel.app",
+    "name": "UNA",
+    "subtitle": "Social Media App Prototype",
+    "description": "UNA is a social media app focused on providing users with largely live interactable interface, enriching social media experiences through live customizeable avatars, and live forums.",
+    "thumb_image": una_mock,
+    "date": 2024,
+    "tags": ["UI/UX", "Figma", "After Effects"],
+    "roles": ["UI Designer", "UX Researcher"],
+    "images": [una_mock],
+    "sections": [
     ]
   },
 ]

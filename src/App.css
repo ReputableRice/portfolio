@@ -69,3 +69,8 @@
   background-color: var(--white);
   color: var(--white);
 }
+
+.background {
+  background-image: url("./public/assets/images/background.png");
+  background-size: contain;
+}

@@ -102,7 +102,7 @@ export default function Home({ projects }) {
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-[761px]">
-                    <div className=" h-[491px] fadeIn relative top-0 left-0 overflow-hidden bg-zinc-700">
+                    <div className=" h-[491px] fadeIn relative top-0 left-0 overflow-hidden background">
                         <img src={lookout_fg} className="w-full absolute z-20 lg:h-[800px] sm:h-[100%] -right-[43%] object-contain fgGSAP" alt="a vast landscape"/>
                         <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
                         {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
