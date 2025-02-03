@@ -57,6 +57,13 @@ import hoyo_crop from "/src/public/assets/images/hoyo/crop.png"
 //UNA 
 import una_mock from "/src/public/assets/images/UNA/una_mock.png"
 
+//mueseum
+import museum_draft from "/src/public/assets/images/museum/draft.png"
+import museum_cover from "/src/public/assets/images/museum/Museum.png"
+import museum_poster from "/src/public/assets/images/museum/Museum2.png"
+import museum_mock1 from "/src/public/assets/images/museum/mockup.png"
+import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
+
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -251,6 +258,33 @@ The rest of the designs were based off of pre-existing UI Kits with our style gu
     "roles": ["UI Designer", "UX Researcher"],
     "images": [una_mock],
     "sections": [
+    ]
+  },
+  {
+    "id": 7,
+    "link": "https://una-marketing.vercel.app",
+    "name": "Candian Museum Advertisement",
+    "subtitle": "Advertisement Mockup",
+    "description":
+      `
+A design exercise advertisement (mockup) for the Canadian National Museum based around the theme of Retro Technology, highlighting a showcase of Nintendo's old consoles.
+
+    `,
+    "thumb_image": museum_cover,
+    "date": 2024,
+    "tags": ["Illustrator", "Photoshop"],
+    "images": [museum_poster, museum_cover],
+    "sections": [
+      {
+        "heading": "For Print & Poster",
+        "description": "Two seperate designs were screated for the purpose of intending to print one for magazines while the other is intented for a large physical banner.",
+        "image": [museum_mock1, museum_mock2],
+      },
+      {
+        "heading": "Early Sketches",
+        "description": "After establishing the initial intention of what the showcase was about, several different ideas were drafted. By gauging and receiving feedback, the one to was most received well was selected to be turned into the final render.",
+        "image": [museum_draft],
+      },
     ]
   },
 ]
