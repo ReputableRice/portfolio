@@ -71,7 +71,7 @@ import ill_9 from "/src/public/assets/images/illustrations/river.png"
 import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 
 
-const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, ill_8]
+const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10]
 
 //Create a different object for solo and team projects along with component
 const projects = [
