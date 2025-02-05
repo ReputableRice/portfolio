@@ -36,7 +36,7 @@ function ProjectDetails({ project }) {
   return (
     <>
       <div className="min-h-svh">
-        <div className="drop-shadow-xl flex">
+        <div className="drop-shadow-xl flex lg:flex-row sm:flex-col">
           <Carousel
             plugins={[
               Autoplay({
@@ -44,7 +44,7 @@ function ProjectDetails({ project }) {
                 loop: true,
               }),
             ]}
-            className="w-3/5 h-[650px] object-cover"
+            className="lg:w-3/5 h-[650px] object-cover"
           >
             <CarouselContent>
               {project.images.map((images, index) => (
@@ -58,7 +58,7 @@ function ProjectDetails({ project }) {
             </CarouselContent>
 
           </Carousel>
-          <div className="w-1/4 px-6">
+          <div className="lg:w-1/4 px-6">
             <div>
               <CardHeader>
                 <BreadcrumbCompress project_name={project.name} />
@@ -86,7 +86,7 @@ function ProjectDetails({ project }) {
           </div>
         </div>
 
-        <h1 className="font-bold text-[128px]">PROJECT DETAILS</h1>
+        <h1 className="font-bold lg:text-[128px] sm:text-[76px] lg:leading-normal sm:leading-[68px]">PROJECT DETAILS</h1>
         {/* this part is where i can add sections, i want to make this a sub component but it's kind of scary */}
         {project.sections.map((section, a) => (
           <div>
@@ -95,14 +95,14 @@ function ProjectDetails({ project }) {
               <path d="M0 3L1913 2.99983" stroke="black" stroke-width="2" stroke-linecap="round" />
             </svg>
 
-            <div key={a} className="flex pl-[215px] gap-16">
-              <div className="flex w-1/3">
+            <div key={a} className="flex lg:pl-[215px] gap-16 lg:flex-row sm:flex-col">
+              <div className="flex lg:w-1/3">
                 <CardHeader>
                   <CardTitle className="font-bold text-3xl">{section.heading}</CardTitle>
                   <ReactMarkdown>{section.description}</ReactMarkdown>
                 </CardHeader>
               </div>
-              <div className="w-[737px] h-[492px] flex">
+              <div className="lg:w-[737px] lg:h-[492px] flex">
                 <Carousel
                   plugins={[
                     Autoplay({

@@ -70,7 +70,7 @@ import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
 import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
 import ill_3 from "/src/public/assets/images/illustrations/Giant Shrines.jpg"
 import ill_4 from "/src/public/assets/images/illustrations/Grasslands.jpg"
-// import ill_5 from "/src/public/assets/images/illustrations/Commission.jpg"
+import ill_5 from "/src/public/assets/images/illustrations/Commission.jpg"
 import ill_6 from "/src/public/assets/images/illustrations/Distant Landscape.jpg"
 import ill_7 from "/src/public/assets/images/illustrations/plane.png"
 import ill_8 from "/src/public/assets/images/illustrations/Shoutmon.png"
@@ -78,7 +78,7 @@ import ill_9 from "/src/public/assets/images/illustrations/river.png"
 import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 
 
-const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10]
+const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, hoyo_cover, char_cover, rez_wulf]
 
 //Create a different object for solo and team projects along with component
 const projects = [

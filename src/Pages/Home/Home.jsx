@@ -107,13 +107,13 @@ export default function Home({ projects }) {
                         <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
                         {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
                     </div>
-                    <div className="w-full px-[63px] flex justify-between">
+                    <div className="w-full px-[63px] flex lg:flex-row sm:flex-col justify-between">
                         <div className="w-[736px]">
                             <h1 className="text-[90px] font-bold fadeIn">Hi I'm Jackie!</h1>
                             <p className="font-semibold fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
                             <p className="pt-2 z-10 lg:flex fadeIn">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                         </div>
-                        <div className="mt-auto flex gap-6">
+                        <div className="lg:mt-auto sm:mt-6 flex gap-6">
                             <div className="flex">
                                 <ArrowDown className="arrowGSAP" strokeWidth={4} />
                                 <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="var(--orange)" />
