@@ -14,7 +14,6 @@ export default function ImageExpand({ className, alt, src }) {
           src={src ? src : "https://placehold.co/600x400"}
           alt={alt}
           className={className}
-          onClick={() => setIsEnlarged(!isEnlarged)}
           loading="lazy" decoding="async"
           onContextMenu={handleContextMenu}
 

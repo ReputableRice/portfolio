@@ -113,10 +113,16 @@ function ProjectDetails({ project }) {
                   className=" overflow-hidden"
                 >
                   <CarouselContent>
-                    {section.image.map((image, index) => (
+                    {section.image?.map((image, index) => (
                       <CarouselItem key={index} className="flex items-end justify-end">
-                        <ImageExpand key={index} src={image}
-                          className="object-cover" alt={image.name} />
+                        <ImageExpand src={image} className="object-cover" alt={image.name} />
+                      </CarouselItem>
+                    ))}
+                    {section.video?.map((video, vid) => (
+                      <CarouselItem key={vid} className="flex items-end justify-end">
+                        <video src={video} controls className="object-cover" loop="true" autoPlay="true" muted>
+                          <source src={video} type="video/mp4" />
+                        </video>
                       </CarouselItem>
                     ))}
                   </CarouselContent>

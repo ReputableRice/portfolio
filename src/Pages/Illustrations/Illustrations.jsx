@@ -41,7 +41,7 @@ export default function Illustrations({ illustrations }) {
                                 {illustrations.map((illustration, ill) => (
                                     <div key={ill}>
                                         <ImageExpand src={illustration}
-                                            className="imageGSAP object-cover min-h-60" alt={illustration} />
+                                            className="imageGSAP object-cover min-h-60 rounded-3xl" alt={illustration} />
                                     </div>
                                 ))}
                             </Masonry>

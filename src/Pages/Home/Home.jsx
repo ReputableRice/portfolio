@@ -61,10 +61,6 @@ export default function Home({ projects }) {
         tl.to(".arrowGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
         tl.to(".arrowGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
 
-        var tl2 = gsap.timeline({ repeat: -1 });
-        tl.to(".arrowContactGSAP", { y: 20, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
-        tl.to(".arrowContactGSAP", { y: 0, duration: 0.5, stagger: { amount: 0.5, from: "end", ease: "power2.inOut" } });
-
         document.addEventListener("mousemove", mouseMoveFunc);
 
         let fg = gsap.utils.toArray(".fgGSAP");
@@ -132,9 +128,9 @@ export default function Home({ projects }) {
                 <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%] hover:bg-zinc-100 transition-colors">
                     <h1 className="font-bold text-2xl">My Skills</h1>
                     <div className="skillArea mt-6 justify-center">
-                        {skills.map((skill, index) => (
-                            <Badge key={index} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
-                                {skill}
+                        {skills.map((skills, skill) => (
+                            <Badge key={skill} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
+                                {skills}
                             </Badge>
                         ))}
                     </div>

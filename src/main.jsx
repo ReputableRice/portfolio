@@ -26,6 +26,8 @@ import wad_mockup from "/src/public/assets/images/wad/wad_mock.webp"
 import wad_color from "/src/public/assets/images/wad/WaddleOn_colours.png"
 import wad_logo from "/src/public/assets/images/wad/WaddleOn_logo.png"
 import wad_type from "/src/public/assets/images/wad/WaddleOn_type.png"
+import wad_hifi from "/src/public/assets/images/wad/hifi.png"
+import wad_lofi from "/src/public/assets/images/wad/lofi.png"
 
 //flare
 import flare_mockup from "/src/public/assets/images/flare/flare_mock.png"
@@ -56,6 +58,10 @@ import hoyo_crop from "/src/public/assets/images/hoyo/crop.png"
 
 //UNA 
 import una_mock from "/src/public/assets/images/UNA/una_mock.png"
+import una_style from "/src/public/assets/images/UNA/Style.png"
+import una_logo from "/src/public/assets/images/UNA/Logo Design.png"
+import una_promo from "/src/public/assets/images/UNA/promo.mp4"
+
 
 //mueseum
 import museum_draft from "/src/public/assets/images/museum/draft.png"
@@ -64,6 +70,9 @@ import museum_poster from "/src/public/assets/images/museum/Museum2.png"
 import museum_mock1 from "/src/public/assets/images/museum/mockup.png"
 import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
 
+//egg
+
+import egg_display from "/src/public/assets/images/egg/egg_preview.png"
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -76,9 +85,13 @@ import ill_7 from "/src/public/assets/images/illustrations/plane.png"
 import ill_8 from "/src/public/assets/images/illustrations/Shoutmon.png"
 import ill_9 from "/src/public/assets/images/illustrations/river.png"
 import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
+import ill_11 from "/src/public/assets/images/illustrations/Mantra.png"
+import ill_12 from "/src/public/assets/images/illustrations/Mundane.png"
+import ill_13 from "/src/public/assets/images/illustrations/heartbeat.png"
 
 
-const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, hoyo_cover, char_cover, rez_wulf]
+
+const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, char_cover, rez_wulf, ill_11, ill_12, ill_13]
 
 //Create a different object for solo and team projects along with component
 const projects = [
@@ -105,18 +118,18 @@ const projects = [
       },
     ]
   },
-  {
-    "id": 1,
-    "name": "Rezealwulf",
-    "subtitle": "Creature Design",
-    "description": "A promotional advertisement featuring an original animal, promoting it's natural habitat through the text.",
-    "thumb_image": rez_wulf,
-    "date": 2024,
-    "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
-    "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
-    "sections": [
-    ]
-  },
+  // {
+  //   "id": 1,
+  //   "name": "Rezealwulf",
+  //   "subtitle": "Creature Design",
+  //   "description": "A promotional advertisement featuring an original animal, promoting it's natural habitat through the text.",
+  //   "thumb_image": rez_wulf,
+  //   "date": 2024,
+  //   "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
+  //   "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
+  //   "sections": [
+  //   ]
+  // },
   {
     "id": 2,
     "link": "https://waddleon.vercel.app",
@@ -138,6 +151,11 @@ const projects = [
         "heading": "Logo Colour Development",
         "description": "Various different colours were considered during the design period to see which attracted the most interest but ultimately the palette resembling Mallard was suitable.",
         "image": [wad_logo],
+      },
+      {
+        "heading": "Lofi and Hifi",
+        "description": "LoFi and HiFi developments mainly consisted on ensuring the core feature of the app can be intuitively navigated.",
+        "image": [wad_lofi, wad_hifi],
       },
     ]
   },
@@ -258,6 +276,22 @@ The rest of the designs were based off of pre-existing UI Kits with our style gu
     "roles": ["UI Designer", "UX Researcher"],
     "images": [una_mock],
     "sections": [
+      {
+        "heading": "Promotion",
+        "description": "All pages for the print version of the magazine are optimized for print, including crop/bleed marks and necessary color settings.",
+        "video": [una_promo],
+        "image": [],
+      },
+      {
+        "heading": "Branding",
+        "description": "The main motif being bunny along with eccentric colour styles enabled una to stand out from the crowd.",
+        "image": [una_style],
+      },
+      {
+        "heading": "Logo Development",
+        "description": "The core motif for our app was using rabbits for our development, this choice helped guide our philosiphy throughout our design process.",
+        "image": [una_logo],
+      },
     ]
   },
   {
