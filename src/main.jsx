@@ -87,7 +87,7 @@ import ill_9 from "/src/public/assets/images/illustrations/river.png"
 import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 import ill_11 from "/src/public/assets/images/illustrations/Mantra.png"
 import ill_12 from "/src/public/assets/images/illustrations/Mundane.png"
-import ill_13 from "/src/public/assets/images/illustrations/heartbeat.png"
+import ill_13 from "/src/public/assets/images/illustrations/Heartbeat.png"
 
 
 
