@@ -72,8 +72,6 @@ import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
 
 //egg
 
-import egg_display from "/src/public/assets/images/egg/egg_preview.png"
-
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
 import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
