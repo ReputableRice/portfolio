@@ -2,7 +2,7 @@ import Footer from "../../components/Footer/Footer"
 import { useRef } from "react"
 import ReactMarkdown from "react-markdown";
 
-//videos
+//videos /
 import donut from "../../public/assets/videos/Donut.mp4"
 import vTuber from "../../public/assets/videos/VT.mp4"
 
