@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import NavBar from "./components/Nav/Nav";
 import Illustrations from "./Pages/Illustrations/Illustrations";
+import MotionGraphics from "./Pages/Motion_Graphics/Motion_Graphics";
 
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
@@ -24,6 +25,7 @@ function App({ projects, illustrations }) {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio projects={projects} illustrations={illustrations} />} />
           <Route path="/illustrations" element={<Illustrations projects={projects} illustrations={illustrations} />} />
+          <Route path="/motion_graphics" element={<MotionGraphics />} />
 
           {projects.map((project) => (
             <Route

@@ -15,7 +15,6 @@ import croc_logo from "/src/public/assets/images/CrocColour.png"
 import lookout_fg from "/src/public/assets/images/lookout/fg.png"
 import lookout_bg from "/src/public/assets/images/lookout/bg.png"
 
-
 //GSAP
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -104,8 +103,8 @@ export default function Home({ projects }) {
                         {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
                     </div>
                     <div className="w-full px-[63px] flex lg:flex-row sm:flex-col justify-between">
-                        <div className="w-[736px]">
-                            <h1 className="text-[90px] font-bold fadeIn">Hi I'm Jackie!</h1>
+                        <div className="lg:w-[736px] lg:mt-0 sm:mt-6">
+                            <h1 className="lg:text-[90px] sm:text-[30px] font-bold fadeIn">Hi I'm Jackie!</h1>
                             <p className="font-semibold fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
                             <p className="pt-2 z-10 lg:flex fadeIn">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                         </div>

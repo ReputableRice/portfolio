@@ -40,8 +40,6 @@ export default function ProjectPreview({ projects }) {
         window.scrollTo(0, 0)
     }
 
-    window.addEventListener("click", newPage)
-
     return (
         <div className="flex flex-wrap boxAll" ref={card} >
             {projects.map((project, projectNumber) => (
@@ -57,8 +55,8 @@ export default function ProjectPreview({ projects }) {
                     </CardContent>
                     <CardFooter>
                         <Button asChild>
-                            <Link key={project.id} to={`/project/${project.id}`}>
-                                Link to Project
+                            <Link key={project.id} to={`/project/${project.id}`} onClick={newPage()}>
+                                Open Project
                             </Link>
                         </Button>
                     </CardFooter>

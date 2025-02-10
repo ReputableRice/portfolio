@@ -16,13 +16,18 @@ export default function NavBar() {
                 active &&
                 <div className="flex sm:flex-col lg:flex-row w-full justify-between sm:items-end lg:items-center sm:text-right sm:mr-16 lg:mr-0 sm:mt-6 lg:mt-0 sm:font-bold sm:py-6 lg:py-0 text-xl">
                     <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
-                    <div className="flex sm:flex-col lg:flex-row lg:gap-12">
+                    <div className="flex sm:flex-col lg:flex-row lg:gap-6 font-medium">
                         <Link to="/">Home</Link>
+                        <div className="sm:hidden lg:flex">/</div>
                         <Link to="/portfolio">Portfolio</Link>
+                        <div className="sm:hidden lg:flex">/</div>
                         <Link to="/illustrations">Illustrations</Link>
+                        <div className="sm:hidden lg:flex">/</div>
+                        <Link to="/motion_graphics">Motion Graphics</Link>
+                        <div className="sm:hidden lg:flex">/</div>
                         <Link to="/about">About</Link>
                     </div>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" className="font-medium">Contact</Link>
                 </div>
             }
         </nav>
