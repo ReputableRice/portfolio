@@ -36,6 +36,12 @@ export default function ProjectPreview({ projects }) {
         });
     }, { scope: card }) // <-- scope
 
+    function newPage() {
+        window.scrollTo(0, 0)
+    }
+
+    window.addEventListener("click", newPage)
+
     return (
         <div className="flex flex-wrap boxAll" ref={card} >
             {projects.map((project, projectNumber) => (

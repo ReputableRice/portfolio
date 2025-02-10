@@ -9,16 +9,6 @@ export default function NavBar() {
     const [active, setActive] = useState(true);
     const [screenSize, setScreenSize] = useState();
 
-    useEffect(() => {
-        if (window.innerWidth < 1000) {
-            setActive(() => false)
-            console.log("sm vw")
-        } else {
-            setActive(() => true)
-            console.log("lg vw")
-        }
-    }, [])
-
     return (
         <nav className="lg:p-[25px] flex sm:justify-end lg:justify-between z-50 items frosted top-0 w-full sm:sticky border-b-2 border-b-zinc-950 transition-all">
             <Menu className="sm:flex lg:hidden absolute top-6 right-6 bg-zinc-200 rounded-sm" onClick={() => setActive(!active)} size={32} />
@@ -30,7 +20,7 @@ export default function NavBar() {
                         <Link to="/">Home</Link>
                         <Link to="/portfolio">Portfolio</Link>
                         <Link to="/illustrations">Illustrations</Link>
-                        <Link to="/about">About Me</Link>
+                        <Link to="/about">About</Link>
                     </div>
                     <Link to="/contact">Contact</Link>
                 </div>
