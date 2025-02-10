@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 
 //videos /
 import donut from "../../public/assets/videos/Donut.mp4"
-import vTuber from "../../public/assets/videos/VT.mp4"
+import vTuber from "../../public/assets/videos/Vt_Web.mp4"
 
 //shadcn
 import {
