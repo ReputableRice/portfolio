@@ -41,9 +41,9 @@ export default function ProjectPreview({ projects }) {
     }
 
     return (
-        <div className="flex flex-wrap boxAll" ref={card} >
+        <div className="flex flex-wrap boxAll items-center justify-center" ref={card} >
             {projects.map((project, projectNumber) => (
-                <Card className="projectCard w-[285px] sm:m-auto lg:m-3 hover:drop-shadow-lg my-3" key={projectNumber}>
+                <Card className="projectCard w-[400px] sm:m-auto lg:m-3 hover:drop-shadow-lg my-3" key={projectNumber}>
                     <CardHeader>
                         <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" loading="eager" />
                     </CardHeader>

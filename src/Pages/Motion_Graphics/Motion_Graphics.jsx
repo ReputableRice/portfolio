@@ -60,7 +60,7 @@ A tutorial on creating your own VTuber model! This animation goes through all th
     return (
         <>
             <div className="min-h-svh">
-                <main className="flex sm:px-6  flex-col" >
+                <main className="flex sm:px-6  flex-col lg:px-[10%]" >
                     <h1 className="text-3xl font-bold mt-16">Motion Graphics</h1>
                     <div className="flex gap-6 flex-wrap mt-6 justify-center">
                         {

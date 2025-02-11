@@ -2,9 +2,22 @@ import "../../App.css"
 import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 import Footer from "../../components/Footer/Footer"
 import { useRef } from "react"
+import ImageExpand from "../../components/ImageExpand/ImageExpand"
+import { useState, useEffect } from "react"
+import Autoplay from "embla-carousel-autoplay"
+import { Link } from "react-router-dom"
+
 
 //shadcn
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 //icons
 import { ArrowDown } from "lucide-react"
@@ -23,7 +36,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Home({ projects }) {
+export default function Home({ projects, illustrations }) {
+    const [expandIllustrations, setExpandIllustrations] = useState("max-h-svh overflow-hidden")
+    const [imgToggle, setImgToggle] = useState(false)
+    const [text, setText] = useState("See More")
 
     const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript", "React", "Figma", "UI/UX", "Live2D"]
     const container = useRef();
@@ -91,21 +107,21 @@ export default function Home({ projects }) {
 
     }, { scope: container })
 
-
     return (
         <>
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-[761px]">
                     <div className=" h-[491px] fadeIn relative top-0 left-0 overflow-hidden background">
-                        <img src={lookout_fg} className="w-full absolute z-20 lg:h-[800px] sm:h-[100%] -right-[43%] object-contain fgGSAP" alt="a vast landscape"/>
+                        <img src={lookout_fg} className="w-full absolute z-20 lg:h-[800px] sm:h-[100%] -right-[43%] object-contain fgGSAP" alt="a vast landscape" />
                         <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
                         {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
                     </div>
                     <div className="w-full px-[63px] flex lg:flex-row sm:flex-col justify-between">
                         <div className="lg:w-[736px] lg:mt-0 sm:mt-6">
                             <h1 className="lg:text-[90px] sm:text-[30px] font-bold fadeIn">Hi I'm Jackie!</h1>
-                            <p className="font-semibold fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
+                            <p className="font-semibold text-2xl fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
+
                             <p className="pt-2 z-10 lg:flex fadeIn">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                         </div>
                         <div className="lg:mt-auto sm:mt-6 flex gap-6">
@@ -119,27 +135,64 @@ export default function Home({ projects }) {
                     </div>
                 </section>
                 <section className="hover:bg-zinc-100 transition-colors">
-                    <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[16%] sm:px-6 lg:pb-12">
+                    <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[10%] sm:px-6 lg:pb-12">
                         <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects</h1>
                         <ProjectPreview projects={projects} />
                     </div>
                 </section>
-                <section className="flex justify-center items-center min-h-svh flex-col flex-wrap px-[20%] hover:bg-zinc-100 transition-colors">
-                    <h1 className="font-bold text-2xl">My Skills</h1>
-                    <div className="skillArea mt-6 justify-center">
+                <section className={`hover:bg-zinc-100 py-[10vh] px-[15vw] flex justify-center flex-col`}>
+                    <div className="w-full flex justify-between py-6">
+                        <h1 id="graphics" className=" font-bold text-3xl"> Illustrations</h1>
+                        <div className="flex justify-center">
+                            <Button asChild onClick={() => window.scrollTo(0, 0)}>
+                                <Link to={`/illustrations`}>
+                                    To Illustrations Page
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                    <Carousel
+                        opts={{
+                            align: "end",
+                            loop: true,
+                        }}
+                        plugins={[
+                            Autoplay({
+                                delay: 2000,
+                                loop: true,
+                            }),
+                        ]}
+                    >
+                        <CarouselContent>
+                            {illustrations.map((illustration, homeIll) => (
+                                <CarouselItem key={homeIll}>
+                                    <ImageExpand src={illustration}
+                                        className="object-cover object-center h-[560px] w-full rounded-3xl overflow-hidden" alt={illustration} />
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </section>
+                <section className="hover:bg-zinc-100 transition-colors w-full flex justify-center py-[10vh]">
+                    <div className="skillArea">
+                        <h1 className="font-bold text-2xl mb-6 green__text">Programs I use...</h1>
                         {skills.map((skills, skill) => (
-                            <Badge key={skill} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            <Badge key={skill} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full hover:bg-green-500 hover:text-zinc-50">
                                 {skills}
                             </Badge>
                         ))}
                     </div>
                 </section>
+
                 <section className="contactArea h-screen flex flex-col items-center justify-center hover:bg-zinc-100 transition-colors">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
                     <h1 className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
                     <p className="contact pt-6">Contact me at</p>
                     <p className="contact">jackietruong274@gmail.com</p>
                 </section>
+
             </main>
             <Footer />
         </>
