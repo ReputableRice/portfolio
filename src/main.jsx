@@ -36,6 +36,13 @@ import flare_safety from "/src/public/assets/images/flare/Safety.png"
 import flare_settings from "/src/public/assets/images/flare/Settings.png"
 import flare_sol from "/src/public/assets/images/flare/flaresol.png"
 import flare_land from "/src/public/assets/images/flare/land.png"
+import flare_sona from "/src/public/assets/images/flare/flar_sona.png"
+import flare_sona_2 from "/src/public/assets/images/flare/flar_sona2.png"
+import flare_hifi from "/src/public/assets/images/flare/flar_hifi.png"
+import flare_hifi_2 from "/src/public/assets/images/flare/flar_hifi2.png"
+import flare_sitemap from "/src/public/assets/images/flare/flare_sitemap.png"
+import flare_comp from "/src/public/assets/images/flare/flare_competitive.png"
+
 
 
 //Charizard
@@ -170,45 +177,74 @@ const projects = [
     "images": [flare_mockup, flare_mockup2, flare_safety, flare_settings],
     "sections": [
       {
-        "heading": "1. Project Summary",
+        "heading": "Project Summary",
         "description": `Flare is an app targeted towards those who live in areas that lack the necessary resources for fire relief services. This app provides **informational** and **reliable** information about fires occurring in the Vancouver area.`,
         "image": [flare_mockup],
       },
       {
-        "heading": "2. Challenges",
+        "heading": "Challenges",
         "description": `
         
-* One of the core challenges for Flare was **cohesive design**. Being the first large project most team members were a part of it was difficult to coordinate proper design systems between frontend and backend, from visuals to micro-interactions.
----
-* Another obstacle was overall coordination, highlighting a difference between team members other work and this particular project. It made it much more difficult to properly pace the project.
+Wildfires are a frequent matter in the lower mainland, throughout winter until summer, they are often shown to cause real damage to a vast amount of people. This impact can range from lack of fast real-time information, knowledge of evacuation procedures and access to emergency resources.
 
         `,
         "image": [flare_mockup2],
       },
       {
-        "heading": "3. Solution",
+        "heading": "Solution",
         "description": `
         
-* The best solutions for cohesive design was to **create a single concise document** highlighting all the required colours and schema for components.
----
-* During the latter half of the project we were able to properly better discuss and coordinate times in which we could work. By setting expectations when **[x] feature** needed to be done ensured accountability across team members. 
+Flare is designed to be a user-friendly application that delivers real-time information about wildfires, safety resources and location-based updates. The app leverages a clean UI, accessible navigation and API integrations to ensure users receive timely and reliable information 
 
 `,
-        "image": [flare_sol],
+        "image": [],
       },
       {
-        "heading": "4. Design Process",
+        "heading": "Key Findings",
         "description": `
         
-By establishing the purpose of Flare, **we were able to ideate possible visuals that would resonate with the meaning of the app through mood boards**, providing peace of mind from wildfires. This process helped dictate the colours that were used in the app.
----
-The fonts chosen were based on **simplicity and readabliity** and how quickly users can understand what's going on.
----
-The rest of the designs were based off of pre-existing UI Kits with our style guide adapted to the components provided.
----
-
+- **Users prioritize real-time updates** over static safety resources.
+- **Visual clarity is essential** during emergencies—concise alerts and intuitive UI elements improve usability.
+- **Community-driven reports** help supplement official wildfire tracking data.
         `,
-        "image": [flare_land, flare_safety, flare_settings],
+        "image": [flare_sona, flare_sona_2],
+      },
+      {
+        "heading": "Competitive Analysis",
+        "description": `
+Analyzing existing wildfire tracking apps revealed gaps in usability and engagement. While some apps provide extensive data, they often lack an intuitive experience, making it difficult for users to access critical information quickly. Flare differentiates itself by focusing on **user experience, accessibility, and proactive safety measures.**
+        `,
+        "image": [flare_comp],
+      },
+      {
+        "heading": "Insights from Research",
+        "description": `
+- **Users need customizable alerts** based on their location and risk level.
+- **Educational resources** should be easy to digest, helping users prepare before wildfires occur.
+        `,
+        "image": [flare_hifi_2],
+      },
+      {
+        "heading": "Design Process",
+        "description": `
+1. **User Research** – Conducted surveys and analyzed user behavior to understand wildfire awareness gaps 
+2. **Wireframing & Prototyping** – Created low-fidelity sketches, followed by interactive prototypes using a UI design kit and Tailwind.
+3. **User Testing & Iteration** – Gathered feedback from testers to refine UI/UX and improve information hierarchy.
+        `,
+        "image": [flare_sitemap],
+      },
+      {
+        "heading": "HiFi and LoFi Prototypes",
+        "description": ``,
+        "image": [flare_hifi],
+      },
+      {
+        "heading": "Colour Palette",
+        "description": `
+A carefully selected palette reflecting warm tones (red, orange) for urgency, balanced with cool tones (blue, gray) for reliability and trust.
+Promotional Materials
+        `,
+        "image": [flare_sol],
       },
     ]
   },
