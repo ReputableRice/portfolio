@@ -14,7 +14,6 @@ import label_pink from "/src/public/assets/images/cans/label_wolf.jpg"
 import label_sketches from "/src/public/assets/images/cans/sketches.jpg"
 import can_display from "/src/public/assets/images/cans/display.png"
 
-
 //rezealwulf import
 import rez_wulf from "/src/public/assets/images/rezeal/rezwulf.jpg"
 import rez_book from "/src/public/assets/images/rezeal/rezbook.jpg"
@@ -43,8 +42,6 @@ import flare_hifi_2 from "/src/public/assets/images/flare/flar_hifi2.png"
 import flare_sitemap from "/src/public/assets/images/flare/flare_sitemap.png"
 import flare_comp from "/src/public/assets/images/flare/flare_competitive.png"
 
-
-
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
 import char_mock1 from "/src/public/assets/images/charizard/holding.png"
@@ -69,7 +66,6 @@ import una_style from "/src/public/assets/images/UNA/Style.png"
 import una_logo from "/src/public/assets/images/UNA/Logo Design.png"
 import una_promo from "/src/public/assets/images/UNA/promo.mp4"
 
-
 //mueseum
 import museum_draft from "/src/public/assets/images/museum/draft.png"
 import museum_cover from "/src/public/assets/images/museum/Museum.png"
@@ -81,13 +77,10 @@ import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
 import egg_logo from "/src/public/assets/images/egg/egg logos.png"
 import egg_ideating from "/src/public/assets/images/egg/egg ideation.png"
 import egg_colour from "/src/public/assets/images/egg/egg colours.png"
-import egg_old from "/src/public/assets/images/egg/eggOLD.png"
+// import egg_old from "/src/public/assets/images/egg/eggOLD.png"
 import egg_mock from "/src/public/assets/images/egg/egg_mock.png"
 import egg_mock2 from "/src/public/assets/images/egg/egg_hat.png"
 import egg_cover from "/src/public/assets/images/egg/egg cover.png"
-
-
-
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -103,8 +96,6 @@ import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 import ill_11 from "/src/public/assets/images/illustrations/Mantra.png"
 import ill_12 from "/src/public/assets/images/illustrations/Mundane.png"
 import ill_13 from "/src/public/assets/images/illustrations/Heartbeat.png"
-
-
 
 const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, char_cover, rez_wulf, ill_11, ill_12, ill_13]
 
@@ -133,18 +124,6 @@ const projects = [
       },
     ]
   },
-  // {
-  //   "id": 1,
-  //   "name": "Rezealwulf",
-  //   "subtitle": "Creature Design",
-  //   "description": "A promotional advertisement featuring an original animal, promoting it's natural habitat through the text.",
-  //   "thumb_image": rez_wulf,
-  //   "date": 2024,
-  //   "tags": ["Illustration", "Mockup", "Photobashing", "Photoshop"],
-  //   "images": [rez_wulf, rez_book, rez_poster, rez_poster_2],
-  //   "sections": [
-  //   ]
-  // },
   {
     "id": 2,
     "link": "https://waddleon.vercel.app",
@@ -387,7 +366,7 @@ showcasing my design process behind creating logos.
       {
         "heading": "Challenges",
         "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
-        "image": [egg_old],
+        "image": [],
       },
       {
         "heading": "Solutions",
