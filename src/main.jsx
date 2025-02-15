@@ -77,10 +77,10 @@ import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
 import egg_logo from "/src/public/assets/images/egg/egg logos.png"
 import egg_ideating from "/src/public/assets/images/egg/egg ideation.png"
 import egg_colour from "/src/public/assets/images/egg/egg colours.png"
-// import egg_old from "/src/public/assets/images/egg/eggOLD.png"
 import egg_mock from "/src/public/assets/images/egg/egg_mock.png"
 import egg_mock2 from "/src/public/assets/images/egg/egg_hat.png"
 import egg_cover from "/src/public/assets/images/egg/egg cover.png"
+import egg_old from "/src/public/assets/images/egg/egg old.png"
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -366,7 +366,7 @@ showcasing my design process behind creating logos.
       {
         "heading": "Challenges",
         "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
-        "image": [],
+        "image": [egg_old],
       },
       {
         "heading": "Solutions",
