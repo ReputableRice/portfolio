@@ -140,7 +140,7 @@ export default function Home({ projects, illustrations }) {
                     </div>
                 </section>
                 <section className={`hover:bg-zinc-100 py-[10vh] px-[15vw] flex justify-center flex-col`}>
-                    <div className="w-full flex justify-between py-6 sm:flex-col sm:items-center">
+                    <div className="w-full flex justify-between py-6 sm:flex-col sm:items-center lg:flex-row lg:items-start">
                         <h1 id="graphics" className=" font-bold text-3xl"> Illustrations</h1>
                         <div className="flex justify-center">
                             <Button asChild onClick={() => window.scrollTo(0, 0)}>
