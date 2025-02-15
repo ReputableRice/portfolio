@@ -111,26 +111,25 @@ export default function Home({ projects, illustrations }) {
         <>
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
-                <section className="flex flex-col w-full h-[761px]">
-                    <div className=" h-[491px] fadeIn relative top-0 left-0 overflow-hidden background">
-                        <img src={lookout_fg} className="w-full absolute z-20 lg:h-[800px] sm:h-[100%] -right-[43%] object-contain fgGSAP" alt="a vast landscape" />
+                <section className="flex flex-col w-full h-full">
+                    <div className=" h-[721px] fadeIn relative top-0 left-0 overflow-hidden background rounded-b-[124px]">
+                        <img src={lookout_fg} className="w-full absolute lg:z-20 lg:h-[800px] sm:h-[100%] -right-[43%] lg:object-contain fgGSAP" alt="a vast landscape" />
                         <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
-                        {/* <img src={lookout} className="object-cover object-top mx-auto w-full"/> */}
-                    </div>
-                    <div className="w-full px-[63px] flex lg:flex-row sm:flex-col justify-between">
-                        <div className="lg:w-[736px] lg:mt-0 sm:mt-6">
-                            <h1 className="lg:text-[90px] sm:text-[30px] font-bold fadeIn">Hi I'm Jackie!</h1>
-                            <p className="font-semibold text-2xl fadeIn">Graphic Design | Illustrator | Frontend Web Developer</p>
+                        <div className="w-full h-full flex flex-col justify-center items-center lg:px-[30%] sm:px-6 frosted">
+                            <div className="text-center">
+                                <h1 className="lg:text-[60px] sm:text-[30px] font-bold fadeIn white__text">Hi I'm Jackie!</h1>
+                                <p className="font-semibold text-2xl fadeIn white__text">Graphic Design | Illustrator | Frontend Web Developer</p>
 
-                            <p className="pt-2 z-10 lg:flex fadeIn">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
-                        </div>
-                        <div className="lg:mt-auto sm:mt-6 flex gap-6">
-                            <div className="flex">
-                                <ArrowDown className="arrowGSAP" strokeWidth={4} />
-                                <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="var(--orange)" />
-                                <ArrowDown className="arrowGSAP" strokeWidth={4} stroke="var(--green)" />
+                                <p className="pt-2 z-10 lg:flex fadeIn white__text">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                             </div>
-                            <h1 className="font-bold contentPush green__text">Projects Down Below</h1>
+                            <div className="sm:mt-6 flex gap-6">
+                                <div className="flex">
+                                    <ArrowDown className="arrowGSAP" strokeWidth={4} stroke="var(--green)" />
+                                    <ArrowDown className="arrowGSAP rounded-2xl" strokeWidth={4} stroke="var(--green)" />
+                                    <ArrowDown className="arrowGSAP" strokeWidth={4} stroke="var(--green)" />
+                                </div>
+                                <h1 className="font-bold contentPush green__text z-10">Projects Down Below</h1>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -141,7 +140,7 @@ export default function Home({ projects, illustrations }) {
                     </div>
                 </section>
                 <section className={`hover:bg-zinc-100 py-[10vh] px-[15vw] flex justify-center flex-col`}>
-                    <div className="w-full flex justify-between py-6">
+                    <div className="w-full flex justify-between py-6 sm:flex-col sm:items-center">
                         <h1 id="graphics" className=" font-bold text-3xl"> Illustrations</h1>
                         <div className="flex justify-center">
                             <Button asChild onClick={() => window.scrollTo(0, 0)}>
@@ -162,6 +161,7 @@ export default function Home({ projects, illustrations }) {
                                 loop: true,
                             }),
                         ]}
+                        className="rounded-3xl"
                     >
                         <CarouselContent>
                             {illustrations.map((illustration, homeIll) => (
@@ -177,7 +177,7 @@ export default function Home({ projects, illustrations }) {
                 </section>
                 <section className="hover:bg-zinc-100 transition-colors w-full flex justify-center py-[10vh]">
                     <div className="skillArea">
-                        <h1 className="font-bold text-2xl mb-6 green__text">Programs I use...</h1>
+                        <h1 className="font-bold text-2xl mb-6 green__text">Tools I use...</h1>
                         {skills.map((skills, skill) => (
                             <Badge key={skill} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full hover:bg-green-500 hover:text-zinc-50">
                                 {skills}
@@ -188,7 +188,7 @@ export default function Home({ projects, illustrations }) {
 
                 <section className="contactArea h-screen flex flex-col items-center justify-center hover:bg-zinc-100 transition-colors">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
-                    <h1 className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
+                    <h1 id="test" className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>
                     <p className="contact pt-6">Contact me at</p>
                     <p className="contact">jackietruong274@gmail.com</p>
                 </section>

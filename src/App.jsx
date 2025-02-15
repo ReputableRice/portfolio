@@ -10,11 +10,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import NavBar from "./components/Nav/Nav";
 import Illustrations from "./Pages/Illustrations/Illustrations";
 import MotionGraphics from "./Pages/Motion_Graphics/Motion_Graphics";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 function App({ projects, illustrations }) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, [])
+
   return (
     <Router>
       <NavBar />
@@ -26,7 +33,6 @@ function App({ projects, illustrations }) {
           <Route path="/portfolio" element={<Portfolio projects={projects} illustrations={illustrations} />} />
           <Route path="/illustrations" element={<Illustrations projects={projects} illustrations={illustrations} />} />
           <Route path="/motion_graphics" element={<MotionGraphics />} />
-
           {projects.map((project) => (
             <Route
               key={project.id}

@@ -78,6 +78,16 @@ import museum_mock1 from "/src/public/assets/images/museum/mockup.png"
 import museum_mock2 from "/src/public/assets/images/museum/mockup2.png"
 
 //egg
+import egg_logo from "/src/public/assets/images/egg/egg logos.png"
+import egg_ideating from "/src/public/assets/images/egg/egg ideation.png"
+import egg_colour from "/src/public/assets/images/egg/egg colours.png"
+import egg_old from "/src/public/assets/images/egg/egg_OLD.png"
+import egg_mock from "/src/public/assets/images/egg/egg_mock.png"
+import egg_mock2 from "/src/public/assets/images/egg/egg_hat.png"
+import egg_cover from "/src/public/assets/images/egg/egg cover.png"
+
+
+
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -330,7 +340,6 @@ Promotional Materials
   },
   {
     "id": 7,
-    "link": "https://una-marketing.vercel.app",
     "name": "Candian Museum Advertisement",
     "subtitle": "Advertisement Mockup",
     "description":
@@ -353,7 +362,39 @@ A design exercise advertisement (mockup) for the Canadian National Museum based 
         "description": "After establishing the initial intention of what the showcase was about, several different ideas were drafted. By gauging and receiving feedback, the one to was most received well was selected to be turned into the final render.",
         "image": [museum_draft],
       },
-    ]
+    ],
+  },
+  {
+    "id": 8,
+    "name": "Egg Logo",
+    "subtitle": "Logo Design Exercise",
+    "description":
+      `
+A logo exercise designed for a friend who really enjoys eggs with the intent on
+showcasing my design process behind creating logos.
+
+    `,
+    "thumb_image": egg_cover,
+    "date": 2024,
+    "tags": ["Illustrator", "Clip Studio Paint"],
+    "images": [egg_mock, egg_mock2, egg_logo],
+    "sections": [
+      {
+        "heading": "Project Summary",
+        "description": "The goal of this exercise was to create a logo based around a combination of an anthropomorphic dog and eggs, based around the personality of a friend.",
+        "image": [egg_ideating, egg_colour],
+      },
+      {
+        "heading": "Challenges",
+        "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
+        "image": [egg_old],
+      },
+      {
+        "heading": "Solutions",
+        "description": "Ultimately, the decision to re-imagine the idea was the best solution, focusing more on the shine of eggs rather than the viscosity of it.",
+        "image": [egg_logo],
+      },
+    ],
   },
 ]
 

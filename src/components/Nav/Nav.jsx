@@ -7,7 +7,6 @@ import croc_logo from "/src/public/assets/images/CrocColour.png"
 
 export default function NavBar() {
     const [active, setActive] = useState(true);
-    const [screenSize, setScreenSize] = useState();
 
     return (
         <nav className="lg:p-[25px] flex sm:justify-end lg:justify-between z-50 items frosted top-0 w-full sm:sticky border-b-2 border-b-zinc-950 transition-all">
@@ -15,19 +14,21 @@ export default function NavBar() {
             {
                 active &&
                 <div className="flex sm:flex-col lg:flex-row w-full justify-between sm:items-end lg:items-center sm:text-right sm:mr-16 lg:mr-0 sm:mt-6 lg:mt-0 sm:font-bold sm:py-6 lg:py-0 text-xl">
-                    <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
+                    <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                        <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
+                    </Link>
                     <div className="flex sm:flex-col lg:flex-row lg:gap-6 font-medium">
-                        <Link to="/">Home</Link>
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                         <div className="sm:hidden lg:flex">/</div>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/portfolio" onClick={() => window.scrollTo(0, 0)}>Portfolio</Link>
                         <div className="sm:hidden lg:flex">/</div>
-                        <Link to="/illustrations">Illustrations</Link>
+                        <Link to="/illustrations" onClick={() => window.scrollTo(0, 0)}>Illustrations</Link>
                         <div className="sm:hidden lg:flex">/</div>
-                        <Link to="/motion_graphics">Motion Graphics</Link>
+                        <Link to="/motion_graphics" onClick={() => window.scrollTo(0, 0)}>Motion Graphics</Link>
                         <div className="sm:hidden lg:flex">/</div>
-                        <Link to="/about">About</Link>
+                        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About</Link>
                     </div>
-                    <Link to="/contact" className="font-medium">Contact</Link>
+                    <Link to="/contact" className="font-medium" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
                 </div>
             }
         </nav>
