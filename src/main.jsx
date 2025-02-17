@@ -343,38 +343,38 @@ A design exercise advertisement (mockup) for the Canadian National Museum based 
       },
     ],
   },
-  {
-    "id": 8,
-    "name": "Egg Logo",
-    "subtitle": "Logo Design Exercise",
-    "description":
-      `
-A logo exercise designed for a friend who really enjoys eggs with the intent on
-showcasing my design process behind creating logos.
+//   {
+//     "id": 8,
+//     "name": "Egg Logo",
+//     "subtitle": "Logo Design Exercise",
+//     "description":
+//       `
+// A logo exercise designed for a friend who really enjoys eggs with the intent on
+// showcasing my design process behind creating logos.
 
-    `,
-    "thumb_image": egg_cover,
-    "date": 2024,
-    "tags": ["Illustrator", "Clip Studio Paint"],
-    "images": [egg_mock, egg_mock2, egg_logo],
-    "sections": [
-      {
-        "heading": "Project Summary",
-        "description": "The goal of this exercise was to create a logo based around a combination of an anthropomorphic dog and eggs, based around the personality of a friend.",
-        "image": [egg_ideating, egg_colour],
-      },
-      {
-        "heading": "Challenges",
-        "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
-        "image": [egg_old],
-      },
-      {
-        "heading": "Solutions",
-        "description": "Ultimately, the decision to re-imagine the idea was the best solution, focusing more on the shine of eggs rather than the viscosity of it.",
-        "image": [egg_logo],
-      },
-    ],
-  },
+//     `,
+//     "thumb_image": egg_cover,
+//     "date": 2024,
+//     "tags": ["Illustrator", "Clip Studio Paint"],
+//     "images": [egg_mock, egg_mock2, egg_logo],
+//     "sections": [
+//       {
+//         "heading": "Project Summary",
+//         "description": "The goal of this exercise was to create a logo based around a combination of an anthropomorphic dog and eggs, based around the personality of a friend.",
+//         "image": [egg_ideating, egg_colour],
+//       },
+//       {
+//         "heading": "Challenges",
+//         "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
+//         "image": [egg_old],
+//       },
+//       {
+//         "heading": "Solutions",
+//         "description": "Ultimately, the decision to re-imagine the idea was the best solution, focusing more on the shine of eggs rather than the viscosity of it.",
+//         "image": [egg_logo],
+//       },
+//     ],
+//   },
 ]
 
 createRoot(document.getElementById('root')).render(
