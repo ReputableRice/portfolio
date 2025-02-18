@@ -161,7 +161,7 @@ const projects = [
     "description": "An app created to help users who live in under-resourced areas and lack access to proper fire services, help them prepare for wildfire seasons.",
     "thumb_image": flare_mockup,
     "date": 2024,
-    "tags": ["App", "Frontend Developer", "UI Design"],
+    "tags": ["App", "Frontend Development", "UI Design"],
     "roles": ["UI/UX Designer", "Frontend Developer"],
     "images": [flare_mockup, flare_mockup2, flare_safety, flare_settings],
     "sections": [

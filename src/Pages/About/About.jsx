@@ -32,7 +32,7 @@ export default function About() {
 
     return (
         <>
-            <div className="flex sm:flex-col items-center justify-center w-full min-h-[900px] mt-16 bg-zinc-900" ref={container}>
+            <div className="flex sm:flex-col items-center justify-center w-full min-h-[900px] bg-zinc-900" ref={container}>
                 <div className="w-[100%] flex flex-row justify-center sm:flex-col lg:flex-row items-start sm:items-center">
                     <CardHeader className="lg:w-[30%] sm:w-[50%] drop-shadow-xl fadeInGSAP">
                         <video autoPlay muted loop>

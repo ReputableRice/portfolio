@@ -44,7 +44,7 @@ function ProjectDetails({ project }) {
                 loop: true,
               }),
             ]}
-            className="lg:w-3/5 h-[650px] object-cover"
+            className="lg:w-3/5 h-[650px] object-cover  rounded-br-3xl overflow-hidden"
           >
             <CarouselContent>
               {project.images.map((images, index) => (
@@ -110,7 +110,7 @@ function ProjectDetails({ project }) {
                       loop: true,
                     }),
                   ]}
-                  className=" overflow-hidden"
+                  className=" overflow-hidden rounded-3xl"
                 >
                   <CarouselContent>
                     {section.image?.map((image, index) => (
