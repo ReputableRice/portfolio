@@ -112,12 +112,12 @@ export default function Home({ projects, illustrations }) {
             <main className="flex flex-col" ref={container} >
                 {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-full">
-                    <div className=" h-[721px] fadeIn relative top-0 left-0 overflow-hidden background">
-                        <img src={lookout_fg} className="w-full absolute lg:z-20 lg:h-[800px] sm:h-[100%] -right-[43%] lg:object-contain fgGSAP" alt="a vast landscape" />
+                    <div className=" h-svh fadeIn relative left-0 overflow-hidden background -top-[112px]">
+                        <img src={lookout_fg} className="w-full absolute lg:z-20 lg:h-svh sm:h-[100%] -right-[43%] lg:object-contain fgGSAP" alt="a vast landscape" />
                         <img src={lookout_bg} className="w-[200%] h-[100%] absolute object-cover bgGSAP drop-shadow-2xl" alt="an anthropomorphic dragon standing on a rock looking into the distance" />
                         <div className="w-full h-full flex flex-col justify-center lg:px-[30%] sm:px-6 frosted">
                             <div className="">
-                                <h1 className="lg:text-[60px] sm:text-[30px] font-bold fadeIn white__text">Hi I'm Jackie!</h1>
+                                <h1 className="lg:text-[60px] sm:text-[30px] font-bold fadeIn white__text">jackie truong</h1>
                                 <p className="font-semibold text-2xl fadeIn white__text">Graphic Design | Illustrator | Frontend Web Developer</p>
 
                                 <p className="pt-2 z-10 lg:flex fadeIn white__text">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
