@@ -96,8 +96,9 @@ import ill_10 from "/src/public/assets/images/illustrations/spright blue.png"
 import ill_11 from "/src/public/assets/images/illustrations/Mantra.png"
 import ill_12 from "/src/public/assets/images/illustrations/Mundane.png"
 import ill_13 from "/src/public/assets/images/illustrations/Heartbeat.png"
+import ill_14 from "/src/public/assets/images/illustrations/frutiger_aero.png"
 
-const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, char_cover, rez_wulf, ill_11, ill_12, ill_13]
+const illustrations = [ill_3, ill_4, ill_6, ill_7, ill_9, ill_10, museum_cover, char_cover, rez_wulf, ill_11, ill_12, ill_13, ill_14]
 
 //Create a different object for solo and team projects along with component
 const projects = [
