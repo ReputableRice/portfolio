@@ -9,12 +9,7 @@ import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import NavBar from "./components/Nav/Nav";
 import Illustrations from "./Pages/Illustrations/Illustrations";
-
-import { useEffect } from 'react';
-import { Live2DModel } from 'pixi-live2d-display';
-import * as PIXI from 'pixi.js'
-import { useRef } from 'react';
-import Live2DComponent from "./components/live2d";
+import Live2DModel from "@/components/l2d";
 //images
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 
@@ -22,7 +17,7 @@ function App({ projects, illustrations }) {
   return (
     <Router>
       Test
-      <Live2DComponent/>
+      <Live2DModel/>
     </Router>
   );
 }

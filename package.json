@@ -18,9 +18,8 @@
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "gsap": "^3.12.7",
+    "l2d": "^0.1.1",
     "lucide-react": "^0.471.1",
-    "pixi-live2d-display": "^0.4.0",
-    "pixi.js": "^6.5.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.3",
@@ -45,6 +44,7 @@
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.7.3",
     "vite": "^6.0.5"
   }
 }

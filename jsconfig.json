@@ -6,9 +6,17 @@
       }
     ],
     "compilerOptions": {
+      "jsx": "react",         // Enable JSX support for React
+      "allowJs": true,        // Allow mixing JavaScript and TypeScript files
+      "checkJs": true,        // Optional: Enable type checking for JavaScript files
+      "moduleResolution": "node",
+      "esModuleInterop": true,
       "baseUrl": ".",
       "paths": {
         "@/*": ["./src/*"]
       }
-    }
+    },
+    "include": [
+      "src/**/*"              // Include all files in the "src" folder
+    ]
   }
