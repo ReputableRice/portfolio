@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { init } from 'l2d';
 import model from "../../public/courier/courier.model3.json"
 
+// https://www.npmjs.com/package/l2d
 function Live2D() {
     const l2dRef = useRef<HTMLCanvasElement>(null);
     const model = useRef<Model>();
@@ -9,7 +10,8 @@ function Live2D() {
       const l2d = init(l2dRef.current);
       l2d.create({
         path: 'https://reputablerice.github.io/models/courier.model3.json',
-        // path: '/courier_small/courier.model3.json',
+        rotaion: 35, 
+        position: [80, 0]
       }).then(res => {
         model.current = res;
       });
@@ -19,8 +21,8 @@ function Live2D() {
       };
     }, []);
     return (
-      <div style={{ width: '300px', height: '300px' }}>
-        <canvas ref={l2dRef} />
+      <div style={{ width: '500px', height: '1000px' }}>
+        <canvas ref={l2dRef}/>
       </div>
     );
 }
