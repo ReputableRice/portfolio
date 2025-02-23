@@ -1,0 +1,25 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "courier.moc3",
+		"Textures": [
+			"courier.1024/texture_00.png",
+			"courier.1024/texture_01.png",
+			"courier.1024/texture_02.png"
+		],
+		"Physics": "courier.physics3.json",
+		"DisplayInfo": "courier.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}
