@@ -11,7 +11,8 @@ function Live2D() {
       l2d.create({
         path: 'https://reputablerice.github.io/models/courier.model3.json',
         rotaion: 35, 
-        position: [80, 0]
+        position: [200,-500],
+        scale: 0.4
       }).then(res => {
         model.current = res;
       });
@@ -21,7 +22,7 @@ function Live2D() {
       };
     }, []);
     return (
-      <div style={{ width: '500px', height: '1000px' }}>
+      <div style={{ width: '100%^', height: '1000px'}}>
         <canvas ref={l2dRef}/>
       </div>
     );
