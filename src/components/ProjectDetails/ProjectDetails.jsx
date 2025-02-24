@@ -66,7 +66,7 @@ function ProjectDetails({ project }) {
                 <CardDescription>
                   <ReactMarkdown>{project.description}</ReactMarkdown>
                   <p className="mt-8"> Created In {project.date}</p>
-                  {project.link && <Button asChild className="mt-2"><a href={project.link} target="_blank"> Link To Project</a></Button>}
+                  {project.link && <Button asChild className="mt-2"><a href={project.link} target="_blank"> Link To {project.type ? project.type : "Project"} </a></Button>}
                 </CardDescription>
               </CardHeader>
               <CardFooter>
@@ -102,7 +102,7 @@ function ProjectDetails({ project }) {
                   <ReactMarkdown>{section.description}</ReactMarkdown>
                 </CardHeader>
               </div>
-              <div className="lg:w-[737px] lg:h-[492px] flex">
+              <div className="lg:w-[737px] flex flex-col">
                 <Carousel
                   plugins={[
                     Autoplay({
@@ -118,15 +118,15 @@ function ProjectDetails({ project }) {
                         <ImageExpand src={image} className="object-cover" alt={image.name} />
                       </CarouselItem>
                     ))}
-                    {section.video?.map((video, vid) => (
-                      <CarouselItem key={vid} className="flex items-end justify-end">
+                  </CarouselContent>
+                </Carousel>
+                {section.video?.map((video, vid) => (
+                      <div key={vid} className="flex items-end justify-end rounded-3xl overflow-hidden">
                         <video src={video} controls className="object-cover" loop="true" autoPlay="true" muted>
                           <source src={video} type="video/mp4" />
                         </video>
-                      </CarouselItem>
+                      </div>
                     ))}
-                  </CarouselContent>
-                </Carousel>
               </div>
             </div>
           </div>

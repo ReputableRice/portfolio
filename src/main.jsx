@@ -41,6 +41,9 @@ import flare_hifi from "/src/public/assets/images/flare/flar_hifi.png"
 import flare_hifi_2 from "/src/public/assets/images/flare/flar_hifi2.png"
 import flare_sitemap from "/src/public/assets/images/flare/flare_sitemap.png"
 import flare_comp from "/src/public/assets/images/flare/flare_competitive.png"
+import flare_solution from "/src/public/assets/images/flare/flare_solution.png"
+import flare_promo from "/src/public/assets/videos/Flarepromo_web.mp4"
+import flare_storyboard from "/src/public/assets/images/flare/Storyboard.png"
 
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
@@ -187,7 +190,7 @@ Wildfires are a frequent matter in the lower mainland, throughout winter until s
 Flare is designed to be a user-friendly application that delivers real-time information about wildfires, safety resources and location-based updates. The app leverages a clean UI, accessible navigation and API integrations to ensure users receive timely and reliable information 
 
 `,
-        "image": [],
+        "image": [flare_solution],
       },
       {
         "heading": "Key Findings",
@@ -224,17 +227,31 @@ Analyzing existing wildfire tracking apps revealed gaps in usability and engagem
         "image": [flare_sitemap],
       },
       {
-        "heading": "HiFi and LoFi Prototypes",
-        "description": ``,
+        "heading": "Prototyping",
+        "description": `
+        
+Flare went through an accelerated prototyping processes utilizing tools such as the Shadcn design kit to rapidly design high-fidelity products. 
+
+        `,
         "image": [flare_hifi],
       },
       {
-        "heading": "Colour Palette",
+        "heading": "Style Guide",
         "description": `
 A carefully selected palette reflecting warm tones (red, orange) for urgency, balanced with cool tones (blue, gray) for reliability and trust.
 Promotional Materials
         `,
         "image": [flare_sol],
+      },
+      {
+        "heading": "Promotion",
+        "description": `
+
+A promotion video was created highlighting Flare's utility as an app. The app was storyboarded by me (Jackie), filmed by Henver Bio and Sebastian Fok and edited by Ben Louis.
+
+        `,
+        "video": [flare_promo],
+        "image": [flare_storyboard],
       },
     ]
   },
@@ -292,6 +309,7 @@ Promotional Materials
     "id": 6,
     "link": "https://una-marketing.vercel.app",
     "name": "UNA",
+    "type": "Prototype",
     "subtitle": "Social Media App Prototype",
     "description": "UNA is a social media app focused on providing users with largely live interactable interface, enriching social media experiences through live customizeable avatars, and live forums.",
     "thumb_image": una_mock,
