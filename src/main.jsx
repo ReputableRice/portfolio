@@ -85,6 +85,14 @@ import egg_mock2 from "/src/public/assets/images/egg/egg_hat.png"
 import egg_cover from "/src/public/assets/images/egg/egg cover.png"
 import egg_old from "/src/public/assets/images/egg/egg old.png"
 
+//vtuber
+import vt_preview from "/src/public/assets/images/vt/VT_preview.png"
+import vt_cover from "/src/public/assets/images/vt/VT_cover.png"
+import vt_sketches from "/src/public/assets/images/vt/VT_sketches.png"
+import vt_vid from "/src/public/assets/videos/Vt_Web.mp4"
+
+
+
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
 import ill_2 from "/src/public/assets/images/illustrations/Summer Day.png"
@@ -362,38 +370,64 @@ A design exercise advertisement (mockup) for the Canadian National Museum based 
       },
     ],
   },
-//   {
-//     "id": 8,
-//     "name": "Egg Logo",
-//     "subtitle": "Logo Design Exercise",
-//     "description":
-//       `
-// A logo exercise designed for a friend who really enjoys eggs with the intent on
-// showcasing my design process behind creating logos.
+  {
+    "id": 8,
+    "name": "Egg Logo",
+    "subtitle": "Logo Design Exercise",
+    "description":
+      `
+A logo exercise designed for a friend who really enjoys eggs with the intent on
+showcasing my design process behind creating logos.
 
-//     `,
-//     "thumb_image": egg_cover,
-//     "date": 2024,
-//     "tags": ["Illustrator", "Clip Studio Paint"],
-//     "images": [egg_mock, egg_mock2, egg_logo],
-//     "sections": [
-//       {
-//         "heading": "Project Summary",
-//         "description": "The goal of this exercise was to create a logo based around a combination of an anthropomorphic dog and eggs, based around the personality of a friend.",
-//         "image": [egg_ideating, egg_colour],
-//       },
-//       {
-//         "heading": "Challenges",
-//         "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
-//         "image": [egg_old],
-//       },
-//       {
-//         "heading": "Solutions",
-//         "description": "Ultimately, the decision to re-imagine the idea was the best solution, focusing more on the shine of eggs rather than the viscosity of it.",
-//         "image": [egg_logo],
-//       },
-//     ],
-//   },
+    `,
+    "thumb_image": egg_cover,
+    "date": 2024,
+    "tags": ["Illustrator", "Clip Studio Paint"],
+    "images": [egg_mock, egg_mock2, egg_logo],
+    "sections": [
+      {
+        "heading": "Project Summary",
+        "description": "The goal of this exercise was to create a logo based around a combination of an anthropomorphic dog and eggs, based around the personality of a friend.",
+        "image": [egg_ideating, egg_colour],
+      },
+      {
+        "heading": "Challenges",
+        "description": "A large hurdle I had to overcome when designing the logo was adapting the 'droopiness' of egg yolk into a vector environment. A large amount of time of the finalization was spent trying to mimick painting.",
+        "image": [egg_old],
+      },
+      {
+        "heading": "Solutions",
+        "description": "Ultimately, the decision to re-imagine the idea was the best solution, focusing more on the shine of eggs rather than the viscosity of it.",
+        "image": [egg_logo],
+      },
+    ],
+  },
+  {
+    "id": 9,
+    "name": "How To Be a VTuber!",
+    "subtitle": "Motion Graphics Project",
+    "description":
+      `
+How to make a VTuber! This was a motion graphics project used to illustrate the entire process of making a VTuber for production purposes.
+
+    `,
+    "thumb_image": vt_preview,
+    "date": 2024,
+    "tags": ["After Effects", "Live2D", "Illustrator", "Clip Studio Paint"],
+    "images": [vt_cover],
+    "sections": [
+      {
+        "heading": "Video",
+        "description": "How to make a Vtuber!",
+        "video": [vt_vid],
+      },
+      {
+        "heading": "Preparation",
+        "description": "Before rigging, positions are roughly mocked up to ensure that actual time is spent rigging instead of fixing and guessing 'what works best'.",
+        "image": [vt_sketches],
+      },
+    ],
+  },
 ]
 
 createRoot(document.getElementById('root')).render(
