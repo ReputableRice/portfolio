@@ -55,7 +55,8 @@ export default function ProjectPreview({ projects }) {
                     </CardContent>
                     <CardFooter>
                         <Button asChild>
-                            <Link key={project.id} to={`/project/${project.id}`} onClick={newPage()}>
+                            <Link key={project.id} to={`/project/${project.id}`} 
+                            onClick={() => window.scrollTo(0, 0)}> 
                                 Open Project
                             </Link>
                         </Button>

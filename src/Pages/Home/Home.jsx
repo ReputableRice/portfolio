@@ -21,6 +21,7 @@ import {
 
 //icons
 import { ArrowDown } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 //images
 import lookout from "/src/public/assets/images/lookout/lookoutbanner.jpg"
@@ -118,7 +119,7 @@ export default function Home({ projects, illustrations }) {
                         <div className="w-full h-full flex flex-col justify-center lg:px-[30%] sm:px-6 frosted">
                             <div className="">
                                 <h1 className="lg:text-[60px] sm:text-[30px] font-bold fadeIn white__text">jackie truong</h1>
-                                <p className="font-semibold text-2xl fadeIn white__text">Graphic Design | Illustrator | Frontend Web Developer</p>
+                                <p className="font-semibold text-2xl fadeIn white__text">UI UX Graphic Designer | Illustrator | Frontend Web Developer</p>
 
                                 <p className="pt-2 z-10 lg:flex fadeIn white__text">Predominantly a graphic designer, with a focus on objective-driven visuals and seeking to provide professional level illustrations and eye-catching graphics.</p>
                             </div>
@@ -133,19 +134,21 @@ export default function Home({ projects, illustrations }) {
                         </div>
                     </div>
                 </section>
+               
                 <section className="hover:bg-zinc-100 transition-colors">
                     <div className="flex min-h-svh items-center flex-col flex-wrap lg:px-[10%] sm:px-6 lg:pb-12">
                         <h1 id="projects" className=" font-bold text-3xl mx-auto mt-24 mb-6 green__text"> Projects</h1>
                         <ProjectPreview projects={projects} />
                     </div>
                 </section>
-                <section className={`hover:bg-zinc-100 py-[10vh] px-[15vw] flex justify-center flex-col`}>
+                <section className={`hover:bg-zinc-100 py-[10vh] px-[15vw] h-svh w-svw flex justify-center flex-col`}>
                     <div className="w-full flex justify-between py-6 sm:flex-col sm:items-center lg:flex-row lg:items-start">
                         <h1 id="graphics" className=" font-bold text-3xl"> Illustrations</h1>
                         <div className="flex justify-center">
                             <Button asChild onClick={() => window.scrollTo(0, 0)}>
                                 <Link to={`/illustrations`}>
                                     To Illustrations Page
+                                    <ArrowUpRight/>
                                 </Link>
                             </Button>
                         </div>
@@ -175,17 +178,6 @@ export default function Home({ projects, illustrations }) {
                         <CarouselNext />
                     </Carousel>
                 </section>
-                <section className="hover:bg-zinc-100 transition-colors w-full flex justify-center py-[10vh]">
-                    <div className="skillArea">
-                        <h1 className="font-bold text-2xl mb-6 green__text">Tools I use...</h1>
-                        {skills.map((skills, skill) => (
-                            <Badge key={skill} className="skills frosted m-1 bg-primary/10 text-primary px-3 py-1 rounded-full hover:bg-green-500 hover:text-zinc-50">
-                                {skills}
-                            </Badge>
-                        ))}
-                    </div>
-                </section>
-
                 <section className="contactArea h-screen flex flex-col items-center justify-center hover:bg-zinc-100 transition-colors">
                     <img src={croc_logo} alt="my crocodile logo" className="contact sm:w-2/6 lg:w-2/12" />
                     <h1 id="test" className="contact pt-10 text-3xl font-bold text-center">Want to Work together?</h1>

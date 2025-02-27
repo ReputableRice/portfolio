@@ -27,7 +27,7 @@ export default function Contact() {
 
     return (
         <>
-            <section id="contact" className="h-screen flex flex-col items-center justify-center" ref={container}>
+            <section id="contact" className="h-svh w-svw flex flex-col items-center justify-center absolute top-0" ref={container}>
                 <img src={croc_logo} alt="my crocodile logo" className="sm:w-2/6 lg:w-2/12 contactGSAP" />
                 <h1 className="pt-10 text-3xl font-bold text-center contactGSAP">Want to Work together?</h1>
                 <p className="pt-6 contactGSAP">Contact me at</p>

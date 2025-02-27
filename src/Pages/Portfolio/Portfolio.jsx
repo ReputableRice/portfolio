@@ -41,7 +41,7 @@ export default function Portfolio({ projects, illustrations }) {
                     <h1 className="text-3xl font-bold mt-16">Detailed Projects</h1>
                     <div className=" flex w-full items-start flex-wrap gap-6 sm:justify-center lg:justify-normal">
                         {projects.map((project, c) => (
-                            <Card key={c} className="cardGSAP w-[285px] mt-4 hover:drop-shadow-lg">
+                            <Card key={c} className="cardGSAP w-[385px] mt-4 hover:drop-shadow-lg">
                                 <CardHeader>
                                     <img src={project.thumb_image} alt={project.name} className="rounded-[16px] project__thumbnail" />
                                 </CardHeader>

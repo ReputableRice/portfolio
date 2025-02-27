@@ -72,7 +72,7 @@ A starting screen meant for live streams, animated to show a parallax motion.
                     <div className="flex gap-6 flex-wrap mt-6">
                         {
                             videos.map((video, vid) => (
-                                <div key={vid} className="flex flex-col rounded-2xl w-[426px] videoGSAP">
+                                <div key={vid} className="flex flex-col rounded-2xl w-[426px] videoGSAP overflow-hidden">
                                     <video width="426" height="240" controls>
                                         <source src={video.link} type="video/mp4" />
                                     </video>
