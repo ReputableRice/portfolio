@@ -68,6 +68,16 @@ import una_mock from "/src/public/assets/images/UNA/una_mock.png"
 import una_style from "/src/public/assets/images/UNA/Style.png"
 import una_logo from "/src/public/assets/images/UNA/Logo Design.png"
 import una_promo from "/src/public/assets/images/UNA/promo.mp4"
+import una_promo_1 from "/src/public/assets/images/UNA/chatting.png"
+import una_promo_2 from "/src/public/assets/images/UNA/talking.png"
+import una_promo_3 from "/src/public/assets/images/UNA/group.png"
+import una_hifi from "/src/public/assets/images/UNA/UNA_hifi.png"
+import una_lofi from "/src/public/assets/images/UNA/UNA_lofi.png"
+import una_challenge from "/src/public/assets/images/UNA/UNA_chal.png"
+import una_character from "/src/public/assets/images/UNA/UNA_char.png"
+
+
+
 
 //mueseum
 import museum_draft from "/src/public/assets/images/museum/draft.png"
@@ -327,14 +337,47 @@ A promotion video was created highlighting Flare's utility as an app. The app wa
     "images": [una_mock],
     "sections": [
       {
+        "heading": "Challenge",
+        "description": "Modern social media apps typically lack the necessary engagements that emphasize 1-on-1 interaction on a grandeur scale. This lack of interaction results in a more disconnected and unforgiving communication. The team behind UNA seeks to build an app that resolves these issues by fostering more realistic, healthier interactions.",
+        "video": [],
+        "image": [una_challenge],
+      },
+      {
+        "heading": "Solution",
+        "description": "By utilizing virtual worlds, UNA builds upon these driving principles of positive interaction. By utilizing customizable avatars and virtual rooms within registered communities. The users’ voice will feel more realistic, giving more importance to what is said.",
+        "video": [],
+        "image": [una_character],
+      },
+      {
+        "heading": "Insights from User Research",
+        "description": `
+- -> **Users want simple, clean interactivity**
+- -> **Users want a transferable experience to and from similar apps**
+- -> **Users want to be able to control their experience and manage the gamification of UNA**
+
+        `,
+        "video": [],
+        "image": [una_promo_1, una_promo_2, una_promo_3],
+      },
+      {
+        "heading": "Design Process",
+        "description": `
+- **User Research** – Conducted surveys and analyzed user behavior to understand wildfire awareness gaps. 
+- **Wireframing & Prototyping** – Created low-fidelity sketches, followed by interactive prototypes using a UI design kit and Tailwind.
+- **User Testing & Iteration** – Gathered feedback from testers to refine UI/UX and improve information hierarchy.
+        `,
+        "video": [],
+        "image": [una_hifi, una_lofi],
+      },
+      {
         "heading": "Promotion",
         "description": "All pages for the print version of the magazine are optimized for print, including crop/bleed marks and necessary color settings.",
         "video": [una_promo],
         "image": [],
       },
       {
-        "heading": "Branding",
-        "description": "The main motif being bunny along with eccentric colour styles enabled una to stand out from the crowd.",
+        "heading": "Style Sheet",
+        "description": "The main motif being bunny along with eccentric colour styles enabled una to stand out from the crowd. Additionally, the font choices help give UNA the feel of being modern and professional while also being easy to read.",
         "image": [una_style],
       },
       {
