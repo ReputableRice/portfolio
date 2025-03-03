@@ -96,11 +96,16 @@ function ProjectDetails({ project }) {
             </svg>
 
             <div key={a} className="flex lg:pl-[215px] gap-16 lg:flex-row sm:flex-col">
-              <div className="flex lg:w-1/3">
-                <CardHeader>
-                  <CardTitle className="font-bold text-3xl">{section.heading}</CardTitle>
-                  <ReactMarkdown>{section.description}</ReactMarkdown>
-                </CardHeader>
+              <div className="flex lg:w-1/3 mt-3">
+                <div>
+                  <h3 className="font-bold text-3xl">{section.heading}</h3>
+                  <ReactMarkdown className="mt-3">{section.description}</ReactMarkdown>
+                  <div className="mt-16">
+                    {section.section_link &&
+                      <Button asChild className="w-1/2"><a href={section.section_link} target="_blank">Check it here</a></Button>
+                    }
+                  </div>
+                </div>
               </div>
               <div className="lg:w-[737px] flex flex-col">
                 <Carousel
@@ -121,12 +126,12 @@ function ProjectDetails({ project }) {
                   </CarouselContent>
                 </Carousel>
                 {section.video?.map((video, vid) => (
-                      <div key={vid} className="flex items-end justify-end rounded-3xl overflow-hidden">
-                        <video src={video} controls className="object-cover" loop="true" autoPlay="true" muted>
-                          <source src={video} type="video/mp4" />
-                        </video>
-                      </div>
-                    ))}
+                  <div key={vid} className="flex items-end justify-end rounded-3xl overflow-hidden">
+                    <video src={video} controls className="object-cover" loop="true" autoPlay="true" muted>
+                      <source src={video} type="video/mp4" />
+                    </video>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

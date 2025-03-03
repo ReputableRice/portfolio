@@ -44,6 +44,8 @@ import flare_comp from "/src/public/assets/images/flare/flare_competitive.png"
 import flare_solution from "/src/public/assets/images/flare/flare_solution.png"
 import flare_promo from "/src/public/assets/videos/Flarepromo_web.mp4"
 import flare_storyboard from "/src/public/assets/images/flare/Storyboard.png"
+import flare_brochure_front from "/src/public/assets/images/flare/FlareBrochureFront.png"
+import flare_brochure_back from "/src/public/assets/images/flare/FlareBrochureBack.png"
 
 //Charizard
 import char_cover from "/src/public/assets/images/charizard/charizard_cover.webp"
@@ -76,9 +78,6 @@ import una_lofi from "/src/public/assets/images/UNA/UNA_lofi.png"
 import una_challenge from "/src/public/assets/images/UNA/UNA_chal.png"
 import una_character from "/src/public/assets/images/UNA/UNA_char.png"
 
-
-
-
 //mueseum
 import museum_draft from "/src/public/assets/images/museum/draft.png"
 import museum_cover from "/src/public/assets/images/museum/Museum.png"
@@ -100,8 +99,6 @@ import vt_preview from "/src/public/assets/images/vt/VT_preview.png"
 import vt_cover from "/src/public/assets/images/vt/VT_cover.png"
 import vt_sketches from "/src/public/assets/images/vt/VT_sketches.png"
 import vt_vid from "/src/public/assets/videos/Vt_Web.mp4"
-
-
 
 //
 import ill_1 from "/src/public/assets/images/illustrations/Vast Skies.png"
@@ -252,6 +249,7 @@ Flare went through an accelerated prototyping processes utilizing tools such as 
 
         `,
         "image": [flare_hifi],
+        "section_link": "https://www.figma.com/design/gPHPwANNCgyHX811XBko9g/Flare-Mockup?node-id=2-3&t=bvhPAiy0El0maKlf-1",
       },
       {
         "heading": "Style Guide",
@@ -262,14 +260,31 @@ Promotional Materials
         "image": [flare_sol],
       },
       {
-        "heading": "Promotion",
+        "heading": "Promotion: Video",
         "description": `
 
-A promotion video was created highlighting Flare's utility as an app. The app was storyboarded by me (Jackie), filmed by Henver Bio and Sebastian Fok and edited by Ben Louis.
+A promotion video was created highlighting Flare's utility as an app to assist users with wildfire information.
 
         `,
         "video": [flare_promo],
+      },
+      {
+        "heading": "Promotion: Video (Storyboard)",
+        "description": `
+
+A storyboard was created to assist with the production of the film. Key actions were drawn out and designed with the composition in mind, showcasing what should be done each scene. Additionally, these sketched scenes were utilized to finalize the length of the promotion.
+
+        `,
         "image": [flare_storyboard],
+      },
+      {
+        "heading": "Promotion: Brochure",
+        "description": `
+
+Utilizing specified print designs, a brochure was created to be distributed at the showcase event in person. This served to help get the app more out into the public.
+
+        `,
+        "image": [flare_brochure_front, flare_brochure_back],
       },
     ]
   },
