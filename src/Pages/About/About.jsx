@@ -4,6 +4,8 @@ import {
     CardContent,
     CardHeader,
 } from "@/components/ui/card"
+import { Toaster } from "@/components/ui/sonner"
+
 import Live2D from "../../components/live2d/Live2D"
 import Footer from "../../components/Footer/Footer";
 import { useRef } from "react";
@@ -40,6 +42,7 @@ export default function About() {
 
     return (
         <>
+            <Toaster/>
             <div className="overflow-hidden absolute h-svh w-full -top-0 flex items-center drop-shadow-2xl" ref={container}>
                 <div className="sm:hidden lg:flex">
                     <div>
@@ -55,20 +58,9 @@ export default function About() {
                 <div className="relative lg:w-1/5 items-center lg:p-0 sm:p-6">
                         <h1 className="text-3xl font-bold fadeInGSAP">About <span className="green__text">Me!</span></h1>
                         <p className="fadeInGSAP mt-6"><span className="font-bold">I'm an artist and graphic designer</span> based in British Columbia with experience in web development, branding and marketing. As a hobby I create VTuber models, play games, and do some video editing!
-                            <div className="mt-3">I strive to create content and visuals that can be appreciated and inspire others!</div>
+                            <span className="mt-3">I strive to create content and visuals that can be appreciated and inspire others!</span>
                         </p>
                     </div>
-                {/* <div className="flex lg:flex-row-reverse sm:flex-col items-center justify-center">
-                    <div className="flex justify-start">
-                        <Live2D />
-                    </div>
-                    <div className="lg:h-[1000px] lg:w-1/5 sm:w-full flex flex-col justify-center frosted p-6">
-                        <h1 className="text-3xl font-bold fadeInGSAP">About <span className="green__text">Me!</span></h1>
-                        <p className="fadeInGSAP mt-6"><span className="font-bold">I'm an artist and graphic designer</span> based in British Columbia with experience in web development, branding and marketing. As a hobby I create VTuber models, play games, and do some video editing!
-                            <div className="mt-3">I strive to create content and visuals that can be appreciated and inspire others!</div>
-                        </p>
-                    </div>
-                </div> */}
             </div>
         </>
     )

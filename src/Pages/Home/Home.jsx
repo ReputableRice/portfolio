@@ -55,15 +55,6 @@ export default function Home({ projects, illustrations }) {
             opacity: 0,
         });
 
-        gsap.from('.skills', {
-            scrollTrigger: '.skillArea',
-            y: 300,
-            stagger: 0.1,
-            ease: "power3.out",
-            duration: 0.5,
-            opacity: 0,
-        });
-
         gsap.from('.fadeIn', {
             y: 300,
             stagger: 0.1,
