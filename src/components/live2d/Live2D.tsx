@@ -13,7 +13,7 @@ function Live2D() {
       l2d
         .create({
           path: "https://reputablerice.github.io/models/courier.model3.json",
-          position: [200, -1000],
+          position: [200, -900],
           // position: [0, 0],
           rotaion: 25,
           // anchor: [-100, 100]
