@@ -1,14 +1,7 @@
-import about__me from "/src/public/assets/videos/About Me.mp4"
-
-import {
-    CardContent,
-    CardHeader,
-} from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 import Live2D from "../../components/live2d/Live2D"
-import Footer from "../../components/Footer/Footer";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';

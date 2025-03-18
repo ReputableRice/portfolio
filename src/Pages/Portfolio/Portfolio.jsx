@@ -1,17 +1,12 @@
-import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import Footer from "../../components/Footer/Footer"
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import ImageExpand from "../../components/ImageExpand/ImageExpand"
 import { useRef } from "react"
 
 //GSAP
@@ -20,7 +15,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-export default function Portfolio({ projects, illustrations }) {
+export default function Portfolio({ projects }) {
     const container = useRef();
 
     useGSAP(() => {

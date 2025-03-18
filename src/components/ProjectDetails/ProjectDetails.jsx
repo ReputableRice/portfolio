@@ -6,30 +6,17 @@ import ReactMarkdown from "react-markdown";
 import ImageExpand from "../ImageExpand/ImageExpand";
 
 //Shadcn
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 
 function ProjectDetails({ project }) {

@@ -3,10 +3,8 @@ import { useRef } from "react";
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
@@ -18,9 +16,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger)
 
-
 export default function ProjectPreview({ projects }) {
-
     const card = useRef();
 
     useGSAP(() => {
@@ -34,11 +30,7 @@ export default function ProjectPreview({ projects }) {
             rotation: 90,
             opacity: 0,
         });
-    }, { scope: card }) // <-- scope
-
-    function newPage() {
-        window.scrollTo(0, 0)
-    }
+    }, { scope: card })
 
     return (
         <div className="flex flex-wrap boxAll items-center justify-center" ref={card} >

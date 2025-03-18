@@ -31,17 +31,6 @@ export default function NavBar() {
                     <Link to="/contact" className="font-medium frosted__nav lg:rounded-3xl sm:rounded-none sm:w-full lg:w-auto px-6 lg:py-3" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
                 </div>
             }
-            {/* <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
-            </Link>
-            <div className="flex sm:flex-col lg:flex-row lg:gap-6 green px-6 items-center white__text  rounded-full">
-                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">Home</Link>
-                <Link to="/portfolio" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">Portfolio</Link>
-                <Link to="/illustrations" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">Illustrations</Link>
-                <Link to="/motion_graphics" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">Motion Graphics</Link>
-                <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">About</Link>
-                <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-zinc-500">Contact</Link>
-            </div> */}
         </nav>
     );
 }

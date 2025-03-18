@@ -1,5 +1,4 @@
 //images
-import croc_logo from "/src/public/assets/images/CrocColour.png"
 import { SocialIcon } from 'react-social-icons'
 
 export default function Footer() {

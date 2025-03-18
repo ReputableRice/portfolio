@@ -1,6 +1,3 @@
-import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
 import Footer from "../../components/Footer/Footer"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import ImageExpand from "../../components/ImageExpand/ImageExpand"

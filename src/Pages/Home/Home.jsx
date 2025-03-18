@@ -3,13 +3,12 @@ import ProjectPreview from "../../components/ProjectPreview/ProjectPreview"
 import Footer from "../../components/Footer/Footer"
 import { useRef } from "react"
 import ImageExpand from "../../components/ImageExpand/ImageExpand"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Autoplay from "embla-carousel-autoplay"
 import { Link } from "react-router-dom"
 
 
 //shadcn
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
     Carousel,
@@ -37,11 +36,6 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Home({ projects, illustrations }) {
-    const [expandIllustrations, setExpandIllustrations] = useState("max-h-svh overflow-hidden")
-    const [imgToggle, setImgToggle] = useState(false)
-    const [text, setText] = useState("See More")
-
-    const skills = ["Illustrator", "Photoshop", "Clip Studio Paint", "After Effects", "HTML/CSS", "JavaScript", "React", "Figma", "UI/UX", "Live2D"]
     const container = useRef();
 
     useGSAP(() => {
@@ -101,7 +95,6 @@ export default function Home({ projects, illustrations }) {
     return (
         <>
             <main className="flex flex-col" ref={container} >
-                {/* <h1 className="lg:text-5xl sm:text-3xl font-bold z-10">Website Under Construction</h1> */}
                 <section className="flex flex-col w-full h-full">
                     <div className=" h-svh fadeIn relative left-0 overflow-hidden background -top-[112px]">
                         <img src={lookout_fg} className="w-full absolute lg:z-20 lg:h-svh sm:h-[100%] -right-[43%] lg:object-contain fgGSAP" alt="a vast landscape" />
