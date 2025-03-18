@@ -15,7 +15,7 @@ export default function NavBar() {
                 active &&
                 <div className="flex sm:flex-col lg:flex-row w-full justify-between sm:items-end lg:items-center sm:text-right sm:mr-16 lg:mr-0 sm:mt-6 lg:mt-0 sm:font-bold lg:py-0">
                     <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                        <img src={croc_logo} className="w-24 sm:hidden lg:flex" />
+                        <img src={croc_logo} className="w-24 sm:hidden lg:flex" alt=""/>
                     </Link>
                     <div className="flex sm:flex-col lg:flex-row lg:gap-6 font-medium frosted__nav lg:rounded-3xl sm:rounded-none lg:px-16 sm:px-3 sm:w-full lg:w-auto lg:py-3">
                         <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
