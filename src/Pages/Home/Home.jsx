@@ -24,7 +24,6 @@ import { ArrowDown } from "lucide-react"
 import { ArrowUpRight } from "lucide-react"
 
 //images
-import lookout from "/src/public/assets/images/lookout/lookoutbanner.jpg"
 import croc_logo from "/src/public/assets/images/CrocColour.png"
 import lookout_fg from "/src/public/assets/images/lookout/fg.png"
 import lookout_bg from "/src/public/assets/images/lookout/bg.png"

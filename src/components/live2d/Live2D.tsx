@@ -4,7 +4,7 @@ import { init } from "l2d";
 // https://www.npmjs.com/package/l2d
 function Live2D() {
   const l2dRef = useRef<HTMLCanvasElement>(null);
-  const model = useRef<any>(null); // Use 'any' to avoid TypeScript errors
+  const model = useRef<any>(null);
   const [glasses, setGlasses] = useState(true)
   const [randomNum, setRandomNum] = useState(0)
 
@@ -15,9 +15,7 @@ function Live2D() {
         .create({
           path: "https://reputablerice.github.io/models/courier.model3.json",
           position: [200, -900],
-          // position: [0, 0],
           rotaion: 25,
-          // anchor: [-100, 100]
         })
         .then((res) => {
           model.current = res;
