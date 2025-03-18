@@ -6,7 +6,7 @@ function Live2D() {
   const l2dRef = useRef<HTMLCanvasElement>(null);
   const model = useRef<any>(null);
   const [glasses, setGlasses] = useState(true)
-  const [randomNum, setRandomNum] = useState(0)
+  const [number, setNumber] = useState(0)
 
   useEffect(() => {
     const l2d = init(l2dRef.current);
@@ -36,12 +36,17 @@ function Live2D() {
   }
 
   const mouseClick = () => {
-    setRandomNum(Math.random() * 10)
+    setNumber((prev) => {
+      const newNum = prev + 1
+      console.log(newNum);
+      return newNum;
+    })
+
     setDefaults()
 
-    if (randomNum == 0) {
+    if (number === 0) {
 
-    } else if (randomNum < 3) {
+    } else if (number === 1) {
       model.current.setParam("Glasses", 1)
       model.current.setParam("ParamMouthOpenY", 1)
       model.current.setParam("ParamEyeLOpen", 0)
@@ -49,12 +54,14 @@ function Live2D() {
       model.current.setParam("ParamEyeROpen", 0)
       model.current.setParam("ParamEyeRSmile", 1)
 
-    } else if (randomNum < 6) {
+    } else if (number === 2) {
       model.current.setParam("Hat", 1)
       model.current.setParam("Glasses", 1)
-    } else if (randomNum <= 10) {
+    } else if (number === 3) {
       model.current.setParam("Hat", 1)
       model.current.setParam("Plant", 1)
+    } else {
+      setNumber(0)
     }
   };
 
