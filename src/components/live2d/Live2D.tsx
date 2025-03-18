@@ -6,6 +6,7 @@ function Live2D() {
   const l2dRef = useRef<HTMLCanvasElement>(null);
   const model = useRef<any>(null); // Use 'any' to avoid TypeScript errors
   const [glasses, setGlasses] = useState(true)
+  const [randomNum, setRandomNum] = useState(0)
 
   useEffect(() => {
     const l2d = init(l2dRef.current);
@@ -24,13 +25,38 @@ function Live2D() {
     }, 500)
   }, []);
 
-  const mouseClick = () => {
-    setGlasses(!glasses)
+  function setDefaults() {
+    model.current.setParam("Glasses", 0)
+    model.current.setParam("Hat", 0)
+    model.current.setParam("Plant", 0)
+    model.current.setParam("ParamMouthOpenY", 0)
+    model.current.setParam("ParamEyeLOpen", 1)
+    model.current.setParam("ParamEyeLSmile", 0)
+    model.current.setParam("ParamEyeROpen", 1)
+    model.current.setParam("ParamEyeRSmile", 0)
+    console.log("reset")
+  }
 
-    if (glasses) {
-      model.current.setParam("Glasses", 0)
-    } else {
+  const mouseClick = () => {
+    setRandomNum(Math.random() * 10)
+    setDefaults()
+
+    if (randomNum == 0) {
+
+    } else if (randomNum < 3) {
       model.current.setParam("Glasses", 1)
+      model.current.setParam("ParamMouthOpenY", 1)
+      model.current.setParam("ParamEyeLOpen", 0)
+      model.current.setParam("ParamEyeLSmile", 1)
+      model.current.setParam("ParamEyeROpen", 0)
+      model.current.setParam("ParamEyeRSmile", 1)
+
+    } else if (randomNum < 6) {
+      model.current.setParam("Hat", 1)
+      model.current.setParam("Glasses", 1)
+    } else if (randomNum <= 10) {
+      model.current.setParam("Hat", 1)
+      model.current.setParam("Plant", 1)
     }
   };
 
